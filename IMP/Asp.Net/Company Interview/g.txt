@@ -1,0 +1,9 @@
+//Write Program to find fibonacci series for given number    
+            for (int i = 0; i < 10; i++)    
+            {    
+                Console.Write("{0} ", FibbonacciSeries(i));    
+            }    
+            Console.WriteLine(Environment.NewLine);    
+    
+            Console.Write("Fibbonacci Series of {0} is : {1} ", 10, FibbonacciSeries1(10));    
+    

@@ -1,0 +1,65 @@
+9.
+What is the main use of ‘recursive stored procedure’?
+
+Hide Answer
+The main use of the recursive stored procedure is to make the code calls till the time certain boundary conditions are reached. This helps programmers enhance productivity by using the same code multiple times.
+
+An SQL interview question like this one shows that even though some of the advanced concepts may be easy to understand, they may be difficult to recount when suddenly faced with the question. Thus, when you prepare for SQL interview questions, ensure to revise all types of concepts.
+
+13.
+List the type of SQL statements or subsets.
+
+Hide Answer
+Below are the popular subsets used in SQL:
+
+DDL (Data Definition Language) - It is used to define and structure tables. Users can CREATE, ALTER, and DELETE the database tables.
+DCL (Data Control Language) - Administrators use it to give users privileges to GRANT or REVOKE permissions to the database.
+DML (Data Manipulation Language) - It allows users to either UPDATE, INSERT, RETRIEVE, or DELETE information from the database.
+
+What is a trigger?
+
+Question Level: Expect this question for intermediate and senior level role.
+
+Trigger is a database object which is similar to a stored procedure which will automatically get invoked or executed when the specified event occurs in the database.
+
+The most common type of triggers are DML triggers, DDL triggers and Database triggers (also referred as Logon triggers).
+
+DML triggers are invoked when a DML operation (INSERT, UPDATE, DELETE) occurs on the respective table (table on which the trigger was created). Trigger can be configured to invoke either before the DM operation or after the DML operation.
+
+DDL triggers are invoked when a DDL operation (CREATE, ALTER, DROP) occurs on the respective table (table on which the trigger was created). 
+
+Database trigger is invoked when the database session is established or shut down.
+
+5.
+What is the difference between clustered and non clustered index?
+
+The indexing is required to quicken search results in the database. If we compare index in our real world then page number of books and keywords mostly on the back side of book work similar as Index. We can quickly go to respective pages if we know the page number and also if we have an idea of keywords, we are looking into the book then just visiting keywords section will make our job easier as keywords are linked with page numbers. There are two types of indexes that exist in SQL database. One is called clustered while other is called non-clustered. The page number of the book is similar to the clustered index while the keyword section of the book represents non-clustered indexes. They exist in the database as a B-Tree structure. Let's go into the details of each index.
+
+Clustered Index 
+We can have only one clustered index per table. Once we create a primary key, by default it ends up creating a clustered index on that key. We can also specify the index type as well in case we would like to have non clustered index as well. The table is called heap if it does not have any clustered index. As we said earlier that indexes are B-Tree structures. The leaf node is mapped to data pages of the table in case of a clustered index. The data is physically sorted based on the clustered index. This is the reason why it is quickest in two of the indexes.
+
+Non-clustered Index 
+Earlier it was possible to have only 249 non clustered indexes on the table but after SQL server 2008 we can have 999 non clustered indexes. It gets created by default when we create unique key constraint. We can also decide index type as well while creating Unique constraint. It is not mandatory to have any non clustered index. The leaf nodes of non clustered index map to index pages having details of clustering key or RID to get the actual row. In case the table does not have any clustered index, leaf nodes are mapped to the physical location of the row which is called as RID and if present leaf nodes mapped to clustering key. It is much quicker for DML operations like adding /deleting and updating records.
+
+What are the Advantages of Using CTE?
+
+CTE is virtually created temporary storage which holds query output created by SQL syntax SELECT, INSERT, UPDATE, DELETE OR CREATE VIEW statement. It holds the data until the time of the query session. It is similar to the derived table only. We can also  use the CTE in case of VIEW in some scenarios:
+
+When we have a recursive query we can use CTE. It holds a query output in an area that is defined during CTE definition. It is more beneficial when we need to work on the queries query. It holds query data till the time the SQL query is running. It is beneficial for holding filter data which is needed for subsequent processing.
+It improves the readability of queries without affecting performance.
+It can be referenced multiple times in the SQL query.
+It can be used instead of a view where metadata information does not require to be stored.
+
+16.
+What is the difference between COMMIT and ROLLBACK?
+
+Hide Answer
+COMMIT is a statement executed to save the changes made to a database. It ensures that the changes made within a transaction are permanent and cannot be rolled back. On the other hand, a ROLLBACK statement is executed to revert all the changes made on the current transaction to the previous state of the database.
+
+18.
+What is the difference between a temporary table and a table variable in SQL Server?
+
+Hide Answer
+Temporary Table: A temporary table is created using CREATE TABLE statement with a prefix #, and it is stored in the tempdb system database. Temporary tables support indexing, statistics, and can have constraints. There are two types of temporary tables: local (visible only to the session that created it) and global (accessible to all sessions).
+
+Table Variable: A table variable is declared using DECLARE statement with @ prefix, and it is also stored in the tempdb system database. Table variables don't require explicit dropping, have no statistics, limited constraints, and are scoped to the batch or stored procedure in which they are declared.

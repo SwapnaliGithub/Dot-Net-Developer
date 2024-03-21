@@ -1,0 +1,136 @@
+I would suggest something like this
+
+Respected Sir/Madam {name in case name is mentioned},
+
+I read your job posting on Naukri.com for the postion of Software Engineer in Winforms Applications.
+
+In my current position as a Software Engineer in ABC Company, I created a Registry Cleaner using native libraries and customized functionalities and wrote various functionalities for enabling system restoration, detecting and clearing bad registries and saving & managing the restore points.
+
+I involved myself in Creating the Setups using NSIS and creating Installers using .msi. and was given the responsibility to maintain the version control as well as the version updation of the software. I was entrusted with the responsibility for configuring the server, hosting the project in IIS and maintaining the website. I had played an active role in online marketing, blogging, Api Integrations, Payment Gateways such as ccavenue, Paypal, Bpoint.
+
+The url of the application is as follows : myapplication.com
+
+My resume is attached. If I can provide you with any further information on my background and qualifications, please let me know.
+
+I look forward to hearing from you. Thank you for your consideration.
+
+John Doe
+Address
+Email
+Home Phone
+Cell Phone
+
+Hope this would help.
+
+
+            string a = "Dear [Recipient's name or hiring manager],\r\n\r\n\r\n\r\n" 
+                +
+                I have attached my resume and cover letter for your convenience. Please do not hesitate to let me know if there is any other material you need.You can reach me at 000 - 000 - 0000 or via Aahana.Shah @email.com.Thank you for your time and I look forward to hearing from you.
+                "Regards,Swapnali Vishal Ladi";
+
+
+
+
+
+
+Dear Sir or Madam, I hope the day finds you well. I am writing to apply for the position of ___(Job Title)__ as advertised on ___(Website Title)__. My CV attached below. I am currently a ___(Position)__ for ___(Company Name)__, a company that has been in business for ___(Number)__ years. I have a great deal of experience in ___(Domain Name)__ and consider myself to be very qualified for this position. Please feel free to contact me if you would like to speak to me. I can be reached by phone at ___(Phone Number)__ or by email at ___(Email Address)__. I eagerly look forward to your reply. Kind Regards,
+
+Respected Sir/Mam,
+
+I would like to introduce myself to you. I am Mr./Ms. _____(your name) referred by Mr./Ms. ______(name of reference), who is my _____(give relation) and currently associated with your company as _____(give this detail if reference person is already associated with the company).
+
+I am a _____(your highest qualification) from (institution) in ______(year of qualification).
+
+I am looking for job opportunity and hence attaching my resume along with this mail for your reference.
+
+Thank you for your time and consideration.
+
+
+Dear HR Manager,
+
+My name is [Name] and I am sending you my resume and covering letter as I want to apply for the [Position] in your company [name of the company].
+
+My resume will describe to the fullest my experience that fits your requirement for the opening at your department. I am sure that I am suitable for this position due to my hard-working approach and serious attitude to every working responsibility. My creative way of thinking helps in finding completely new approaches to the usual tasks and makes my work more productive.
+
+I am looking forward to your response.
+
+Thank you for reviewing my CV,
+
+[Name, Last Name]
+
+Job application email example
+A job application by an experienced professional may look something like this: 
+
+To: jondoe@email.com
+
+Subject: Jane Abbot – Application for Senior Front-End Developer
+
+Hello Jon,
+
+This is regarding a recent call for Senior Front-End Developer posted on your company website. I am a Front-End Developer with over 1 year of experience in the field and 3+ years of experience running and managing my own projects and teams. 
+
+I hold a Major in Web Development from Cornell University, I’m proficient in HTML, CSS, and JavaScript, and hold in-depth knowledge of Website Design, User Experience, Client-Side Development, and Systems Administration. I have worked with and managed teams at several high-ranking companies in US, France, and Germany. 
+
+I am attaching a portfolio- which would include previous projects and their business impacts, a comprehensive cover letter, and a CV for your perusal. Please feel free to connect with me via email or phone if you require any more information.
+
+Looking forward to hearing from you soon. 
+
+Thank you.
+
+Regards,
+
+Jane Abbot
+
+011 1234567
+
+Hi (Recipient's name),
+
+My name is (name) and I’m applying for the position of (job name). I have attached a copy of my resume with this email. 
+
+I’ve worked in the industry for (X) years and have a considerable amount of transferable experience. I’ve read the job description and feel I have the skills and expertise to excel in the role.
+
+The role of (job name) is a huge opportunity in an incredible organization, and I am excited to apply.
+
+If you have any questions, please don’t hesitate to contact me (insert contact details). Can you confirm that you have received this email and let me know about the next steps in the process.
+
+Kind regards, 
+(Your name)
+
+Hi (Recipient's name),
+
+My name is (name), and I’m applying for the position of (job name). I  have attached my resume to this email.
+
+I’ve reviewed the job description and feel I have all the critical skills, including all professional qualifications. You’ll also find details of my previous roles and current position. 
+
+My salary expectations for the role are (insert details). 
+
+Can you explain how the process works and what the following stages will be?
+
+You can contact me on (insert details). I look forward to hearing from you about how we move forward with my application.
+(Your name)
+
+Hi (Recipient's name),
+
+I’m applying for the position of (job name) at (company). 
+
+As requested in the job description, please find my resume attached alongside a cover letter. In my cover letter, I explain why I am applying for the position, my previous experience and salary expectations. 
+
+If you have any questions, you can call me at any time on (insert number) or email me at (insert address).
+
+Kindest regards, 
+(Your name)
+
+Hi (Recipient's name),
+
+I have attached my resume for the position of (insert details).
+
+You’ll find details of my previous work experience, professional qualifications and personal qualities in my CV. I’ve reviewed the job description and believe I meet all the essential requirements.
+
+I’ve researched your company, am fascinated about your journey, and am excited about your future. I would be honored to play a part in that.
+
+Please can you confirm that you have received this email? If you have any questions, contact me (insert details). 
+
+I await to hear of the next steps.
+
+Kindest regards,
+(Your name)

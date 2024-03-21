@@ -1,0 +1,78 @@
+1. What is Javascript and what is its uses
+JavaScript (js) is a light-weight object-oriented programming language which is used by several websites for scripting the webpages. It is an interpreted, full-fledged programming language that enables dynamic interactivity on websites when applied to an HTML document.
+
+JavaScript (JS) is a cross-platform, object-oriented programming language used by developers to make web pages interactive. It allows developers to create dynamically updating content, use animations, pop-up menus, clickable buttons, control multimedia, etc. The use of JavaScript can be both on the client-side and server-side. While HTML and CSS languages are used to give structure and style to web pages, JavaScript is used to add interactive elements that engage users. Without JavaScript, 90% of Internet webpages would be static.    
+
+JavaScript for Web Development
+JavaScript's most popular use is for web development, and it is one of the most powerful tools a developer can have on their toolbelt. Developers use JavaScript in web development to add interactivity and features to improve the user experience and make the internet much more enjoyable.
+
+JavaScript runs on all devices, including computers, iPhones, Androids, and smart TVs.
+JavaScript is standardized and receives frequent version updates.
+JavaScript works with many different frameworks and libraries.
+
+
+
+
+JavaScript uses in web development include dynamic content, browser compatibility, and user experience. JavaScript enhances browser compatibility, meaning websites work across a variety of platforms, including mobile devices.
+
+JavaScript is a versatile scripting language that can create robust web applications. JavaScript can create interactive features like menus, and form validation.JavaScript can make webpages more interactive
+
+For mobile app developers, JavaScript uses include responsive user interfaces
+
+JavaScript enables game developers to create interactive and engaging games.
+
+JavaScript can create server-based applications users can access on a web browser
+
+A very popular application of JavaScript is to create interactive presentations as websites
+
+
+2. Advantages of Ajax
+
+Ajax (also AJAX /ˈeɪdʒæks/; short for "asynchronous JavaScript and XML")[1][2] is a set of web development techniques that uses various web technologies on the client-side to create asynchronous web applications. With Ajax, web applications can send and retrieve data from a server asynchronously (in the background) without interfering with the display and behaviour of the existing page.
+
+Reduce server traffic and increase speed
+The first and foremost advantage of Ajax is its ability to improve the performance and usability of web applications.
+
+Enable Asynchronous call
+Ajax allows its users to make asynchronous calls to the web server without reloading the whole web page
+
+Reduce bandwidth usage
+One more advantage of Ajax comes from the bandwidth usage. This action is effective in improving web performance and load speed as well.
+
+Ajax makes the best use of the server’s bandwidth by fetching particle contents instead of transmitting the entire page’s content. This means that you can bring data from the database and store it into the database to perform background without reloading the page.
+
+Form Validation
+In contrast to traditional form submission, where client-side validations occur after submission, the AJAX method enables precise and immediate form validation. AJAX provides speed, which is also one of its significant benefits.
+
+Disadvantages of Ajax
+We’ve just listed out all the areas where Ajax can show its great potential in implementation. Let’s move on to some possible drawbacks you can meet when using Ajax.
+
+Open-source. View source is allowed, and anyone can view the code source written for Ajax, which makes it less secure compared to other technologies
+
+Search Engines cannot index Ajax pages can not be indexed by Google as well as other search engines
+
+The usage of Ajax can cause difficulties for your web pages to debug as well as make them prone to possible security issues in the future
+
+Most importantly, Ajax has a considerable dependency on JavaScript, so only browsers that support Javascripts or XMLHttpRequest can use pages with Ajax techniques
+
+Users will find it challenging to bookmark a specific state of the application due to the dynamic web page
+
+From the users’ perspective, when you click the back button on the browser, you may not return to the previous state of the page but the entire page. This happens because the pages with successive Ajax requests are unable to register with the browser’s history
+
+
+3.What is JSON?
+JSON stands for JavaScript Object Notation
+JSON is a format to exchange & store data across platforms.
+JSON is the best alternative to XML
+JSON stores values in the key/value pair format.
+
+Uses of JSON
+It is used while writing JavaScript based applications that includes browser extensions and websites.
+
+JSON format is used for serializing and transmitting structured data over network connection.
+
+It is primarily used to transmit data between a server and web applications.
+
+Web services and APIs use JSON format to provide public data.
+
+It can be used with modern programming languages.
