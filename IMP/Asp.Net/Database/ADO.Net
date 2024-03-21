@@ -1,0 +1,7 @@
+How does Connection Pooling work?
+
+Connection Pooling involves sharing your connection with others so that multiple users may access the data pool. 
+This process reuses active connections with an identical connection string to reduce the time that you might spend opening or closing new connections. 
+By using Connection Pooling, you can avoid creating a new connection each time that colleagues request access to a data set. 
+A Connection Manager monitors existing connections by keeping a list of links, permitting access to data sets on request. 
+By using this system, you can then share data with colleagues more easily, boosting general productivity."

@@ -1,0 +1,212 @@
+https://www.dotnetustad.com/oop-interview/when-to-use-abstract-method
+https://www.interviewquestionspdf.com/2015/02/c-oops-interview-questions-answers-with.html
+https://www.bytehide.com/blog/csharp-oops-interview-questions
+https://www.aspdotnet-suresh.com/search/label/OOPS%20Concepts
+https://www.upgrad.com/blog/oops-interview-questions-answers-for-freshers-experienced/
+https://www.mygreatlearning.com/blog/javascript-interview-questions/
+https://www.dotnetforall.com/oop-c-interview-question-answer/
+https://www.c-sharpcorner.com/article/oops-interview-questions-c-sharp/
+https://www.mygreatlearning.com/blog/ajax-interview-questions/
+https://www.c-sharpcorner.com/blogs/basics-of-oops-in-c-sharp
+
+29. What is the virtual function?
+A virtual function is a function that is used to override a method of the parent class in the derived class. It is used to provide abstraction in a class.
+
+28. What is a constructor in C#?
+Ans: A constructor is a special method of the class that contains a collection of instructions and gets automatically invoked when an instance of the class is created.
+
+29. Explain Different Types of Constructors in C#?
+Ans: There are 5 types of constructors in C#, as given below:
+
+Default Constructor: It is without any parameters.
+Parameterized Constructor: It has one parameter.
+Copy Constructor: It creates an object by copying variables from another object.
+Static Constructor: It is created using a static keyword and will be invoked only once for all of the instances of the class.
+Private Constructor: It is created with a private specifier and does not allow other classes to derive from this class or create an instance of it.
+
+37. What is an Interface?
+Ans: An interface is a declaration for a set of class members. It is a reference type that contains only abstract members such as Events, Methods, Properties, etc.
+
+38. What are the events and delegates?
+Ans: Events notify other classes and objects when the desired action occurs in a class or object. A delegate is a type-safe function pointer that defines a method signature in CLI.
+
+60. What are managed and unmanaged codes?
+Ans: Managed code runs inside CLR and installing the .NET Framework is necessary to execute it. Unmanaged code does not depend on CLR for execution and is developed using languages outside the .NET framework.
+
+What are sealed modifiers?
+- Access modifiers which cannot be inherited by other methods.
+- They can be applied to properties, events and methods but not to static members.
+Explain: a.) Static binding b.) Dynamic binding
+a.) Static binding-
+It is a binding in which the name of the class can be associated with it during compilation. Also referred to as early binding.
+
+b.) Dynamic binding –
+It is a binding in which the name of the class can be associated with it during execution time. Also referred to as late binding.
+
+
+Object Oriented Programming Interview Questions
+By: Rajesh P.S.
+Object-oriented programming (OOP) concepts serve as the foundational principles for numerous programming languages prevalent in the current landscape. The OOP model has gained immense popularity, leading to its widespread adoption across various programming languages like Java, C++, Python, C#, among others. In light of this significance, we have curated a selection of essential interview questions and answers pertaining to object-oriented programming. These resources are designed to equip you with the knowledge and insights necessary to excel in your interview and demonstrate a comprehensive understanding of OOP concepts.
+
+How much memory does a class occupy?
+A class without an object does not require any memory allocation as it exists solely as a blueprint or template. Memory allocation occurs when objects are created, as objects embody the actual implementation of the class's contents. When an object of an empty class is created, the compiler assigns 1 byte for its unique address identification. In the case of multiple objects belonging to the same class, each object can have a distinct memory location assigned to it. The process of creating a new class involves invoking an allocation function, which can have various implementations depending on factors such as the programming language, its version, libraries used, and configuration settings.
+
+What is the meaning of "IS-A" and "HAS-A" relationship?
+In OOP, IS-A relationship is completely inheritance. This means, that the child class is a type of parent class. On the other hand, HAS-A relationship is composition. Composition means creating instances which have references to other objects.
+
+Foo IS-A Bar:
+ 
+public class Foo extends Bar{}
+Foo HAS-A Bar:
+ 
+public class Foo {
+  private Bar bar;
+}
+A HAS-A relationship is dynamic (run time) binding while IS-A relationship is a static (compile time) binding.
+
+What is Dependency?
+Dependency refers to a scenario where component Y relies on component X. When component X undergoes modifications, it necessitates corresponding changes in component Y to maintain consistency. A component can manifest in various forms, such as a class, function, interface, method, or even a field. The level of dependency, or coupling, between Y and X can vary, ranging from strong to weak. When one class instantiates another class, it establishes a dependency between the two.
+
+In the scope of Object-Oriented Programming (OOP), inheritance represents a form of strong coupling. Alterations made to a base class are likely to impact its derived classes. Inheritance serves as a mechanism for code reuse; however, it results in dependencies between parent and child classes, deviating from the principle of information hiding and creating a rigid class hierarchy. On the other hand, composition and interface implementation offer a less stringent form of coupling compared to inheritance, while still achieving code reuse objectives.
+
+Can you inherit private members of a class?
+In object-oriented programming, a derived class does not inherit direct access to private data members of its base class. However, it does inherit the complete parent object, including any private members declared within the base class. Despite this inheritance, direct access to the private members is restricted as they are exclusively accessible within the base class. Private members are intentionally concealed from external entities, preventing any external class from accessing private member variables or functions. If the intention is to utilize such members in derived classes, accessor functions, such as getter/setter functions, need to be implemented.
+
+In the context of object-oriented programming principles, the purpose of private members is to restrict access to these members by other classes. If a derived class is intended to have access to a member, it should be declared as protected instead of private, indicating a controlled level of accessibility for derived classes.
+
+What are the drawbacks of inheritance?
+Inheritance increases the coupling between base class and derived class. A change in base class will affect all the child classes.
+Inherited functions work slower than normal function as there is indirection.
+Adds extra memory overload for the compiler as it will have to keep records of the parent as well as the child class.
+Often, data members in the base class are left unused which may lead to memory wastage.
+Inheritance relationships generally can't be altered at runtime.
+
+Object Oriented Programming Interview Questions  and answers
+What is the relationship between a class and an object?
+A class serves as a fundamental blueprint that facilitates the creation of objects. An object, on the other hand, represents a tangible instance derived from a specific class. The term "instance" signifies the inherent connection between an object and its corresponding class. By defining the methods (behavior) and variables (state), a class outlines the desired characteristics and functionality to be encompassed within instances of that specific object type. Essentially, a class acts as a template, providing the necessary guidelines for constructing objects with consistent behaviors and states.
+
+For example, If CAR is a class, Hyundai, Ford, Suzuki are its objects.
+
+Can you call the base class method without creating an instance?
+Yes. Its is possible,
+
+If it is a static method.
+By inheriting from that class.
+From derived classes using the base keyword.
+
+Advantages of the OOP include-
+Support modularity for troubleshooting-
+Whenever there is any problem in a code, there is no need to go through each code in a serial manner. By the look, the programmers can figure out the problem, if it is in any particular class or not. 
+
+This is how amazingly encapsulation works, the objects are self-contained, and each part of the functionality does its own thing, leaving the other bits alone. 
+
+Code reuse through inheritance
+It is useful in creating one generic class and defining subclasses that are supposed to inherit the generic class’ traits. The programmers can also change code in one class, and all the subclasses will inherit the change. 
+
+Flexibility provided using Polymorphism 
+A single object can mould and adapt to whichever class it is in. One function can be created in one parent class. Polymorphism brings flexibility to the design, allowing the same method to have different implementations.
+
+Problems of any level of complexity can be supported by object-oriented programming.
+Highly complex problems can be handled by object-oriented programming
+It provides an efficient mechanism for code reuse using inheritance which reduces redundancy 
+It provides a mechanism for hiding data
+It is based on a bottom-up approach
+It offers flexibility through polymorphism 
+It improves maintainability of the codeIt is secure and provides security through encapsulation
+It allows for a class-specific behaviour through polymorphism
+It easier to debug
+It is easily maintainable
+It provides for effective troubleshooting
+
+31) What is the difference between new and override?
+The new modifier instructs the compiler to use the new implementation instead of the base class function. Whereas, Override modifier helps to override the base class function.
+
+Explain the concept of inheritance in C# with an example.
+Answer
+Inheritance is a fundamental OOP concept that allows you to create a new class (derived class) that inherits the properties and methods of an existing class (base class). This promotes code reusability and allows you to make changes and extensions to a derived class without affecting the base class.
+
+In C#, to create a derived class that inherits from a base class, you use the colon : symbol like this: DerivedClass : BaseClass.
+
+Here’s an example to illustrate the concept of inheritance in C#:
+
+// Base class
+public class Animal
+{
+    public string Name { get; set; }
+
+    public void Eat()
+    {
+        Console.WriteLine($"{Name} is eating.");
+    }
+}
+
+// Derived class
+public class Dog : Animal // Dog inherits from Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine($"{Name} is barking.");
+    }
+}
+In the example, the Dog class is derived from the Animal class and inherits the Name property and the Eat() method. The Dog class can also have its own additional methods, like Bark() in this case.
+
+What is abstraction in C# and why is it important?
+Answer
+Abstraction is the process of simplifying complex systems by breaking them down into smaller, more manageable components and hiding the implementation details. In C#, abstraction can be achieved through abstract classes and interfaces.
+
+Abstract classes are classes that cannot be instantiated, and they can contain both abstract and non-abstract methods. Abstract methods don’t have a body and must be overridden in derived classes. By defining an abstract class with methods that must be implemented by its subclasses, you can create a blueprint for a certain type of functionality without providing any implementation details.
+
+Interfaces, on the other hand, are a contract that specifies a set of methods and properties that must be implemented by any class that implements the interface. Multiple interfaces can be implemented by a single class, thus providing a way to achieve multiple inheritance.
+
+Abstraction is important in software development because it helps to:
+
+Reduce complexity by hiding unnecessary implementation details from the users of a class or an interface.
+Promote better code organization by breaking down complex systems into smaller, more focused components.
+Enhance flexibility and extensibility, as interfaces and abstract classes allow you to add new features or modify existing ones without affecting other parts of the system.
+Improve code reusability through inheritance and interface implementation.
+Now that we’ve explored the fundamentals of object-oriented programming in C#, let’s proceed to more advanced topics. These next questions will guide you through the intricacies of inheritance, polymorphism, and interfaces, offering real-world examples and relevant answers for experienced developers.
+
+Make sure to pay close attention, as these concepts play a significant role in building robust, maintainable, and scalable applications.
+
+Reflection
+Reflection provides objects (of type Type) that describe assemblies, modules and types. You can use reflection to dynamically create an instance of a type, bind the type to an existing object, or get the type from an existing object and invoke its methods or access its fields and properties. If you are using attributes in your code, reflection enables you to access them.
+
+Reflection inspects type metadata at runtime.
+
+The type metadata contains information such as:
+
+The type Name
+The containing Assembly
+Constructors
+Properties
+Methods
+Attributes
+This data can be used to create instances, access values and execute methods dynamically at runtime.
+
+
+Lambda Expressions
+An anonymous method
+
+No access modifier
+No name
+No return statement
+Lambda Expression is nothing but an anonymous method. That is a method that has no access modifier (like public or private), and has no name, and has no return statement.
+
+Why do we use them? For convenience. We can write less code and achieve the same thing, plus our code would be more readable.
+
+https://github.com/henriquesd/ProgrammingInCSharp/blob/master/Interface/README.md
+
+Indexers
+Indexers allow instances of a class or struct to be indexed just like arrays. The indexed value can be set or retrieved without explicitly specifying a type or instance member. Indexers resemble properties except that their accessors take parameters.
+
+An indexer provides the ability to access a type using an index similar to an array.
+
+Events
+A mechanism for communication between objects
+Used in building Loosely Coupled Applications ()
+Helps extending applications
+Events is a mechanism for communication between objects (that means when something happens inside an object, it can notify other objects about that). Why do we need that? Because it can help building Loosely Coupled Applications. What is Loosely Coupled Applications? That means an application, that its components or classes are not tightly coupled together. A loosely coupled application is easy to extend without breaking or changing one or more of its existing capabilities.
+
+https://github.com/henriquesd/ProgrammingInCSharp/blob/master/Delegate/README.md
+
+https://github.com/henriquesd/ProgrammingInCSharp/blob/master/CollectionsAndArrays/README.md

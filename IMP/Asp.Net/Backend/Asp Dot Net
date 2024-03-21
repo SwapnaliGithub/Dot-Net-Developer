@@ -1,0 +1,130 @@
+https://www.stechies.com/aspnet-interview-questions/
+
+.NET Developer Interview Questions
+
+https://medium.com/@adarshrai3011/53-javascript-frontend-interview-questions-e6013116eaa0
+https://medium.com/artificial-corner/youre-using-chatgpt-wrong-here-s-how-to-be-ahead-of-99-of-chatgpt-users-886a50dabc54
+Explanation: This is an example of a technical question. During an interview as a .NET developer, you can anticipate that the majority of questions will be technical in nature. The best way to answer technical questions is directly and concisely with little embellishment.
+
+Question: Can you explain what a .NET web service is?
+Example: “Web services are components that can be reused and enable developers to publish the application’s functions on the internet. 
+This makes the application accessible and able to interact with other applications online. 
+Web services are written in standard protocols, including HTTP, XML, and others. This enables them to connect across platforms and programming languages.”
+
+Question: How do the terms class and object relate to each other, and what is the difference between them?
+Example: “A class is a building block or template which defines the attributes of an object, Its behavior, and the data contained in it. 
+An object is a single instance of a class that has individual identities, behaviors, and attributes. These two terms relate to each other because a class defines the states and properties that are common to a wide range of objects.”
+
+Question: How does managed code differ from unmanaged code?
+Example: "Managed code is programming which runs and the common language runtime (CLR) which is a critical part of the .NET environment. 
+Unmanaged code is code written in other languages and only runs on the platforms for which it is written. 
+While these two are interoperable, managed code is platform independent and also takes advantage of the functionality COR provides within the .NET framework.”
+
+Question: Can you explain inheritance and how it functions in a .NET environment?
+Explanation: This is yet another technical question. As the interview progresses, the technical questions will become more specific and more difficult. 
+This indicates the interviewer is gaining confidence in your capabilities and is willing to explore more sophisticated areas. 
+Continue to respond to these questions in the same manner you have been.
+Example: “Inheritance means a class is based on another class and is considered any child of the parent class. 
+The child has the same attributes as the parent class. An example of this is that a parent class would be named dwelling while the child class may be called home, 
+apartment, or condominium. All three of these will have the same attributes as the parent class dwelling. The children can only be associated with one parent.”
+
+Question: How does an abstract class and an interface differ from each other?
+Explanation: The interviewer is continuing to explore your understanding of .NET programming and the terms and concepts associated with it. 
+The best way to prepare for this type of interview is to review the terminology, concepts, and practices common to a .NET developer. It’s also advisable to practice these questions while providing your answers out loud to build your confidence and the muscle memory associated with interviewing.
+
+Example: “An abstract class is a base class. It provides virtual members the other entities they must use and a framework for the implementation of a functionality.
+While developers can declare fields from an abstract class, they cannot create objects from it.
+An interface can declare properties, methods, and events. It designates behaviors that implementing classes need to have.”
+
+Question: Can you define delegate as it relates to .NET?
+Explanation: While the term delegate can have many meanings, the interviewer is asking you to define it within the framework of .NET. 
+This is an example of needing to carefully listen to the questions the interviewer is asking to provide the answers they are seeking. 
+It demonstrates the need for active listening so you understand the question and can address it appropriately.
+Example: “A delegate is a type that contains a reference to a method. Delegates can reference either single or multiple methods. 
+It allows objects to be passed to code when the code calls for the method. T
+The advantage of a delegate is that it doesn’t require the developer to know which method is being used when the code is compiled.”
+
+Question: Please explain the differences between a queue and a stack.
+Explanation: Again, you are being asked to compare two terms used by .NET developers. As a reminder, first define the terms and then describe the differences 
+or similarities between them.
+Example: “A queue and a stack are both collections. A stack keeps track of what is executing and contains stored value types.
+The value types are processed in a last-in, first-out order. A queue, on the other hand, processes value types on a first-in, first-out basis.”
+
+Question: When is it common to use .NET web forms over ASP.NET MVC?
+
+Explanation: By asking this question, the interviewer is trying to determine your familiarity with two different types of programming methodologies. 
+The first is a legacy methodology and more common in the .NET framework. The others are newer methodologies that provide more functionality. 
+Both are valid, so by expressing a preference, you are indicating which of them you typically use.
+
+Example: “Historically, the .NET framework has been based on web forms which create web services using Microsoft’s visual studio tools. 
+Throughout my career, I employed web forms for the majority of my programming.
+ASP.NET MVC is a newer development methodology known as model view controller. 
+Its advantage is that it allows applications to be divided into discrete components, making them easier to test during development.” 
+
+Question: Define JSON data, and describe how .NET developers can work with it?
+Example: “JavaScript Object Notation, or JSON, enables developers to organize and store data, making it easy to access. 
+The advantage of this is that it allows developers to manipulate feeds from other sites and use them for their code. 
+Other uses for JSON are defining classes that parse objects and serializing value types.”
+
+Question: Can you name three common acronyms that are used in .NET and what each one of them stands for?
+
+Explanation: This is an odd question because it allows you the flexibility to identify several terms you use while developing code in a .NET environment. 
+An interviewer may ask this type of question just to see where you go with this and the acronyms you identify. 
+It provides them with an example of how you can think on your feet as well as your knowledge of specific areas within .NET.
+
+Example: “Wow, this is a pretty wide open question. I guess I’d start with JIT which stands for just in time compiler. The compiler uses the target machine CPU to perform a .NET operation. 
+Another common term is OOP which stands for object-oriented programming. A third term is CLI or common intermediate language. 
+This is a compiled code library originally developed by Microsoft. I use that for security, versioning, and deployment.”
+
+Additional .NET Developer Interview Questions
+What is session management?
+
+Can you write a code to divide two numbers without using a division or modulus operator?
+using System;
+class Program
+{
+    static int Divide(int dividend, int divisor)
+    {
+        if (divisor == 0)
+        {
+            throw new DivideByZeroException();
+        }
+
+        int quotient = 0;
+        int sign = ((dividend < 0) ^ (divisor < 0)) ? -1 : 1;
+
+        long longDividend = Math.Abs((long)dividend);
+        long longDivisor = Math.Abs((long)divisor);
+
+        while (longDividend >= longDivisor)
+        {
+            longDividend -= longDivisor;
+            quotient++;
+        }
+        return sign * quotient;
+    }
+
+    static void Main()
+    {
+        int dividend = 10;
+        int divisor = 3;
+        Console.WriteLine(Divide(dividend, divisor));  // Output: 3
+
+        dividend = 7;
+        divisor = -3;
+        Console.WriteLine(Divide(dividend, divisor));  // Output: -2
+    }
+}
+
+What is the difference between a full outer join and inner join?
+
+Have you ever missed a deadline? If so, how was it handled?
+Communication: Communicate early and honestly with stakeholders about the delay. Explain the reasons behind the delay and provide a realistic timeline for completion.
+Reassessment: Review the project plan and tasks to identify the reasons for the delay. Determine if additional resources, changes in approach, or reprioritization of tasks are needed.
+Adjustment: Modify the project plan, timeline, or scope as necessary to accommodate the delay. Prioritize tasks based on criticality and impact.
+Mitigation: Implement strategies to mitigate the impact of the delay, such as working overtime, reallocating resources, or simplifying features.
+Continuous Improvement: After the project is completed, conduct a post-mortem to analyze the causes of the delay and identify areas for improvement in future projects.
+Documentation: Keep detailed records of the delay, including the reasons, actions taken, and outcomes. Use this information to improve project planning and estimation in the future.
+
+What was the most difficult script you ever wrote? How long did it take to write it?
+

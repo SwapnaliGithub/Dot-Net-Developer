@@ -1,0 +1,136 @@
+
+
+what is a temporary view in sql
+A temporary view in SQL is a virtual table that is based on the results of a SQL query or a DataFrame. Temporary views are not stored in the catalog and are only visible to the current session. They are automatically dropped when the session ends or when you explicitly drop them using DROP VIEW
+
+
+The Global.asax file in ASP.NET is an optional file that provides a way to handle global application-level events and settings. It serves as the entry point and central configuration file for an ASP.NET application.
+
+he Global.asax file in ASP.NET allows you to handle application-level events, implement error handling, manage sessions, define URL routing rules, and set global configuration settings. It provides a central place to handle various aspects of your application's behavior and lifecycle.
+
+What is the ASP.NET page life cycle and why is it important?
+The ASP.NET page life cycle refers to the sequence of events that occur during the processing of a web page in an ASP.NET application. It starts when a user requests a page and ends when the page is fully rendered and sent back to the client.
+
+The ASP.NET page life cycle consists of several stages, each representing a specific phase of the page processing. Here are the main stages:
+
+Page Request: The web server receives a request for a page.
+Start: The page's initialization occurs, including loading the page's controls and their properties.
+Page Load: The page's controls are populated with data, and the page's logic is executed.
+Validation: The user input is validated, and any validation errors are collected.
+Postback Event Handling: If there is a postback event, like a button click, the corresponding event handler is executed
+PreRender: The page prepares for rendering, and the state of the controls is finalized.
+Render: The HTML markup for the page is generated.
+Unload: The page is unloaded, and resources are released.
+Understanding the ASP.NET page life cycle is important for several reasons:
+
+Control and Manipulation: By understanding each stage of the life cycle, developers can control and manipulate the behavior and appearance of the page at specific points. This allows them to customize the page's behavior based on the current state.
+State Management: The life cycle helps manage the state of controls and their values across postbacks. It ensures that user input and control values are properly persisted and restored during subsequent requests.
+Event Handling: The life cycle provides a clear structure for handling events raised by controls on the page. Developers can write code to respond to specific events at the appropriate stage of the life cycle.
+Performance Optimization: Knowledge of the life cycle can help optimize the performance of ASP.NET applications. Developers can take advantage of the life cycle stages to perform resource-intensive operations at the appropriate time and avoid unnecessary processing.
+Overall, understanding the ASP.NET page life cycle is crucial for building robust and efficient web applications with ASP.NET. It allows developers to control the flow of execution, handle events, manage state, and optimize performance effectively.
+
+what is a query string in asp.net
+A query string in ASP.NET is a technique for sending data from one webform to another through the URL. It is a method for storing state information on the client end. 
+A query string is made up of two parts: field and value. Each pair is separated by an ampersand (&). The question mark (?) in a query string indicates the beginning of a query string and its value. 
+
+Object pooling is a design pattern that keeps a group of objects in memory for reuse. 
+Reduces resource overhead
+Object pooling is useful when multiple instances of a class are needed, but the class is expensive to create or manage.
+Improves performance
+Object pooling can improve the performance of memory-intensive applications by reducing the overhead of initialization, allocation, and disposal of objects.
+Reduces processing power
+Object pooling can optimize performance by reducing the processing power required of the CPU to run repetitive create and destroy calls.
+
+Connection pooling allows you to reuse connections rather than create a new one every time the ADO.NET data provider needs to establish a connection to the underlying database. Connection pooling behavior can be controlled by using connection string options
+Connection pooling is simple to implement, but it makes a huge difference in performance when more users are logged in. By default, a connection string is enabled with connection pooling. By default, the maximum number of pools is 100, minimum is 0
+
+
+App. config file is used to set configuration parameters externally for desktop / stand-alone applications. Web. config file is used to set configuration parameters externally for web applications.
+App.config and web.config are configuration files that set configuration parameters externally for applications. The choice of configuration file name depends on the hosting environment. 
+Here are some differences between app.config and web.config: 
+Usage: App.config is used for Windows Forms, Windows Services, Console Apps, and WPF applications. Web.config is used for asp.net web projects and web services.
+Hosting environment: If you're using IIS to host your service, use a Web.config file. If you're using any other hosting environment, use an App.config file.
+Location: Web.config files are located in the application's root directory.
+
+What is user controls?
+A user control is a collection of Windows Forms controls encapsulated in a common container. This kind of control is referred to as a composite control. The contained controls are called constituent controls. User controls derive from the UserControl class. User controls are designed like Forms, with a visual designer.
+
+Partial view in ASP.NET MVC is a special view that renders a portion of view content. It is just like a user control of a web form application.
+
+
+garbage collector manages the allocation and release of memory for your application.
+
+
+What is MIME explain?
+What is MIME (Multipurpose Internet Mail Extensions)?
+MIME (Multipurpose Internet Mail Extensions) is an extension of the original Simple Mail Transport Protocol (SMTP) email protocol. It lets users exchange different kinds of data files, including audio, video, images and application programs, over email.
+
+
+How do I secure my Web REST API?
+How do you secure REST API from malicious attacks and data...
+Use HTTPS.
+Implement authentication and authorization.
+Validate and sanitize inputs and outputs.
+Apply rate limiting and throttling.
+Encrypt and backup your data.
+Monitor and audit your API.
+Here's what else to consider.
+
+C# Jagged Arrays
+
+Javatpoint
+https://www.javatpoint.com › c-sharp-jagged-array
+In C#, jagged array is also known as "array of arrays" because its elements are arrays. The element size of jagged array can be different.
+
+
+Both these methods are used to convert a value to a string. The difference is Convert. ToString() method handles null whereas the ToString() doesn't handle null in C#.
+
+A hashtable stores key-value pairs. It retrieves the values by comparing the hash value of the keys.
+
+
+
+SELECT MAX(SALARY) FROM Employee WHERE SALARY < (SELECT MAX(SALARY) FROM Employee);
+
+
+duplicate record
+SELECT OrderID, COUNT(OrderID)
+FROM Orders
+GROUP BY OrderID
+HAVING COUNT(OrderID) > 1
+
+By using the DISTINCT keyword, the GROUP BY clause, and the INNER JOIN statement, we can remove duplicates from a table in SQL.
+
+
+What is the use of case when in SQL?
+The SQL CASE Expression
+
+The CASE expression goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.
+
+The SQL CASE Expression
+The CASE expression goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.
+
+If there is no ELSE part and no conditions are true, it returns NULL.
+
+CASE Syntax
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END;
+
+SELECT OrderID, Quantity,
+CASE
+    WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+    WHEN Quantity = 30 THEN 'The quantity is 30'
+    ELSE 'The quantity is under 30'
+END AS QuantityText
+FROM OrderDetails;
+
+
+	VARCHAR	NVARCHAR
+Character Data Type	Variable-length, non-Unicode characters	Variable-length, both Unicode and non-Unicode characters such as Japanese, Korean, and Chinese.
+Maximum Length	Up to 8,000 characters	Up to 4,000 characters
+Character Size	Takes up 1 byte per character	Takes up 2 bytes per Unicode/Non-Unicode character
+Storage Size	Actual Length (in bytes)	2 times Actual Length (in bytes)
+Usage	Used when data length is variable or variable length columns and if actual data is always way less than capacity	Due to storage only, used only if you need Unicode support such as the Japanese Kanji or Korean Hangul characters.

@@ -1,0 +1,340 @@
+1.What is C#?
+C# is a high-level object-oriented programming language. It is used for building secure and robust applications.
+
+2. Can we execute multiple catch blocks in C# program for one exception?
+No. You can’t use multiple catch blocks for same exception in C# because a catch block is preceded by a try block.
+
+3.Which parameter can be used to return multiple values from a function?
+Reference or output parameters can be used to return multiple values from a function.
+
+4.What’s Polymorphism in C#?
+It’s the ability of an object to take different forms and behave differently in different cases. It is of two types:
+Compile time polymorphism
+Runtime polymorphism.
+
+20.
+Define Keywords in C#?
+
+Hide Answer
+Keywords are reserved words that have some predefined actions. They are special words that hold special meaning to the compiler
+
+What are jagged arrays?
+
+Hide Answer
+A jagged array, also called an array of arrays, is a multidimensional array that consists of other arrays of different sizes.
+
+22.
+Define a local variable in C#.
+
+Hide Answer
+Local variables are referred to as variables that are defined in a code block. They are only visible in the code block they’re declared in.
+
+23.
+Define Inheritance in C#.
+
+Hide Answer
+Inheritance is a way of defining a class (child class) that is allowed to inherit the behavior of the other class (parent class).
+
+24.
+Why does C# not support multiple inheritances?
+
+Hide Answer
+C# does not support multiple inheritance because of Name collision.
+
+25.
+Which keyword is used to implement duck typing?
+
+Hide Answer
+Dynamic
+
+26.
+What is a read only variable?
+
+Hide Answer
+Read only variables are created using the readonly keyword. Its value can be modified only within a constructor.
+
+27.
+Can you change the value of a variable while debugging an application?
+
+Hide Answer
+Yes, the values of variables can be altered during debugging.
+
+28.
+What is LINQ in C#?
+
+Hide Answer
+Language-Integrated Query (LINQ) is a .NET Framework. It is used to retrieve information from different kinds of sources.
+
+Looking for remote developer job at US companies?
+Work at Fortune 500 companies and fast-scaling startups from the comfort of your home
+
+Apply Now
+ADVANCED C-SHARP INTERVIEW QUESTIONS AND ANSWERS
+1.
+What are the constructors?
+
+Hide Answer
+Constructor is a method that gets executed when a new class object is created. It can be public or private.
+
+2.
+Can you tell us the difference between a constant from a read-only?
+
+Hide Answer
+Read-only is a runtime constant. Const is a compile-time constant.
+
+3.
+What is method overloading?
+
+Hide Answer
+Method overloading is a method of having two or more methods with the same name but different parameter lists.
+
+4.
+What are the features of read-only variables?
+
+Hide Answer
+The features of read-only variable are as follows:
+
+Initialized at runtime
+Can be used with static modifiers
+Only declared at the class level
+5.
+Define dynamic type variables in C#.
+
+Hide Answer
+Dynamic type variable was introduced in C# 4.0. It is used to skip type checking at compile-time. It is created using dynamic keywords. You can store any type of value in a dynamic variable.
+
+6.
+What is a "using" statement in C#?
+
+Hide Answer
+Using a statement ensures the object is disposed of as soon as it goes out of scope without needing to write any code.
+
+7.
+Define nullable types in C#.
+
+Hide Answer
+Nullable types allow you to assign a normal range to null values. You can also assign true or false to null types/
+
+The syntax is:
+
+< data_type> ? <variable_name> = null;
+
+8.
+Can you tell us something about the stream reader and stream writer class in C#?
+
+Hide Answer
+Stream reader and stream writer classes are used for reading and writing actions to a file. Both are inherited from the abstract base class stream.
+
+9.
+Can you tell the difference between overloading and overriding?
+
+Hide Answer
+Overloading- When you have two or more methods in the same scope with the same name but different parameters.
+
+Overriding- It allows you to change the behavior of a method in a subclass or child class.
+
+10.
+Define file handling in C#.
+
+Hide Answer
+File handling refers to the management of files. It consists of different actions like creating the file, writing to the file, reading from the file, etc. Read and write are the two operations used in file handling.
+
+11.
+Explain Boxing and Unboxing.
+
+Hide Answer
+Both Boxing and Unboxing are used for converting the type. However, there are some differences.
+
+Boxing - Boxing converts the value type to the object or to the data type of an interface implemented by this particular value type. The CLR boxes a value, in other words, converts the value type to an object. For this, CLR wraps the value in System. Object and store it in the heap area within the domain of the application.
+
+Unboxing - Unboxing extracts the value type from the object or any interface type that has been implemented. For Boxing, implicit code may be used, but for Unboxing explicit code must be used.
+
+Boxing and Unboxing highlight that C# has a unified view of the type system, meaning that all value types can be treated as objects.
+
+12.
+Differentiate between managed and unmanaged code
+
+Hide Answer
+The difference between managed and unmanaged code is as follows:
+
+Managed Code - Managed Code is developed within the .NET framework. CLR directly executes such code by using managed code execution. Any language written in the .NET framework is considered to be managed code.
+
+Unmanaged Code - Unmanaged code is any code developed outside the .NET framework. Unmanaged applications are not executed by CLR. Some languages like C++ can write unmanaged applications such as an application for accessing the low-level functions of the operating system. Some examples of unmanaged code include background compatibility with the code of VB, ASP, and COM.
+
+13.
+Differentiate between Struct and Class in C#.
+
+Hide Answer
+Class and struct both are user-defined data types. However, they have some important differences:
+
+Struct
+
+Struct is a value type in C# that inherits values from System.Value
+It is mostly used for small quantities of data
+It cannot be inherited to any other type
+A Struct cannot have abstract values.
+
+Class
+
+Class is a reference type in C#. Since it refers to objects, it inherits from System.Object
+Classes are mostly used for large quantities of data
+Classes can be inherited to other classes
+Classes can have abstract values.
+A default constructor can be created for classes.
+
+14.
+What is the difference between Task and Thread in C#?
+
+Hide Answer
+Following are the differences between Task and Thread in C#:
+
+Task is an object used in the Task Parallel Library (TPL) to represent an asynchronous operation, while a Thread is a separate path of execution in a program. Tasks are a higher level of abstraction than threads and are used to manage the execution of code in parallel.
+
+Tasks are easier to use and manage than threads, and they can also be used to provide more efficient resource utilization. Threads on the other hand, provide a lower level of abstraction and are used to execute code directly in the processor.
+
+15.
+How is encapsulation done in C#?
+
+Hide Answer
+Access specifiers help implement Encapsulation, in C#, is implemented by using access specifiers. A class member’s scope and visibility are defined by these access specifiers.
+With public access specifiers, a class can expose its member variables and functions to other objects and functions. Once a member is public, it can be reached from outside the class.
+With private access specifiers, a class can hide its member variables and functions from other objects and functions. The private members of a class can be accessed only by functions of the same class. Even instances of the same class do not have access to its private members.
+Protected access specifiers are similar to private access specifiers because they cannot be accessed outside the class. However, protected class members can be accessed by any subclass of that class as well. This enables implementing inheritance.
+
+16.
+What is a Destructor in C# and when is it used?
+
+Hide Answer
+A destructor is a special method in C# that is automatically called when an object is destroyed. It is used to free up any resources that the object may have been using, such as memory or files. Destructors are usually implemented in a class and are denoted by the keyword ~ followed by the class name.
+
+For example, if a class called MyClass was to have a destructor, it would be declared as follows: ~MyClass().
+
+17.
+For methods inside the interface, why can you not specify the accessibility modifier?
+
+Hide Answer
+Virtual methods in an interface have no method definition. The methods here are written to be overridden in the derived class and hence, they are publicly available.
+
+18.
+Differentiate between ref and out keywords.
+
+Hide Answer
+The main difference between ref and out keywords in C# is that ref requires that the variable be initialized before being passed to the method whereas out keyword doesn’t require the variable to be initialized before being passed to the method.
+
+19.
+Why is finally block used in C#?
+
+Hide Answer
+The finally block always gets executed if there is an exception or not. When the code is executed in the try block and an exception occurs, control returns to the catch block, and in the end, the finally block gets executed. The finally block therefore can contain closing connections to the database and the release of file handlers.
+
+https://www.turing.com/interview-questions/c-sharp
+Write a program in C# to reverse a string?
+using System;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        string str = "";
+        Console.Write("Enter a string : ");
+        str = Console.ReadLine();
+        
+        char[] arr = str.ToCharArray();
+        Array.Reverse(arr);
+        Console.Write("Reverse string is : ");
+        
+        foreach(char ch in arr)
+        {
+            Console.Write(ch);
+        }
+        //Console.WriteLine ("Hello Mono World");
+    }
+}
+
+Enter a string : Swapnali Vishal Ladi
+Reverse string is : idaL lahsiV ilanpawS
+
+21.
+Write a program in C# to reverse the order of the given words?
+using System;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        string str = "Hello World";
+        string[] words = str.Split(' ');
+        Console.Write("Reversed order of the given string : ");
+        for(int i = words.Length -1; i>=0; i--)
+        {
+            Console.Write(words[i]+ " ");
+        }
+        //Console.WriteLine ("Hello Mono World");
+    }
+}
+Reversed order of the given string : World Hello 
+
+22.
+Write a program in C# to find if a given string is palindrome or not?
+
+Hide Answer
+Image 07-02-23 at 7.31 PM_11zon-2.webp
+
+23.
+Write a C# program to find the substring from a given string?
+
+Hide Answer
+Image 07-02-23 at 7.31 PM_11zon-3.webp
+
+24.
+Write a program to remove duplicate characters from a string?
+
+Hide Answer
+Image 07-02-23 at 7.32 PM_11zon.webp
+
+25.
+Write a program to find the sum of digits of a positive integer?
+
+Hide Answer
+Image 07-02-23 at 7.32 PM_11zon-2.webp
+
+26.
+Write a program to check whether the entered number is not divisible by 3 and 7?
+
+Hide Answer
+Image 07-02-23 at 7.32 PM (1)_11zon.webp
+
+27.
+What will be the output of the following C# code?
+
+Image 07-02-23 at 7.33 PM_11zon.webp
+
+Hide Answer
+Output:
+
+79
+
+28.
+What will be the output of the following code?
+
+Image 07-02-23 at 7.33 PM (1)_11zon.webp
+
+Hide Answer
+Output:
+
+500
+
+29.
+What will be the output of the following code?
+
+Image 07-02-23 at 7.33 PM (2)_11zon.webp
+
+Hide Answer
+Output:
+
+11
+
+Looking for re
+
+
+

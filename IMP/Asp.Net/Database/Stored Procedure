@@ -1,0 +1,9 @@
+1. How can you improve Stored Procedure Performance?
+
+Use Proper indexing on tables.
+Set NOCount ON|OFF - it will control some messages like - after running some update query you see messages - '0 rows affected'.
+Use Select count(1) instead of count(*) for count function.
+do not use prefix 'SP' while creating stored procedures as default system stored procedures also starts with prefix 'SP'.
+Whenever it's required fetch data from the table with 'NOLOCK' keyword WITH(NOLOCK).
+Set ANSI_Nulls ON|OFF- When it's ON it means a select statement will return zero results even if there are null values in the column. When It's OFF means select statement will return the corresponding rows with null values in columns. When you are setting it OFF means comparison operators do not follow ISO standards.
+Set Quoted_Identifier ON|OFF - When it's ON means identifiers are delimited by double quotes and literals are delimited by single quotes. But when it's OFF means identifiers can not be delimited by quotation.

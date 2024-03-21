@@ -1,0 +1,17 @@
+https://www.interviewbit.com/wpf-interview-questions/
+https://www.c-sharpcorner.com/UploadFile/puranindia/wpf-interview-questions-and-answers/
+
+WPF stands for Windows Presentation Foundation. It's a re-invention of a UI for Desktop applications using WPF. 
+Apart from dropping controls on "Windows Forms" just as developers have been doing for years, 
+WPF provides an extra rapid boost to the application development including Rich User Interface, Animation and much more
+
+. In a nutshell the following things can be done using WPF: 
+
+ Draw normal controls and graphics.  Can easily load/play audio and video files. 
+ Can provide smooth graphical effects such as drop shadows and color gradients. 
+ Can use shared styles which can be used across the same controls to provide the same theme, skin and design. 
+ Transforming objects including shapes, controls and video. 
+ Can create and animate 3D graphics. 
+ Can easily draw vector graphics that scale without jagged aliasing. Advantages: 
+ Tight multimedia integration
+ Resolution independence  Hardware acceleration

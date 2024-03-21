@@ -1,0 +1,5 @@
+When you create a simple database with the CREATE DATABASE command, SQL Server creates two files: 
+A data file (.mdf)
+A transaction log file (.ldf)
+The data file contains data and objects like tables, indexes, stored procedures, and views. The transaction log file records all transactions and the database modifications made by each transaction. 
+Data files can be of two types: primary or secondary. The primary data file contains startup information for the database and points to other files in the database. 
