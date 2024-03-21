@@ -1,0 +1,14 @@
+c:\users\jigs\documents\visual studio 2010\Projects\TechnicalInterviewQuestion\TechnicalInterviewQuestion\bin\Debug\TechnicalInterviewQuestion.exe
+c:\users\jigs\documents\visual studio 2010\Projects\TechnicalInterviewQuestion\TechnicalInterviewQuestion\bin\Debug\TechnicalInterviewQuestion.pdb
+c:\users\jigs\documents\visual studio 2010\Projects\TechnicalInterviewQuestion\TechnicalInterviewQuestion\obj\x86\Debug\TechnicalInterviewQuestion.exe
+c:\users\jigs\documents\visual studio 2010\Projects\TechnicalInterviewQuestion\TechnicalInterviewQuestion\obj\x86\Debug\TechnicalInterviewQuestion.pdb
+C:\Users\91844\Desktop\Publish ang\Swapnali Testing\New folder\TechnicalInterviewQuestion\obj\x86\Debug\TechnicalInterviewQuestion.exe
+C:\Users\91844\Desktop\Publish ang\Swapnali Testing\New folder\TechnicalInterviewQuestion\obj\x86\Debug\TechnicalInterviewQuestion.pdb
+C:\Users\91844\Desktop\Publish ang\Swapnali Testing\New folder\TechnicalInterviewQuestion\bin\Debug\TechnicalInterviewQuestion.exe
+C:\Users\91844\Desktop\Publish ang\Swapnali Testing\New folder\TechnicalInterviewQuestion\bin\Debug\TechnicalInterviewQuestion.pdb
+C:\Users\91844\Desktop\Publish ang\Swapnali Testing\New folder\TechnicalInterviewQuestion\obj\x86\Debug\TechnicalInterviewQuestion.csprojResolveAssemblyReference.cache
+E:\Swapnali Ladi\Swapnali Testing\New folder\TechnicalInterviewQuestion\obj\x86\Debug\TechnicalInterviewQuestion.exe
+E:\Swapnali Ladi\Swapnali Testing\New folder\TechnicalInterviewQuestion\obj\x86\Debug\TechnicalInterviewQuestion.pdb
+E:\Swapnali Ladi\Swapnali Testing\New folder\TechnicalInterviewQuestion\bin\Debug\TechnicalInterviewQuestion.exe
+E:\Swapnali Ladi\Swapnali Testing\New folder\TechnicalInterviewQuestion\bin\Debug\TechnicalInterviewQuestion.pdb
+E:\Swapnali Ladi\Swapnali Testing\New folder\TechnicalInterviewQuestion\obj\x86\Debug\TechnicalInterviewQuestion.csprojResolveAssemblyReference.cache
