@@ -1,0 +1,170 @@
+Basis for comparison	Local variable	Global variable
+Declaration	A variable which is declared inside function or block is known as a local variable.	A variable which is declared outside function or block is known as a global variable.
+Scope	The scope of a variable is available within a function in which they are declared.	The scope of a variable is available throughout the program.
+Access	Variables can be accessed only by those statements inside a function in which they are declared.	Any statement in the entire program can access variables.
+Life	Life of a variable is created when the function block is entered and destroyed on its exit.	Life of a variable exists until the program is executing.
+Storage	Variables are stored in a stack unless specified.	The compiler decides the storage location of a variable.
+
+11) What is the difference between call by value and call by reference in C?
+Following are the differences between a call by value and call by reference are:
+
+Call by value	Call by reference
+Description	When a copy of the value is passed to the function, then the original value is not modified.	When a copy of the value is passed to the function, then the original value is modified.
+Memory location	Actual arguments and formal arguments are created in separate memory locations.	Actual arguments and formal arguments are created in the same memory location.
+Safety	In this case, actual arguments remain safe as they cannot be modified.	In this case, actual arguments are not reliable, as they are modified.
+Arguments	The copies of the actual arguments are passed to the formal arguments.	The addresses of actual arguments are passed to their respective formal arguments.
+
+
+#include <stdio.h>  
+void change(int,int);  
+int main()  
+{  
+    int a=10,b=20;  
+    change(a,b); //calling a function by passing the values of variables.  
+    printf("Value of a is: %d",a);  
+    printf("\n");  
+    printf("Value of b is: %d",b);  
+    return 0;  
+}  
+void change(int x,int y)  
+{  
+    x=13;  
+    y=17;  
+}  
+Output:
+
+Value of a is: 10
+Value of b is: 20
+Example of call by reference:
+
+#include <stdio.h>  
+void change(int*,int*);  
+int main()  
+{  
+    int a=10,b=20;  
+    change(&a,&b); // calling a function by passing references of variables.  
+    printf("Value of a is: %d",a);  
+    printf("\n");  
+    printf("Value of b is: %d",b);  
+    return 0;  
+}  
+void change(int *x,int *y)  
+{  
+    *x=13;  
+    *y=17;  
+}  
+Output:
+
+Value of a is: 13
+Value of b is: 17
+
+
+What is a pointer in C?
+A pointer is a variable that refers to the address of a value. It makes the code optimized and makes the performance fast. Whenever a variable is declared inside a program, then the system allocates some memory to a variable. The memory contains some address number. The variables that hold this address number is known as the pointer variable.
+
+For example:
+
+Data_type *p;  
+The above syntax tells that p is a pointer variable that holds the address number of a given data type value.
+
+Example of pointer
+
+#include <stdio.h>  
+int main()  
+{  
+   int *p; //pointer of type integer.  
+   int a=5;  
+   p=&a;  
+   printf("Address value of 'a' variable is %u",p);  
+    return 0;  
+}  
+Output:
+
+Address value of 'a' variable is 428781252
+
+
+15) What is the usage of the pointer in C?
+Accessing array elements: Pointers are used in traversing through an array of integers and strings. The string is an array of characters which is terminated by a null character '\0'.
+Dynamic memory allocation: Pointers are used in allocation and deallocation of memory during the execution of a program.
+Call by Reference: The pointers are used to pass a reference of a variable to other function.
+Data Structures like a tree, graph, linked list, etc.: The pointers are used to construct different data structures like tree, graph, linked list, etc.
+16) What is a NULL pointer in C?
+A pointer that doesn't refer to any address of value but NULL is known as a NULL pointer. When we assign a '0' value to a pointer of any type, then it becomes a Null pointer.
+
+More details.
+
+17) What is a far pointer in C?
+A pointer which can access all the 16 segments (whole residence memory) of RAM is known as far pointer. A far pointer is a 32-bit pointer that obtains information outside the memory in a given section.
+
+
+
+19) What is pointer to pointer in C?
+In case of a pointer to pointer concept, one pointer refers to the address of another pointer. The pointer to pointer is a chain of pointers. Generally, the pointer contains the address of a variable. The pointer to pointer contains the address of a first pointer. Let's understand this concept through an example:
+
+#include <stdio.h>  
+ int main()  
+{  
+    int a=10;  
+    int *ptr,**pptr; // *ptr is a pointer and **pptr is a double pointer.  
+    ptr=&a;  
+    pptr=&ptr;  
+    printf("value of a is:%d",a);  
+    printf("\n");  
+    printf("value of *ptr is : %d",*ptr);  
+    printf("\n");  
+    printf("value of **pptr is : %d",**pptr);  
+    return 0;  
+}  
+In the above example, pptr is a double pointer pointing to the address of the ptr variable and ptr points to the address of 'a' variable.
+
+
+20) What is static memory allocation?
+In case of static memory allocation, memory is allocated at compile time, and memory can't be increased while executing the program. It is used in the array.
+The lifetime of a variable in static memory is the lifetime of a program.
+The static memory is allocated using static keyword.
+The static memory is implemented using stacks or heap.
+The pointer is required to access the variable present in the static memory.
+The static memory is faster than dynamic memory.
+In static memory, more memory space is required to store the variable.
+For example:  
+int a[10];  
+The above example creates an array of integer type, and the size of an array is fixed, i.e., 10.
+
+More details.
+
+21) What is dynamic memory allocation?
+In case of dynamic memory allocation, memory is allocated at runtime and memory can be increased while executing the program. It is used in the linked list.
+The malloc() or calloc() function is required to allocate the memory at the runtime.
+An allocation or deallocation of memory is done at the execution time of a program.
+No dynamic pointers are required to access the memory.
+The dynamic memory is implemented using data segments.
+Less memory space is required to store the variable.
+For example  
+int *p= malloc(sizeof(int)*10);  
+
+
+
+What is the difference between malloc() and calloc()?
+calloc()	malloc()
+Description	The malloc() function allocates a single block of requested memory.	The calloc() function allocates multiple blocks of requested memory.
+Initialization	It initializes the content of the memory to zero.	It does not initialize the content of memory, so it carries the garbage value.
+Number of arguments	It consists of two arguments.	It consists of only one argument.
+Return value	It returns a pointer pointing to the allocated memory.	It returns a pointer pointing to the allocated memory.
+
+
+
+What is the structure?
+The structure is a user-defined data type that allows storing multiple types of data in a single unit. It occupies the sum of the memory of all members.
+The structure members can be accessed only through structure variables.
+Structure variables accessing the same structure but the memory allocated for each variable will be different.
+
+
+36) What is the maximum length of an identifier?
+It is 32 characters ideally but implementation specific.
+
+37) What is typecasting?
+The typecasting is a process of converting one data type into another is known as typecasting. If we want to store the floating type value to an int type, then we will convert the data type into another data type explicitly.
+
+Syntax
+
+(type_name) expression;  
