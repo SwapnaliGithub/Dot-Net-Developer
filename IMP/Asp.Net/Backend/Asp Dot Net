@@ -128,3 +128,66 @@ Documentation: Keep detailed records of the delay, including the reasons, action
 
 What was the most difficult script you ever wrote? How long did it take to write it?
 
+ Interviewer : What is .NET framework ?
+
+You : It is collection of many small technologies integrated as a single large technology such that very powerful applications can be developed.
+Interviewer : What are the .NET components and explain in detail ?
+
+You :
+
+CLR:Common Language Runtime,
+
+CLR plays a main role in the .NET framework, It is a runtime environment in the .NET framework
+When .NET program is compiled , the output of the compiler is not executable file but a file that contains a special type of code called MSIL ( Microsoft Intermediate Language) also called as Common Intermediate Language (CIL)
+The Job of CLR is to convert IL file to executable code i.e native OS understandable format
+
+CLR is responsible for managing the compile codes of .NET application , Memory management , type checking
+
+These tasks can be done by using
+
+CTS
+CLS
+JIT
+Garbage Collector
+CTS: It is a collection of type definition provided by the .NET framework which has to be supported by all the languages which targets the .NET technology
+To understand CTS , we have so many languages each and every language has some different syntax for the same data type.
+For e.g C# we declared int in Vb.net we declared as Integer but CLR having its own data type int32 when compiling respective languages they should convert into int32 which is understandable by CLR for all the languages
+CLS:It is a subset of CTS , Common Language Specification It iis a set of rules which has been provided by the .NET framework that has to supported by the all the languages.
+Every language has its own syntax, one language syntax can’t understand the other language . CLR has its own Intermediate Language which can understand all languages syntax.
+
+JIT:
+It will convert the MSIL file to OS understandable native code , It also stores the resulting and it is accessible for the subsequent calls.
+
+
+Pre- JIT : In Pre-JIT complete source code is converted into native code in a single cycle , this is done at the time of application deployment (Ngen.exe)
+
+
+Econo-JIT: It compiles only those methods are called at the runtime , after execution of this method the compiled methods are removed from the memory
+
+
+Normal-JIT: It compiles only those methods are called at run time, after execution this method, compiled methods are stored in the memory cache . Now further call to compiled methods should be execute from the memory cache.GC make a trip to the heap and collects all the objects that are no longer used by the application and then makes them free memory
+
+
+Garbage Collection:
+Garbage Collector manages allocation and reclaiming of memory.
+Heap is managed by different generations, it stores and handles long-lived and short lived objects
+
+Generation 0 - When an object is initialized, its in generation 0. These are new objects
+
+Generation 1 - The objects that survive the garbage collection process are considered to be in generation 1. These are the old objects.
+
+Generation 2 - As more new objects get created and added to the memory, the new objects are added to generation 0, the generation 1 old objects become older, and so are considered to be in generation 2. Generation 2 is the highest level generation in the garbage collection process. Any further garbage collection process occuring causes the level 1 objects promoted to level 2, and the level 2 objects stay in level 2 itself, as this generation level is the highest level.
+So what is the importance & use of the generations process? Its actually the priority the GC gives to objects while freeing objects from the heap. During every GC cycle, the objects in the Generation 0 are scanned first -> Followed by Generation 1 and then 2. This is because the generation 0 objects are usually short term objects, that need to be freed. The newer an object, the shorter its life is. The older an object, longer its life is.
+This process also helps in categorizing the memory heap as to where the de-allocation needs to be done first and where next.
+
+When GC triggered
+There are no specific timings for GC to get triggered , GC automatically starts operations
+1.When virtually memory running out of space
+2. When we call GC.Collect() method explicitly , as GC runs continuously , we actually do not need to call this method.
+
+Clean up unmanaged resources
+
+There are two different ways to clean up unmanaged resources
+Implementing IDisposable interface and Dispose method
+Using block is also used to clean unmanaged resources
+
