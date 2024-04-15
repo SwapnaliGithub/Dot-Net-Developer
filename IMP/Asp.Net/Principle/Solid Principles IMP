@@ -1,0 +1,45 @@
+https://www.dotnetplanet.in/2021/10/solid-design-principles-interview.html
+
+SOLID Design Principles Interview questions and answers with Simple Examples
+- October 20, 2021
+ Interviewer : Why should we use SOLID principles ? Can you explain about SOLID design Principles ?
+
+You : SOLID design principles are used to develop the code in an efficient way and also it gives the benefits  Flexible, Maintainable and Understandable code.
+
+SOLID design principles are 
+
+S : Single Responsibility Principle (SRP)
+
+O : Open Closed Principle (OCP)
+
+L : Liskov Substitution Principle (LSP)
+
+I : Interface Segregation Principle (ISP)
+
+D : Dependency Inversion Principle (DIP) 
+
+SRP : class/module should have handle single unit of work
+
+E.g : When you are implementing a Login page, we have some Register/Email/Error functionalities instead of maintaining all methods in the ILogin interface. Create separate Interfaces for all the single unit of work IRegister/IEmail/IError. Code looks cleaner and easy to handle
+
+OCP : class/module should be open for extension and close for the modification
+
+E.g : Suppose we have a CalculateBonus() method in Employee class and implemented for Temporary and Full time employees . In the future if you want to calculate bonus for contract employee you need to modify the existing method instead of You can create an Abstract method for CalculateBonus() and it will be used as an extended method in the future rather than modifying the existing class.
+
+LSP : Ability to replace any instance of the parent class should be replaced with one of its child class instance
+
+E.g : Let’s take a abstract class Fruit and inside the method we have an abstract method Getcolor() return the color of the fruit. We have  two classes Apple and orange which inherits Fruit and override the Getcolor method.
+
+Fruit objfruit = new Apple(); it returns “red”
+
+Objfruit = new Orange(); It returns “orange”
+
+ISP : Client should not force to implement any method/functionality which is not required, at the same time one fat interface can be split into smaller interface so that clients can know about the interfaces that are relevant to them
+
+E.g : Let’s take an Interface IPrint it will all perform all the print/scan tasks like PrintContent,ScanContent,FaxContent and we have two classes HP and Canon and use the interface IPrint but Canon classes does not have the feature of FaxContent. So we are forced to implement the functionality which is not required. So will split into smaller interfaces and for relevant use
+
+IPrint, IFax so HP can use both interfaces and Canon can use IPrint 
+
+DIP: High level modules should not depend upon the low level modules both should be depend upon on the abstraction
+
+E.g : Assume we have a Customer class inside that class we are creating an instance of the Database helper class. So Customer class and database helper class are tightly coupled and depend on database helper class instance. https://tipsontech.medium.com/solid-principles-7cb5b4ff4cc7
