@@ -336,5 +336,16 @@ Output:
 
 Looking for re
 
+let arr = [1,2,3,5],
+Count = 10;
+Output = [];
+
+for(let i;i<=Count; i++){
+  !arr.includes(i)?Output.push(i):"";
+}
+console.log(Output);
+
+https://www.turing.com/interview-questions/c-sharp
+
 
 
