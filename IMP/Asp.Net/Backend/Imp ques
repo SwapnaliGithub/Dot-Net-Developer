@@ -309,3 +309,907 @@ Maximum Length	Up to 8,000 characters	Up to 4,000 characters
 Character Size	Takes up 1 byte per character	Takes up 2 bytes per Unicode/Non-Unicode character
 Storage Size	Actual Length (in bytes)	2 times Actual Length (in bytes)
 Usage	Used when data length is variable or variable length columns and if actual data is always way less than capacity	Due to storage only, used only if you need Unicode support such as the Japanese Kanji or Korean Hangul characters.
+
+
+Tell me about yourself.
+I answered — I am Rohit Sharma working in XXXXXX having 3 years of experience and well versed with Microsoft Technologies. I have worked upon the .Net, C#, Ajax, Javascript, Jquery, and SQL Server.
+
+Then he directly jumped to the technical questions.
+
+2. What is Static Class and Can we have the non-static members inside static class ?
+
+I answered — A static class is a class that cannot be instantiated. You can‘t create an object for the static class. In static class static constructor will be called whenever we try to call the method of the static class and it will be called only once.
+
+For e.g. in the below code only staticcheck.a = 1 will call the constructor. Next ling staticcheck.a=2 will not call the contstructor. So, “Hello” will be printed once.
+
+
+And, We can’t create non static members inside static class. It will give the compile time error. Please see the below image for the error.
+
+
+3. What is Interface ? When we should go for Interface and when we should go for Abstract Class ?
+
+I answered — Interface is like a contract which means it tell what we have to implement inside the class where we are going to use it.
+
+The only thing it contains are declarations of events, indexers, methods and/or properties.
+
+For e.g. In the below code we have created one interface and it is being inherited by the class interfacecheck. Since, the class is inheriting the interface it has to implement the infeface members in the below example i.e. method.
+
+
+When we should go for interface or abstract class?
+
+I answered — If we know the implementation will remain same so we can put it inside the abstract class but when we know the implemntation will vary from class to class then we should go for interface. For e.g. In banks the interest rate is different from bank to bank so we should go for interface in that scenraio. ( He seems to be happy with the answer so far;P)
+
+4. What is SOLID principle ?
+
+I answered —
+
+S: Single Responsibility Principle (SRP)
+
+O: Open closed Principle (OSP)
+
+L: Liskov substitution Principle (LSP)
+
+I: Interface Segregation Principle (ISP)
+
+D: Dependency Inversion Principle (DIP)
+
+( Interviewer was not interested to go into details so just with the names he was happy. But if you want to know in details you can refer here)
+
+5. What is page life cycle in ASP.Net ?
+
+I answered —
+
+It consist of these phases (SILVER)
+
+S — Start
+I — Initialize
+L — Load
+V — Validate
+E — Event Handling
+R — Render
+Start — This is where page properties such as Request, Response, IsPostBack and UICulture are set.
+Initialize — In this phase we can access the masterpage and themes. Also, in this phase a Unique ID is set to each control.
+Load — In this phase we can set properties for all of the server controls
+Validate— In this phase you can check the IsValid property of the controls.
+Event Handling — In this events such as Click, IndexChange are applied to controls.
+Render — In this page calls Render method for each control and output is finally rendered on the screen.
+6. What is the difference between function and Stored procedure ?
+
+( In 90% of SSE interview you will come across this question. So, I was prepared for it.)
+I answered —
+
+SP — Stored Procedure can return zero, single or multiple values.
+
+F — Function must return a single value (which may be a scalar or a table).
+
+SP — Stored Procedure can use transaction.
+
+F — Function can’t use transaction.
+
+SP — Stored Procedure can have input/output parameter.
+
+F — Function have only input parameter.
+
+SP — We can call function from Stored Procedure.
+
+F — We can’t call SP from function.
+
+SP — We can’t use SP in SELECT/ WHERE/ HAVING statement.
+
+F — We can use Function in SELECT/ WHERE/ HAVING statement.
+
+7. What is Singleton ?
+
+I answered — It is one of most common design pattern in which we ensure class has only one instance and provides a global point of access to it.
+
+Simple implentation
+
+
+This implementation is not thread safe ( to know about thread safe read here. ) but again he was ok with this code.
+
+He asked me where I have used it. So, I mentioned I am logging the data into a “.txt” file using Singleton Design Pattern.
+
+8. He also asked me — Have you worked with WCF ?
+
+I politely said No as I have no experience in it.
+
+What is an Object in OOPs?
+Objects are runtime entities that have certain properties.
+
+Take, for illustration, a bouquet of Lillies, Roses, and Tulips. Every flower has its unique qualities, such as various shapes, colours, and scents. This is just a collection of objects.
+
+What is a Class in OOPS?
+A class is a type of object that governs how it will act and what it will include. In other words, it’s a blueprint or instructions for constructing a specific thing.
+
+Let’s use the same example as before: a bouquet. The class is a bouquet, and the objects are the various varieties of flowers that make up the bouquet. As a result, we can define objects as instances of a class.
+
+What are the four basic principles of OOPs?
+The idea of real-world entities as objects is central to object-oriented programming. It binds data to the functions that operate on it, preventing any other section of the code from accessing the data except that function.
+
+Basic Principles of OOPs
+OOPs are based on four major principles:
+
+Data encapsulation: This is when data and methods are combined into a single unit called a class. Data encapsulation supports the camouflage and/or coverup of data or info from the outside world or entity.
+Data abstraction: Data abstraction is the representation of important properties without their background details.
+Inheritance: Inheritance is the process of transferring existing class properties to a new class. The existing class (parent class) is referred to as the base class, while the new derived class is referred to as the subclass (child class). It is beneficial to code reusability.
+Polymorphism: Polymorphism states an object’s ability to take on several forms. Method overloading is used to provide compile-time polymorphism in Java, whereas method overriding is used to accomplish run-time polymorphism.
+Can we implement multiple inheritances in Java?
+Java does not explicitly support multiple inheritances. With the use of an interface, we may achieve multiple inheritances. Multiple interfaces can be incorporated into our program.
+
+How is method overloading different from method overriding?
+Method overloading occurs when two methods have the same name but differ in the number of parameters or the type of arguments they accept. Compile-time polymorphism is what it’s called because it happens during the compilation process.
+
+Method overriding refers to the ability to construct subclass and super-class methods with the same name and signatures, with the subclass method taking precedence over the super-class method. Run-time polymorphism is a type of polymorphism that occurs during the execution of a program.
+
+What is a Constructor?
+A constructor is a class’s special member function that is called automatically whenever a new instance of the class is created. It has a similar name as the class it goes to.
+
+You get bonus points if you know this. If a programmer does not explicitly define a constructor in the code, the compiler creates one for them automatically. When a programmer constructs a function constructor, whether parameterized or non-parameterized, the compiler does not produce the default constructor.
+
+What do you mean by access specifiers?
+Outside of the class, access specifiers are used to define how members (functions and variables) can be accessed. There are 3types of access specifiers: public, private, and protected.
+
+private: Members who are defined as private are only available within the same class and cannot be accessed outside of that class.
+public: Members who have declared themselves to be public can be accessed from anywhere.
+protected: Members who have been designated as protected cannot be accessible from outside the class unless they are members of a child class. In the context of inheritance, this access specifier is important.
+Explain pointers in C++
+A pointer is a variable that carries the address of another variable of the same data type. Pointers may be constructed for any data type and user-defined data types such as class, structure, etc. It enables variable passing through address references. For illustration:
+
+int x = 25;
+int *ptr = &x;
+cout << ptr;
+
+ptr will hold the address of x here. For example, the ptr value is the address of x.
+We may get the value stored in the address addressed by ptr by using *ptr (i.e., 25). The *ptr operator is also known as the dereference operator.
+Pointers have the following applications:
+
+To point to a variable stored in memory.
+Keeping track of the addresses of dynamically allocated memory chunks.
+Give examples of data structures in C++.
+There are 2 types of data structures in C++; they are as follows: linear and nonlinear.
+
+Linear – data elements are stored in sequence or arrangements. Instance, stack, queue, and linked list.
+Non-linear – tree and graph that are not stored sequentially or ordered.
+What is inheritance? Name its types.
+One of the most significant ideas of OOPs languages is inheritance. We may apply the properties of one class to another via inheritance. The idea of inheritance improves the programming language’s code reusability.
+
+Various types of inheritance are:
+
+Single inheritance
+Multi-level inheritance
+Hierarchical inheritance
+Multiple inheritances
+Hybrid inheritance
+Multipath inheritance
+What is the difference between array and pointer?
+An array is a collection of comparable elements with the same data type, whereas a pointer is a variable that points to some data type in memory. Arrays can only contain components of the same data type, but pointers can link to any data type variable.
+
+Questions and Answers on C, C++
+What is Preprocessor in C/C++?
+Preprocessors are programmes that examine a piece of code before compiling it. Preprocessor programmes, which begin with the # symbol, give preprocessor directives that inform the compiler to preprocess the code before compiling.
+
+Why do we use stdio. h in a program?
+“Standard input-output” is abbreviated as “stdio.” As a result, #include is the same as including this standard input-output library in your code. In this fashion, you can use the IO functions accessible via printf and scanf. It’s a pre-processor directive because it’s done before your code is processed.
+
+What is a NULL pointer in C?
+A NULL pointer is a pointer that does not refer to any address other than NULL. For instance, int *p=NULL;
+
+What is a pointer on a pointer?
+It’s a type of pointer variable that can hold the address of another type of pointer variable. It refers to the data stored in the selected pointer variable twice. For example, int x = 5, *p=&x, **q=&p; As a result, **q can access ‘x’.
+
+What is the difference between the local variables and global variables in C?
+Local variable: A local variable is a variable that is declared within the scope of a function or block.
+
+Global variable: A global variable is a variable that is declared inside or within a function or block.
+
+What is the use of return 0?
+The main function in most C and C++ applications is type int. Hence it should return an integer value. The application’s “Exit Status” is determined by the return value of the main function. As a result, return 0 is utilized to complete the programmes using the integer return type.
+
+Question and Answers on DBMS and SQL
+What is Database Management System?
+A database management system (DBMS) is a piece of software that allows you to create and manage databases. The end-user can construct and maintain databases with the help of a database management system (DBMS). The database management system (DBMS) links the end-user/application and the databases.
+
+Enlist different advantages of DBMS.
+Database Management System has a long number of benefits, as stated below:
+
+Improved data security
+Improved data sharing
+Better data integration
+Minimized data inconsistency
+Improved data access
+Improved decision making
+Increased end-user productivity
+What do you mean by Object-Relational DBMS?
+The object-relational database (ORD) is a database management system (DBMS) that combines both an object-oriented and a relational database (RDBMS). ORD’s schemas and query language enable the main components of an object-oriented database model, such as inheritance, classes, and objects.
+
+An object-relational database management system is another name for an object-relational database (ORDBMS).
+
+What is database Schema?
+The integrity restrictions placed on a database are a set of formulas (sentences) called the database schema.
+
+What are DDL and DML commands in SQL?
+Data Definition Language (DDL) is a programming language that is used to define data. DDL instructions are used to define database schema, which is to say, to construct and alter the database object structure. CREATE, ALTER, DROP, TRUNCATE, and similar commands are examples.
+Data Manipulation Language (DML) is a programming language that allows you to manipulate data. To manipulate the data in the database, DML commands are utilized. INSERT, UPDATE, and DELETE are all examples of SQL commands.
+Differentiate between TRUNCATE and DELETE commands in SQL.
+TRUNCATE	DELETE
+It’s used to get rid of all the records in a database table.	It is used to remove one or more records from a database table.
+
+It’s a DDL command (Data Definition Language).	It’s a command in the Data Manipulation Language (DML).
+DELETE command is faster.	When compared to the TRUNCATE command, this command is slower.
+Because it only works on tables, it can’t be used for indexed views.	It’s possible to use it with indexed views.
+Why indexing in SQL is useful?
+A SQL index is a quick lookup table that aids in the discovery of frequently searched records. An index is a type of database that is quick, compact, and designed for quick lookups. It’s handy for connecting relational tables, searching huge tables, and quickly retrieving data from a database.
+
+What is the left outer and right outer join in SQL?
+Left outer join: It returns the whole set of records from the left table and the records from the right table that have been matched.
+Right outer join: It returns the whole set of records from the right table and the records from the left table that are matched.
+Joins in SQL
+What is the stored procedure?
+A stored procedure is a logical unit for a set of statements that may be retrieved by programmes that use an RDBMS (Relational Database Management System). These are saved in the data dictionary of the database. It can be used for data validation as well as access control.
+
+Questions and Answers on Computer Networks and Software Testing
+Different between a session and a socket?
+The Socket is made up of the IP address and the Port Number. The logical connection between the source and the destination is known as a session.
+
+What is the difference between TCP and UDP?
+TCP	UDP
+Connection-orientated protocol	Connectionless protocol
+Segment sequencing	No sequencing
+Acknowledge sequencing	No windowing and retransmission
+Reliable transmission protocol	Unreliable transmission protocol
+What is SDLC (Software Development Life Cycle)?
+SDLC (Software Development Life Cycle) is an end-to-end procedure that outlines the software development flow from requirements to maintenance and support. Requirements analysis, planning, definition, design, development, testing, deployment, maintenance, and support are the steps of the SDLC.
+
+SDLC-Software Development Life Cycle
+What are the disadvantages of the Waterfall model?
+Only after the life cycle is working software developed.
+Unsuitable for both complicated and object-oriented programmes.
+Measuring development within each step is difficult.
+Not recommended for projects with regular requirements that could result in a significant risk of change. As a result, this model carries a significant level of risk and uncertainty. 
+Because integration is completed at the end, it is impossible to discover any business or technology bottlenecks or issues early on.
+Explain about Agile model.
+Agile is a software development paradigm that uses an iterative approach to help teams offer value to their customers faster, with higher quality, fewer errors, and better flexibility in responding to change. Check Agile Methodology here.
+Rather than a “big bang” launch, an agile team releases a product in modest increments. Requirements, planning, and outcome evaluation are all done regularly, so teams have a built-in mechanism for responding quickly to change.
+The most popular Agile techniques are Scrum and Kanban.
+What is DLL and EXE file extension?
+The EXE file extension is used for executable files and identifies them as programmes. It is self-contained. An EXE establishes its memory and processing area.
+
+A dynamic link library (DLL) is a collection of functions and procedures that other programmes can use. A variety of programmes can use this DLL. The caller application’s memory and process space will be shared.
+
+Differentiate between white box and black box testing.
+White box testing	Black box testing
+The tester will completely understand the application’s internal workings.	It is not required that you understand the application’s internal workings.
+Developers and testers are in charge of it (QA).	The end-user, developers, and testers are responsible for it.
+It takes longer and requires more effort.	It takes a least and minimum of time and effort.
+Test data and test cases will be created here by a tester.	External or end-user testing is carried out.
+Open box, structural testing, clear box, and code-based testing are all terms used to describe white box testing.	Closed box, functional, and data-driven testing are other terms for black-box testing.
+Which is the most popular SDLC model?
+The waterfall model is one of them. The other is AGILE, which is gaining popularity because of its continuous iteration process, which is less prone to faults in a production setting.
+
+Conclusion
+We hope you find this post on Infosys Interview Questions and Answers to be helpful in your preparation for the Infosys interview.
+
+If a candidate is not chosen, Infosys will not enable him or her to apply again for the next six months, so give it your all to pursue your dream job at Infosys. Remember that while no one can foretell what questions the interviewer will ask, preparation is essential for success in the Infosys interview process. This blog will prove to be helpful for Infosys system engineer interview questions or any other job profile that you want to get in.
+
+Check out Interview Questions and Answers for in-demand domains
+Java Interview Questions and Answers Coding Interview Questions and Answers SQL Interview Questions and Answers DevOps Interview Questions and Answers
+Frequently Asked Questions
+What is the salary for freshers in Infosys?
+Freshers’ Average Annual Salary at Infosys is ₹ 3,38,152/year with an estimated take-home salary of ₹ 24,564-₹ 25,983/month.
+
+Can I join Infosys without a degree?
+As most of the MNCs require a relevant Bachelor’s degree of 3 or 4 years, so does Infosys. However, Infosys has started making an exception of hiring folks with no degree but relevant knowledge and certification. As long as you have the skill set to do the job, you are welcomed by Infosys in the IT sector.
+
+How should I prepare for Infosys technical interview?
+The following knowledge is what Infosys requires you to possess for the technical interview. If you put the utmost effort into your preparation for these areas, you will undoubtedly succeed in the interview.
+
+Programming languages like C, C++, or Java will be the subject of the majority of the questions. You must be certain that you are selecting the appropriate programming language because questions might be posed straight from syntax in this case. 
+Basic computer concepts like OOPs, networking, and operating systems are possible question topics. You will also be required to write a program, the major focus of which will be on checking your knowledge of syntax and logic-building capabilities.
+A thorough understanding of data structure fundamentals like a stack, linked list, queue, trees, graphs, etc. may come up as well. DSA is an important concept in terms of technical interviews.
+You are required to have a solid understanding of database principles like SQL, MongoDB, etc. Here, questions can be posed using both SQL syntax and fundamental relational database concepts.
+Is Infosys Interview easy to crack?
+The Infosys interview is moderately challenging. You can simply go through all the rounds if you have strong technical and communication skills. You can address any complex questions posed by the interviewer at Infosys if you prepare well for the interview.
+
+Why should we hire you in Infosys?
+This, undoubtedly, is the most asked question in almost all companies. If you come across this question, you can answer it like, “I want to pursue a job that reflects my passion and interests because I have discovered that I am great at logic building and an extraordinary coder. I created various softwares during my time in college as part of our curriculum. I want to begin my career with a reputable IT firm, and I am confident that Infosys is the greatest place for me to learn more and have more prospects to advance.”
+
+What is the work culture like at Infosys?
+Infosys always maintains a highly welcoming workplace environment. The hierarchy is kept to a minimum, and fresh ideas are freely shared. In essence, Infosys seeks to establish a workspace where politics are reduced to a bare minimum, and the workforce relishes an open work environment.
+
+Infosys has always considered its employees to be its most valuable resource, and it works tirelessly to inspire them by creating a pleasant and stable work environment. Infosys makes sure there is always a healthy work-life balance. On site, recreational and entertainment facilities keep employee productivity and satisfaction high.
+
+How is Infosys interview for experienced?
+At Infosys, there are typically two rounds of interviews for experienced candidates: a technical round and an HR round. However, for key positions, you might have to go through two or more rounds of technical interviews before an HR interview.
+
+Why do you want to join Infosys?
+You can answer this question by saying that Infosys is an ideal place for anybody to begin their career and a great place to learn and grow. A career at Infosys offers world-class training, excellent mentors and learning opportunities, fantastic infrastructure and facilities, along with great work culture. 
+
+What is Database Management System?
+A database management system (DBMS) is a piece of software that allows you to create and manage databases. The end-user can construct and maintain databases with the help of a database management system (DBMS). The database management system (DBMS) links the end-user/application and the databases.
+
+Enlist different advantages of DBMS.
+Database Management System has a long number of benefits, as stated below:
+
+Improved data security
+Improved data sharing
+Better data integration
+Minimized data inconsistency
+Improved data access
+Improved decision making
+Increased end-user productivity
+What do you mean by Object-Relational DBMS?
+The object-relational database (ORD) is a database management system (DBMS) that combines both an object-oriented and a relational database (RDBMS). ORD’s schemas and query language enable the main components of an object-oriented database model, such as inheritance, classes, and objects.
+
+An object-relational database management system is another name for an object-relational database (ORDBMS).
+
+What is database Schema?
+The integrity restrictions placed on a database are a set of formulas (sentences) called the database schema.
+
+What are DDL and DML commands in SQL?
+Data Definition Language (DDL) is a programming language that is used to define data. DDL instructions are used to define database schema, which is to say, to construct and alter the database object structure. CREATE, ALTER, DROP, TRUNCATE, and similar commands are examples.
+Data Manipulation Language (DML) is a programming language that allows you to manipulate data. To manipulate the data in the database, DML commands are utilized. INSERT, UPDATE, and DELETE are all examples of SQL commands.
+Differentiate between TRUNCATE and DELETE commands in SQL.
+TRUNCATE	DELETE
+It’s used to get rid of all the records in a database table.	It is used to remove one or more records from a database table.
+
+It’s a DDL command (Data Definition Language).	It’s a command in the Data Manipulation Language (DML).
+DELETE command is faster.	When compared to the TRUNCATE command, this command is slower.
+Because it only works on tables, it can’t be used for indexed views.	It’s possible to use it with indexed views.
+Why indexing in SQL is useful?
+A SQL index is a quick lookup table that aids in the discovery of frequently searched records. An index is a type of database that is quick, compact, and designed for quick lookups. It’s handy for connecting relational tables, searching huge tables, and quickly retrieving data from a database.
+
+What is the left outer and right outer join in SQL?
+Left outer join: It returns the whole set of records from the left table and the records from the right table that have been matched.
+Right outer join: It returns the whole set of records from the right table and the records from the left table that are matched.
+Joins in SQL
+What is the stored procedure?
+A stored procedure is a logical unit for a set of statements that may be retrieved by programmes that use an RDBMS (Relational Database Management System). These are saved in the data dictionary of the database. It can be used for data validation as well as access control.
+
+Questions and Answers on Computer Networks and Software Testing
+Different between a session and a socket?
+The Socket is made up of the IP address and the Port Number. The logical connection between the source and the destination is known as a session.
+
+What is the difference between TCP and UDP?
+TCP	UDP
+Connection-orientated protocol	Connectionless protocol
+Segment sequencing	No sequencing
+Acknowledge sequencing	No windowing and retransmission
+Reliable transmission protocol	Unreliable transmission protocol
+What is SDLC (Software Development Life Cycle)?
+SDLC (Software Development Life Cycle) is an end-to-end procedure that outlines the software development flow from requirements to maintenance and support. Requirements analysis, planning, definition, design, development, testing, deployment, maintenance, and support are the steps of the SDLC.
+
+SDLC-Software Development Life Cycle
+What are the disadvantages of the Waterfall model?
+Only after the life cycle is working software developed.
+Unsuitable for both complicated and object-oriented programmes.
+Measuring development within each step is difficult.
+Not recommended for projects with regular requirements that could result in a significant risk of change. As a result, this model carries a significant level of risk and uncertainty. 
+Because integration is completed at the end, it is impossible to discover any business or technology bottlenecks or issues early on.
+Explain about Agile model.
+Agile is a software development paradigm that uses an iterative approach to help teams offer value to their customers faster, with higher quality, fewer errors, and better flexibility in responding to change. Check Agile Methodology here.
+Rather than a “big bang” launch, an agile team releases a product in modest increments. Requirements, planning, and outcome evaluation are all done regularly, so teams have a built-in mechanism for responding quickly to change.
+The most popular Agile techniques are Scrum and Kanban.
+What is DLL and EXE file extension?
+The EXE file extension is used for executable files and identifies them as programmes. It is self-contained. An EXE establishes its memory and processing area.
+
+A dynamic link library (DLL) is a collection of functions and procedures that other programmes can use. A variety of programmes can use this DLL. The caller application’s memory and process space will be shared.
+
+Differentiate between white box and black box testing.
+White box testing	Black box testing
+The tester will completely understand the application’s internal workings.	It is not required that you understand the application’s internal workings.
+Developers and testers are in charge of it (QA).	The end-user, developers, and testers are responsible for it.
+It takes longer and requires more effort.	It takes a least and minimum of time and effort.
+Test data and test cases will be created here by a tester.	External or end-user testing is carried out.
+Open box, structural testing, clear box, and code-based testing are all terms used to describe white box testing.	Closed box, functional, and data-driven testing are other terms for black-box testing.
+Which is the most popular SDLC model?
+The waterfall model is one of them. The other is AGILE, which is gaining popularity because of its continuous iteration process, which is less prone to faults in a production setting.
+
+Conclusion
+We hope you find this post on Infosys Interview Questions and Answers to be helpful in your preparation for the Infosys interview.
+
+If a candidate is not chosen, Infosys will not enable him or her to apply again for the next six months, so give it your all to pursue your dream job at Infosys. Remember that while no one can foretell what questions the interviewer will ask, preparation is essential for success in the Infosys interview process. This blog will prove to be helpful for Infosys system engineer interview questions or any other job profile that you want to get in.
+
+Check out Interview Questions and Answers for in-demand domains
+Java Interview Questions and Answers Coding Interview Questions and Answers SQL Interview Questions and Answers DevOps Interview Questions and Answers
+Frequently Asked Questions
+What is the salary for freshers in Infosys?
+Freshers’ Average Annual Salary at Infosys is ₹ 3,38,152/year with an estimated take-home salary of ₹ 24,564-₹ 25,983/month.
+
+Can I join Infosys without a degree?
+As most of the MNCs require a relevant Bachelor’s degree of 3 or 4 years, so does Infosys. However, Infosys has started making an exception of hiring folks with no degree but relevant knowledge and certification. As long as you have the skill set to do the job, you are welcomed by Infosys in the IT sector.
+
+How should I prepare for Infosys technical interview?
+The following knowledge is what Infosys requires you to possess for the technical interview. If you put the utmost effort into your preparation for these areas, you will undoubtedly succeed in the interview.
+
+Programming languages like C, C++, or Java will be the subject of the majority of the questions. You must be certain that you are selecting the appropriate programming language because questions might be posed straight from syntax in this case. 
+Basic computer concepts like OOPs, networking, and operating systems are possible question topics. You will also be required to write a program, the major focus of which will be on checking your knowledge of syntax and logic-building capabilities.
+A thorough understanding of data structure fundamentals like a stack, linked list, queue, trees, graphs, etc. may come up as well. DSA is an important concept in terms of technical interviews.
+You are required to have a solid understanding of database principles like SQL, MongoDB, etc. Here, questions can be posed using both SQL syntax and fundamental relational database concepts.
+Is Infosys Interview easy to crack?
+The Infosys interview is moderately challenging. You can simply go through all the rounds if you have strong technical and communication skills. You can address any complex questions posed by the interviewer at Infosys if you prepare well for the interview.
+
+Why should we hire you in Infosys?
+This, undoubtedly, is the most asked question in almost all companies. If you come across this question, you can answer it like, “I want to pursue a job that reflects my passion and interests because I have discovered that I am great at logic building and an extraordinary coder. I created various softwares during my time in college as part of our curriculum. I want to begin my career with a reputable IT firm, and I am confident that Infosys is the greatest place for me to learn more and have more prospects to advance.”
+
+What is the work culture like at Infosys?
+Infosys always maintains a highly welcoming workplace environment. The hierarchy is kept to a minimum, and fresh ideas are freely shared. In essence, Infosys seeks to establish a workspace where politics are reduced to a bare minimum, and the workforce relishes an open work environment.
+
+Infosys has always considered its employees to be its most valuable resource, and it works tirelessly to inspire them by creating a pleasant and stable work environment. Infosys makes sure there is always a healthy work-life balance. On site, recreational and entertainment facilities keep employee productivity and satisfaction high.
+
+How is Infosys interview for experienced?
+At Infosys, there are typically two rounds of interviews for experienced candidates: a technical round and an HR round. However, for key positions, you might have to go through two or more rounds of technical interviews before an HR interview.
+
+Why do you want to join Infosys?
+You can answer this question by saying that Infosys is an ideal place for anybody to begin their career and a great place to learn and grow. A career at Infosys offers world-class training, excellent mentors and learning opportunities, fantastic infrastructure and facilities, along with great work culture. 
+
+How many rounds are there in Infosys placement?
+There are essentially going to be 3 rounds:
+
+Online assessment round
+Technical interview round
+HR interview round
+For experienced candidates as well, the hiring procedure does not change. For some different positions, however, you might need to go through two rounds of technical interviews before an HR interview.
+
+What is InfyTQ certification?
+The InfyTQ certification test evaluates your industry preparedness by assessing your understanding of databases and programming. The best thing about InfyTQ is that, if you pass the test, you can have a direct interview with Infosys for a job.
+
+How do I qualify for InfyTQ?
+Following is the eligibility criteria to qualify in InfyTQ:
+
+https://www.mygreatlearning.com/blog/infosys-interview-questions/
+
+1. what is JIT?
+
+JIT is an acronym for the “Just in time” compiler. The native language is utilized to translate the intermediate code. During execution, the intermediate code is transformed into the native language.
+
+2. Describe BCL and its features.
+
+A base class library (BCL) is a collection of classes, interfaces, and value types.
+It serves as the basis for all.NET framework programs, elements, and controls.
+encapsulates a vast array of frequently used features and makes them readily available to developers.
+It offers features including input/output, security, diagnostics, resources, globalization, and threading.
+Further performs the function of facilitating user and runtime interaction.
+Similarly, it offers namespaces that are frequently used. For example- system, system. Things to do, etc.
+3. What precisely is LINQ?
+
+It stands for Language Integrated Query, a feature that was added to Visual Studio 2008. LINQ is a collection of features that adds query functionality to the syntax of the.NET framework and enables data manipulation from any data source. The world of data and the world of objects are connected by LINQ.
+
+Cognizant Dot Net Interview Questions
+1. What are the fundamental conditions needed for connection pooling?
+
+Connection pooling needs to meet the following two conditions:
+
+To share a connection and describe the same parameters and security settings, multiple processes are required.
+The connection string needs to match exactly.
+2. Which adapter should be used to get the data from an Access database?
+
+The data is obtained from an Access database using OleDbDataAdapter.
+
+3. Why do you use the term “AutoPostBack”?
+
+When an event is raised, a property called AutoPostBack is utilized to postback automatically. The control’s AutoPostBack property must be set to True.
+
+Accenture Dot Net Interview Questions
+1. What are the fundamental components of OOP?
+
+The fundamental elements of OOP are:
+
+Encapsulation is the process of creating independent modules that link functions that access data with the data itself.
+
+Abstraction: Manages complexity and permits the implementation of additional sophisticated functionality without making it visible to the user object.
+
+Polymorphism: To enable simple integration, the operation is dependent on the context at runtime.
+
+A class can inherit behavior from its parent class and reuse code by creating classes in a hierarchy.
+
+2. How does OOP relate to the.NET Framework?
+
+The term “object-oriented programming” (OOP) is an abbreviation. It is a programming structure that accomplishes the needed functionality without the usage of methods by using independent things known as “objects.” OOP enables.NET programmers to build classes and programs that contain logical modules like methods, properties, fields, and events.
+
+3. What kinds of JIT Compilers are there?
+
+Three categories of JIT Compilers exist:
+
+1.Tell about you?
+A formal ice breaking-warm up question. Just tell “Who you are” and “What you do”. Don’t try to detail your life story ,by asking this questions they are expecting you to get tell your professional and education life. Start with little bit of personal details and then dive in to your academic excellence stories and slowly one by one describe about your companies and projects.
+2.Talk about your Last project and your role you done?
+Just describe about your current project in details and technologies used for it. Then just tell a tast you have done recently.
+Interviewer Given me a piece of paper and asked to draw the architect of the project.And also the
+3.What is DotNet and compare DotNet versions?
+ Asked to compare the versions of .NET. So make sure you have an overall idea about the history of .Net framework and versions.
+5.What is String builder ?.What is the advantage and disadvantage ?
+Study what is string in C#. Understand its advantage and disadvantages. Then understand what is string builder and study comparing both.
+6.Tell about the testing you have done in your project ?. talk about any specific tool you used for testing?
+You can tell you have done unit testing. Or you can tell you have done manual testing for your projects. Talk about testing from a developers view.
+7.Tell me about the methodology and architecture used in your last project ?
+Tell about any design patters used in your previous projects.
+8.What is View State ?
+Tell about the state management techniques used in Web forms . etc
+9.What is boxing and Un-Boxing ,Casting and type conversion?
+The operation of Converting a “Value Type”(example :int or float) to a “Reference Type”(example :Object) is called Boxing and the reverse operation is called Unboxing.type Casting or Type Conversion is a mechanism to convert one data type value to another one. Type conversion is possible if both the data types are compatible to each other; otherwise you will get an InvalidCastException.
+10.Difference between int and int 32?
+Its a confusing question. Best answer is BOTH ARE SAME.
+“Int” is a data type keyword defined by the language, C#. Int32 is a data type defined by the .NET Common Type System (CTS). It is mapped to Int32 of FCL type in c#.
+Both are signed and takes 32 bits.
+11.What is Session and why it is used and compare it with ,Application and cache ?
+Since HTTP is stateless ,we use Session object to hold information about one single user, and are available to all pages in one application(across the pages). Common information stored in session variables are name, id, and preferences. The server creates a new Session object for each new user, and destroys the Session object when the session expires.
+12.What is Jquery ?Write a small Jquery program?
+Query is a very common java-script framework. And i wrote a small basic jquery syntax program.
+13.Write SDLC(Software development life cycle ) phases ?
+Just start from requirements gathering and start on going. Just understand the entire phased thoroughly.
+14.Which SDLC method you followed in your last commercial project ?
+You can tell you followed typical water fall model or agile method according your experience.
+15.What is Globalization and Localization ?
+16. What is XML Serialization in .Net. ?
+17.Is Value type variables stored in Stack ?
+Yes value type is stored in stack and reference type is stored in Heap.
+18.Would you like to ask us any queries or doubts ?
+You have to ask something about the company and projects for sure.
+Fortunately i got selected for a whoopng package 6.5 Lakhs per annum. So happy to be part of a big company. Best of luck for all who are going to attend the interview
+
+https://intellipaat.com/blog/interview-question/dot-net-interview-questions/
+
+1. What is exactly the .Net framework?
+The object-oriented technique is supported by the.NET framework and is used to create Windows programs. It supports a wide range of languages, including C#, VB, Cobol, Perl, and.NET. It contains various functions and tools, including classes, libraries, and APIs, which are used to create, deploy, and run web services and multiple applications.
+
+2. Major components of the.Net framework
+dotnet framework
+
+3. What is Common language runtime(CLR)?
+The code is executed by this engine, which also offers services that facilitate the development process.
+
+Regardless of the programming language used, the CLR executes applications created for the.NET Framework. CLR is present in every.NET Framework version.
+
+4. Describe a Common type system(CTS)
+The CTS standard outlines the categories of data values that can be defined and maintained in runtime memory. it will ensure that programming data defined in various languages interact with one another. For instance, while C# describes as a data type, VB.NET integer is a data type.
+
+Transferring data from a type in one language to its corresponding type in another can be utilized to avoid data loss.
+
+5. state the Common language specification(CLS)
+A subset of CTS called Common Language Specification (CLS) outlines a set of guidelines that all languages using the.NET Framework to confirm.
+
+A CLS will support interoperability or cross-language integration. For instance, every programming language supported by the.NET framework (C#, F#, VB.Net, etc.) has its syntax. Therefore, when statements from various languages are performed, the CLS will offer a standard communication and information-sharing platform.
+
+6. Describe .Net Assembly
+The main component of the.NET Framework is known as a.NET assembly. In the CLI (Common Language Infrastructure), an assembly is a logical unit of code used for deployment, versioning, and security. Executable (.exe) files and Dynamic Link Libraries (.dll) are the two ways that assembly can be defined.
+
+7. what is Namespace in Dot Net?
+It is the group of predefined classes and methods found in the.Net Framework. Through “using a system,” where the system stands in for a namespace while using a keyword, a namespace can be introduced to a.NET program.
+
+8. What do you mean ASP.Net?
+Microsoft Corporation’s propitiatory frontend language is called ASP.NET. The term is “Active Server Pages.” The name alone declares that I’m engaged. The client machine will execute the ASP code, which will display the data the server is returning.
+
+9. Explain ASP.Net state management.
+State management refers to expressly maintaining the state of a control, web page, data, and user in the application. Because all ASP.NET web applications are stateless by default, every time a page is submitted to the server, the state of controls is lost.
+
+10. Distinguish a function and stored procedure
+A process is utilized to carry out specific tasks sequentially. A procedure has many functions. A function returns control and value to the function or code. The calling function or code receives control from a procedure but not any values.
+
+TCS Dot Net Interview Questions
+If you are fresher or experienced, this is the right platform to help you start your preparation for the TCS .Net Interview Questions and Answers.
+
+1. what is JIT?
+JIT is an acronym for the “Just in time” compiler. The native language is utilized to translate the intermediate code. During execution, the intermediate code is transformed into the native language.
+
+2. Describe BCL and its features.
+A base class library (BCL) is a collection of classes, interfaces, and value types.
+It serves as the basis for all.NET framework programs, elements, and controls.
+Encapsulates a vast array of frequently used features and makes them readily available to developers.
+It offers features including input/output, security, diagnostics, resources, globalization, and threading.
+Further performs the function of facilitating user and runtime interaction.
+Similarly, it offers namespaces that are frequently used. For example- system, system. Things to do, etc.
+3. What precisely is LINQ?
+It stands for Language Integrated Query, a feature that was added to Visual Studio 2008. LINQ is a collection of features that adds query functionality to the syntax of the.NET framework and enables data manipulation from any data source. The world of data and the world of objects are connected by LINQ.
+
+4. Distinguish MDI and SDI.
+An MDI (Many Document Interface) allows you to open multiple windows; it has one parent window and as many child windows as you need. The parent window’s components, such as the menu bar and toolbar, are shared.
+
+Each document is presented in a separate window using the SDI (Single Document Interface) interface. Each window has its features, such as a menu bar and toolbar. It is not limited to the parent window as a result.
+
+5. What is the difference between a stack and a heap?
+Stack	Heap
+Type of stored value.
+
+Reference type stored.
+
+Every thread in execution is tracked by a stack and its location.
+
+The heap is in charge of maintaining track of the finer-grained items or data.
+
+6. Differentiate localization and globalization.
+Globalization	localization
+The process of creating software that supports various languages is known as globalization.
+
+To adapt the already globally accessible program to a particular language or culture
+
+Multiple language support can also be added to already existing applications.
+
+Microsoft.Extensions. The program content is localized using localization.
+
+7. List the events in the page life cycle.
+The following activities make up the page life cycle:
+
+preInit_page
+init_page
+initcomplete_page
+preLoad_page
+load_page
+oadcomplete_page
+preRender_render
+8. What are variables and constants in.NET?
+Variable: A variable is a place in the computer’s memory where data is stored and which has a name and a value. Every variable has a data type associated with it that specifies the kind of value that can be placed in it.
+
+Constant: The difference between a constant and a variable is their respective values. A constant’s value cannot be changed once it has been assigned. At the same moment, they are declared, constants must also be initialized.
+
+9. what are tuples in .Net?
+A fixed-size collection called a tuple might include components of the same data type or various data types. Like with arrays, the user must specify the size of a tuple when it is declared.
+
+10. How do you check whether a DataReader is closed or opened?
+To determine whether a DataReader is open or closed, the “IsClosed” attribute is utilized. If a Data Reader is closed, this property returns a true value; otherwise, a false value is returned.
+
+Accenture Dot Net Interview Questions
+1. What are the fundamental components of OOP?
+The fundamental elements of OOP are: Encapsulation is the process of creating independent modules that link functions that access data with the data itself.
+
+Abstraction: Manages complexity and permits the implementation of additional sophisticated functionality without making it visible to the user object.
+
+Polymorphism: To enable simple integration, the operation is dependent on the context at runtime. A class can inherit behavior from its parent class and reuse code by creating classes in a hierarchy.
+
+2. How does OOP relate to the.NET Framework?
+The term “object-oriented programming” (OOP) is an abbreviation. It is a programming structure that accomplishes the needed functionality without the usage of methods by using independent things known as “objects.” OOP enables.NET programmers to build classes and programs that contain logical modules like methods, properties, fields, and events.
+
+3. What kinds of JIT Compilers are there?
+Three categories of JIT Compilers exist:
+
+Pre-JIT compiler: It performs a single compilation cycle, or at the time the application is deployed, to convert all of the source code into machine code.
+
+Normal JIT Compiler: The run-time needed source code methods are converted into machine code and saved in the cache to be invoked later.
+
+Econo JIT Compiler: This compiler is used to compile methods that are only needed at runtime and are not saved for later usage.
+
+4. What does.NET caching do?
+The.NET Framework’s caching feature enables data storage in memory for quick access. Making data accessible even when the data source is momentarily unavailable, increases scalability and aids in performance improvement.
+
+5. Distinguish a queue from a stack
+The Last-In, First-Out (LIFO) principle is used to process the values in a stack, so all items are added to and removed from the top. But when it comes to both insertion and deletion, a queue lists things according to the FIFO (First-In, First-Out) principle. The elements are added to a queue from the back end and removed from the front end.
+
+6. Distinguish the While and for loops. Give each loop a.NET syntax.
+While the While loop is a control flow statement that enables repetitive code execution, the for loop offers a simple approach to writing the loop structure. At the beginning of the for loop, initialization, condition checking, and iteration statements are written; however, at the beginning of the while loop, only initialization and condition checking are completed.
+
+7. Describe Marshaling.
+The process of marshaling involves changing types in both managed and unmanaged code.
+
+8. What are the differences between an EXE from a DLL?
+Single outbound files known as EXE files are not able to be shared with other apps. DLL files are a type of shareable multiple inbound files.
+
+9. How is ErrorProvider Control used in.NET?
+While filling out a data entry form, the end-user is informed of any errors or invalid data using the ErrorProvider control. When entering faulty data, the control’s neighboring display shows the error message that is associated with the error description string.
+
+10. What is Multithreading?
+A process that uses many threads to complete various tasks simultaneously is known as multi-threading. Multi-threading is supported by NET in two ways:
+
+Using ThreadStart delegates to start threads
+Using asynchronous methods and the ThreadPool class.
+11. Describe a PE file.
+Portable Executable is referred to as PE. It is an offshoot of Microsoft Common Object File Format (COFF). executable for Windows. The PE file format is used by EXE and DLL files.
+
+There are four sections to it:
+
+EXE or DLL file information is contained in the PE/COFF headers.
+CLR header—Contains details regarding CLR and memory administration.
+CLR data – Consists of DDL and MSIL metadata produced by compilers.
+Native image portion—This component includes sub-sections such as .data, .rdata, .rsrc, and .text.
+12. Describe ADO.
+ActiveX Data Objects is referred to as ADO. It is a program used to create Windows programs. Access to a relational or non-relational database from database providers like Microsoft and others is obtained using this method.
+
+13. Differentiate a release build and a debug build.
+Debug builds are not optimized and permit precise breakpoint settings. While the built-in “Release” mode of the code is optimized for speed or size without any debug data, they contain debugging symbols.
+
+14. What is the difference between the trace class and debug class?
+The Debug class is included, and this is when the application is being developed. While being used at the time of application deployment, the call to the Trace class is included in both Debug and Release modes.
+
+15. What Is Hashtable?
+Key-value pairs are kept in a collection called a hashtable. To access elements in the collection, it employs the hash codes of each key to organize the pairings.
+
+16. Define Method Overriding.
+Using the same name, return type, argument, and calling the same methods from a different class (base class) in the derived class is a process known as method overriding.
+
+17. What are the differences between overriding and shadowing?
+Shadowing is used to give the base class method a new implementation and helps guard against future base class alteration. By overriding, you can accomplish polymorphism by rewriting a base class method with a distinct definition.
+
+18. Describe polymorphism.
+A single interface with various functionalities is referred to as polymorphic. According to the run-time type of the instance that invokes it, the same method or property can carry out several tasks.
+
+19. What.NET Framework design patterns are there?
+1. Factory Method (Creational Design Pattern)
+Abstract Factory
+A builder.
+Prototype
+Singleton
+Adapter
+2. Structural Design Patterns
+Bridge
+Composite
+A decorator
+Facade
+Flyweight
+A proxy
+3. Chain of Responsibility Behavioral Design Pattern
+Direction
+A translator
+Iterator
+Arbitrator
+Memo
+The onlooker
+State
+Plan
+Guests
+Template Method
+20. Write a program to calculate the addition of two numbers.
+You must start a brand-new “CalculateSum” ASP.NET Core project. File > New > Project in Visual Studio 2015.
+
+Choose Web in the left pane, then choose ASP.NET Core Web Application (.NET Core) in the middle pane. Click OK after changing the project’s name to “CalculateSum”.
+
+Choose Web Application in the template window, change the Authentication setting to “No Authentication,” and then click OK.
+
+Click Add New Item from the context menu after opening “Solution Explorer” and selecting the folder “Home” (it is located under Views).
+
+To add a page, click the Add button after renaming the MVC View Page Template to “addition. cshtml” in the ASP.NET Section.
+
+Open addition. cshtml and the following code:
+
+@{
+    ViewBag.Title = "Addition Page";
+    }
+    Welcome to Addition Page
+    form asp-controller="Home" asp-action="add" method="post"
+    span Enter First Number :  input id="Text1" type="text" name="txtFirstNum" 
+    span Enter Second Number : input id="Text2" type="text" name="txtSecondNum" 
+    input id="Submit1" type="submit" value="Add" 
+    form
+    @ViewBag.Result
+    
+    using System;
+    using Microsoft.AspNetCore.Mvc;
+    namespace CalculateSum.Controllers
+    {
+    public class HomeController: Controller
+    {
+    public IActionResult Index()
+    {
+    return View();
+    }
+    public IActionResult About()
+    {
+    ViewData["Message"] = "Application description page.";
+    return View();
+    }
+    public IActionResult Contact()
+    {
+    ViewData["Message"] = "Contact page.";
+    return View();
+    }
+    public IActionResult Error()
+    {
+    return View();
+    }
+    public IActionResult addition()
+    {
+    return View();
+    }
+    [HttpPost]
+    public IActionResult add()
+    {
+    int number1 = Convert.ToInt32(HttpContext.Request.Form["txtFirstNum"].ToString());
+    int number2 = Convert.ToInt32(HttpContext.Request.Form["txtSecondNum"].ToString());
+    int res = number1 + number2;
+    ViewBag.Result = res.ToString();
+    return View("addition");
+    }
+    }
+    }
+    Press Ctrl+F5 to start your program now. This will open a browser and load an ASP.NET Core webpage. After adding /Home/addition to the end of the URL, press enter.
+    
+Below is the output format:
+
+Dot Net Interview Questions
+
+https://www.btreesystem.com/blog/dot-net-interview-questions/
+
+https://dotnettutorials.net/course/csharp-dot-net-tutorials/
+
+1.) .net framework — DOT NET Framework , CLR ,CTS , dot net program execution flow , intermediate language , managed and unmanaged code , garbage collector ,Assembly DLL EXE in .NET Framework , strong and weak assembly , app domain.
+
+2.) C# — basics , oops , exception handling , delegates , multithreading , collection framework and generic.
+
+3.) SQL — basics ,keys , clauses , operator, joins , indexes ,built in function, store procedure , difference between Store procedure and function,views , Trigger .
+
+4.) Web api —introduction ,http Verb ( get ,post ,put ,delete) , calling web api from jQuery, Routing , security , versioning
+
+5.) Ado.net — introduction , Sqlconnection, Sqlconmand , sqldatareader , sqldataadapater, dataset, datatable , architecture of Ado.net
+
+6.) Entity framework— basics , database first approach .
+
+7.) Asp.net MVC— MVC , routing , html helper, attributes , data annotations, action results , view ,filter , security.
+
+Note — This are the main. Each and every topic contain sub topic . Kindly referred link mentioned above. It helped me a lot. For notes you can contact with me.
+
+program for string reverse(eg:- i am boy -> boy am i)
+
+WHAT IS HTTP 500 Internal Server Error? CAN I SOLVE THIS?
+
+https://www.allinterview.com/company/1111/infosys/interview-questions/25/sql-server.html
+
+1)Declare array with five elements a[]={8,4,6,2,1,10} Print minimum and maximum no from array.
+
+https://www.allinterview.com/company/1111/infosys/interview-questions/18/javascript.html
+
+How .net assemblies are registred as private and shared
+assembly ?
+
+Any assembly file (.net dll, .net exe ) is by default is
+Private assembly. This means the assembly is visible only to
+the application that loads/references it explicitly. Each
+
+
+application that refers our private assembly will get its
+own copy in its assembly.
+Shared assembly is the assembly that is registered to the
+GAC (Global Assembly Cache) that is part of the .Net
+framework installed (under 'windows/assembly' directory) on
+a system. We use 'gacutils.exe' binary to register the GAC
+such as gacutil -i MyAssembly.exe. All applications those
+reference a 'registered global assembly' would use the same
+
+https://www.techtutorial.in/asp-dot-net-interview-questions-and-answers-set-10/
+
+copy of the assembly present in the GAC. Hence it is called
+'Shared assembly'.
+
+816232
+Write a program. there are 1..n numbers placed in an array in random fashion with one integer missing. find the missing number.
+Pre-JIT compiler: It performs a single compilation cycle, or at the time the application is deployed, to convert all of the source code into machine code.
+Normal JIT Compiler: The run-time needed source code methods are converted into machine code and saved in the cache to be invoked later.
+Econo JIT Compiler: This compiler is used to compile methods that are only needed at runtime and are not saved for later usage.
+
+Graduates from B.E., B. Tech, M.E., M. Tech., M.Sc., MCA, or MCM
+Must be an Indian citizen
+Minimum 60% marks throughout the academic years
+What qualifications and personal skills does Infosys normally look for in freshers?
+Academic qualifications and professional achievements are both highly valued by Infosys. Some qualities and skills employers look for in potential candidates, particularly at entry-level positions, include analytical skills, teamwork, and leadership skills, communication skills, and the ability to innovate and create.
+
+How many rounds are there in Infosys placement?
+There are essentially going to be 3 rounds:
+
+Online assessment round
+Technical interview round
+HR interview round
+For experienced candidates as well, the hiring procedure does not change. For some different positions, however, you might need to go through two rounds of technical interviews before an HR interview.
+
+What is InfyTQ certification?
+The InfyTQ certification test evaluates your industry preparedness by assessing your understanding of databases and programming. The best thing about InfyTQ is that, if you pass the test, you can have a direct interview with Infosys for a job.
+
+How do I qualify for InfyTQ?
+Following is the eligibility criteria to qualify in InfyTQ:
+
+Graduates from B.E., B. Tech, M.E., M. Tech., M.Sc., MCA, or MCM
+Must be an Indian citizen
+Minimum 60% marks throughout the academic years
+local and global variable, oops concepts
+
+Job Description
+Key Skills
+ASP.Net, C#, AWS, Angular JS, Kendo UI, Linq
+Hiring Unit
+Unit-Engineering services
+Qualification
+BE, BTech, MCA, MTech, MSc
+Location
+Hyderabad, Chandigarh, Chennai, Pune
+Role Designation
+Senior Systems Engineer , Technology Analyst
+Job Description
+Technical & Professional Requirements
+• Required minimum2 years of experience working in .NET, C#, OOP Concepts MVC applications, AWS,• Proficiency with Web Services –Web APIs, REST, WCF, SOAP, TCP/IP,• Familiarity with JavaScript frameworks such as Angular JS, React, jQuery /Bootstrap,• Demonstrates a sound understanding of software quality assurance principles, SOLID design principles and modeling methods,• Good to have experience in Azure based web application development involving ADL, ADLS, ADLA, Azure Storage,• Excellent Problem Solving Analytical and Debugging Skills,• Ability to work in team in diverse/ multiple stakeholder environment,• Analytical, Communication and Client Interfacing skills,• Location of posting is driven by business needs.
+Responsibilities
+• Implement design, development, validation and support activities in line with client needs and architectural requirements.,• Participate in Knowledge Management.,• Ensuring highest levels of service offerings to clients in own technology domain within the guidelines, policies and norms of Infosys
