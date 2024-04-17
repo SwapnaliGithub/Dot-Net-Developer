@@ -1,4 +1,7 @@
 1.What is C#?
+C# is a simple & powerful object-oriented programming language developed by Microsoft. 
+C# can be used to create various types of applications, such as web, windows, console applications, or other types of applications using Visual studio.
+
 C# is a high-level object-oriented programming language. It is used for building secure and robust applications.
 
 2. Can we execute multiple catch blocks in C# program for one exception?
