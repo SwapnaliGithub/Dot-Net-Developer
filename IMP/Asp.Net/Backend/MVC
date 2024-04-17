@@ -9,3 +9,58 @@ https://nareshit.in/asp-net-mvc-interview-questions/
 https://dotnettutorials.net/lesson/mvc-basic-interview-questions-answers/
 
 https://www.dotnettricks.com/learn/mvc/top-20-mvc-interview-questions-answers
+
+
+What is Routing in ASP.NET MVC?
+The ASP.NET MVC Routing module is responsible for mapping the incoming browser requests (i.e. the incoming URL or incoming HTTP Requests) to a particular controller action method. This mapping is done by the routing rules defined for your application. For example, if we issue a request to the “/Home/Index” URL, then it is the Index action method of the Home Controller class that is going to handle the request
+
+Routing in ASP.NET MVC is a pattern matching mechanism that handles the incoming HTTP request (i.e. incoming URL) and figures out what to do with that incoming HTTP request.
+
+When the client makes a request i.e. makes an HTTP Request, then that request is first received by the Routing Engine. Once the Routing engine receives an HTTP Request, then it figures out the URL Pattern of the incoming request and checks if that URL pattern is present in the Route table. If it found a matching URL pattern for the incoming request in the Route Table, then it fetches the corresponding handler information and forwards the request to the appropriate controller and action method. If there is no match found in the routing table for the incoming HTTP request URL Pattern, then it simply returns a 404 HTTP status code. The routing functionality is implemented in the System.Web.Routing
+
+
+Web api routing
+ It routes an incoming HTTP request to a particular action method on a Web API controller.
+
+Web API supports two types of routing:
+
+Convention-based Routing
+Attribute Routing
+
+Convention-based Routing
+In the convention-based routing, Web API uses route templates to determine which controller and action method to execute. At least one route template must be added into route table in order to handle various HTTP requests.
+
+When we created Web API project using WebAPI template in the Create Web API Project section, it also added WebApiConfig class in the App_Start folder with default route
+
+Attribute Routing
+Attribute routing is supported in Web API 2. As the name implies, attribute routing uses [Route()] attribute to define routes. The Route attribute can be applied on any controller or action method.
+
+In order to use attribute routing with Web API, it must be enabled in WebApiConfig by calling config.MapHttpAttributeRoutes() method.
+
+
+MVC stands for Model View and Controller. It is a design pattern that separates the business logic, presentation logic and data.
+
+Controller acts as an interface between View and Model. Controller intercepts all the incoming requests.
+
+Model represents the state of the application i.e. data. It can also have business logic.
+
+View represents the presentaion i.e. UI(User Interface).
+
+MVC Framework Advantages
+1. An improved development process:
+By using MVC, you can develop in parallel and in a rapid manner. To develop the business logic of an MVC web application, one programmer can work on the view and the other on the controller. Therefore, applications developed using the MVC model can be completed three times faster than those developed using other techniques.
+
+2. Ability To Provide Multiple Views:
+ A model can have multiple views using the MVC Model. MVC development is a great solution for today’s increasing demand for new methods of accessing your applications. The approach also limits the amount of code duplication since the display is separated from the data and business logic.
+
+3. Support For Asynchronous Technique:
+MVC architecture can also be integrated with JavaScript Framework. In other words, MVC applications will be able to work with PDF files, site-specific browsers, and andns. The MVC framework also supports an asynchronous technique that helps developers develop applications that load very quickly.
+
+4. The Modification Does Not Affect The Entire Model:
+For any web application, the user interface tends to change more frequently than even the business rules of the .net development company. It is obvious that you make frequeThe MVC framework also supports an asynchronous technique that helps developers develop applications that load very quickly.or tablets. Moreover, Adding a new type of view is very easy in the MVC pattern because the Model part does not depend on the views part. Therefore, any changes in the Model will not affect the entire architecture.
+
+5. MVC Model Returns The Data Without Formatting:
+MVC pattern returns data without applying any formatting. Hence, the same components can be used and called for use with any interface. For example, any kind of data can beThe MVC framework also supports an asynchronous technique that helps developers develop applications that load very quickly.r.
+
+6. SEO Friendly Development Platform:
+MVC platform supports the development of SEO friendly web pages or web applications. Using this platform, it is very easy to develop SEO-friendly URLs to generate more visits. This technique allows developers to develop an application that loads rapidly. MVC also supports asynchronous development. Moreover, Scripting languages like JavaScript and jQuery can be integrated with MVC to develop feature-rich web applications.
