@@ -1,3 +1,175 @@
+https://stackoverflow.com/questions/365489/questions-every-good-net-developer-should-be-able-to-answer
+https://interviewprep.org/net-core-interview-questions/
+https://medium.com/@meghnav274/simple-jwt-authentication-using-asp-net-core-api-5d04b496d27b
+http://www.voidgeeks.com/tutorial/CRUD-Operation-in-ASPNET-Core-MVC-Using-Visual-Studio-and-ADONET/7
+https://www.qfles.com/interview-question/c-sharp-interview-questions
+https://www.vskills.in/interview-questions/asp-dotnet-core-interview-questions
+https://mycodeblock.com/top-20-net-core-interview-questions/
+
+https://www.dotnetinterviewquestions.in/
+https://www.scribd.com/document/548589021/Net-Core-Interview-Questions
+https://www.reddit.com/r/dotnet/comments/v14mgt/im_compiling_a_list_of_questions_in_preparation/?rdt=40762
+https://www.talkingdotnet.com/asp-net-core-interview-questions/
+https://www.linkedin.com/pulse/top-20-aspnet-core-interview-questions-answers-2020-dot-net-tricks-
+
+https://www.codingninjas.com/studio/library/interview-questions-for-net-core
+
+https://www.ambitionbox.com/profiles/dot-net-core-developer/interview-questions
+
+https://www.interviewbit.com/dot-net-interview-questions/
+
+https://www.dotnettricks.com/learn/aspnetcore/top-20-asp-net-core-interview-questions-and-answers
+
+https://anywhere.epam.com/en/blog/advanced-asp-net-core-interview-questions-answers
+
+https://www.hackertrail.com/talent/backend/net-core-interview-questions-answers/
+
+https://medium.com/javarevisited/10-rest-api-basic-interview-questions-8f294afb0f46
+
+https://medium.com/@techworldwithmilan/net-developer-roadmap-2023-c1a9a102748e
+
+https://minafrzli.medium.com/net-developer-interview-questions-6ee3b388c069
+
+https://medium.com/@andytechdev/6-asp-net-core-open-source-projects-to-boost-your-practical-skills-a34807adaf93
+
+How do you handle exceptions globally in an ASP.NET Core Web API project?
+Answer
+Global exception handling in ASP.NET Core can be achieved using middleware. The ideal place to handle exceptions is in the middleware pipeline so that it is separate from your application logic, and can trap any unhandled exceptions.
+
+One of the most effective ways is to use the built-in UseExceptionHandler middleware which captures synchronous and asynchronous exceptions. With this middleware, you can redirect to an error handling route or render an error response directly.
+
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    if (env.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+    }
+    else
+    {
+        app.UseExceptionHandler("/api/Error");
+    }
+
+    //... rest of the middleware
+}
+In the above code, when an exception is raised it is handled by the “/api/Error” route.
+
+Another method of handling global exceptions is using UseDeveloperExceptionPage middleware which provides detailed exception information in the local development environment.
+
+
+How to do database migrations in Entity Framework Core?
+Answer
+Entity Framework Core (EF Core) includes a feature called Migrations that allows you to make changes to your model and then propagate those changes to your database schema. Here’s a basic overview of performing a migration:
+
+1. Install the necessary packages: EF Core requires certain NuGet packages to perform migrations. Make sure you have the basic Entity Framework Core and EF Core tools packages installed in your project.
+
+2. Create a new Migration: Use the Add-Migration command and provide a name for your migration. This creates a new class in your Migrations folder that contains the changes to be made to the database schema.
+
+Add-Migration MyFirstMigration
+3. Update the database: Use the Update-Database command. This applies any pending migrations on the database. EF Core creates the database if it does not exist.
+
+Update-Database
+You may opt to provide a specific migration name if you want to update the database to a specific migration rather than the latest.
+
+Remember to treat migrations as a part of your codebase. They need to be kept under source control and applied as part of your deployment process. Well-managed migrations are key to dealing with evolving database schemas.
+
+How is routing implemented in ASP.NET Core MVC compared to ASP.NET MVC?
+Answer
+There are several differences in how routing is handled in ASP.NET Core MVC compared to ASP.NET MVC.
+
+In ASP.NET MVC, routing was handled through a central RouteConfig file that includes rules for each controller and action method. These routing rules can be either attribute-based or convention-based.
+On the other hand, ASP.NET Core MVC uses middleware for routing. It provides two types of routing methodologies – convention-based routing and attribute routing. All the routing information is configured in the Startup.cs file.
+In ASP.NET Core MVC, we also have a new feature, Routing to Razor Pages. Razor Pages are a new aspect of ASP.NET Core MVC that allow you to create page-based programming model.
+Additionally, ASP.NET Core MVC supports route constraints, which weren’t available in ASP.NET MVC. Route constraints let you restrict how the parameters in the route template are matched.
+What are some of the best techniques for optimizing performance in .NET Core applications?
+Answer
+Optimizing performance in .NET Core applications could involve several techniques:
+
+Caching: It’s about storing data somewhere for future use to speed up the application. .NET Core provides support for several different types of caching including in-memory caching, distributed caching, and response caching.
+Asynchronous Programming: Use the async and await keywords to write asynchronous code that’s easier to read, write and manage.
+Pooling: Techniques such as Object Pooling or Connection Pooling can be used to recycle objects or connections instead of creating and destroying them frequently.
+Optimization of Data Access: Minimize the amount of data that you send over the network and reduce the number of server round trips.
+Use of Middleware: Middleware components are used to handle requests and responses. Ensure that unnecessary middleware components are not registered.
+
+Can you explain some possible strategies for managing session state in a distributed .NET Core application?
+Answer
+Managing session state in a distributed .NET Core application generally involves either a server-side or client-side session management approach.
+
+Server-side session management: It store session data on the server. This strategy involves storing the session state in a database or in-memory data store like Redis. This allows applications running on multiple servers to have access to the shared session data.
+Client-side session management: In this strategy, the session state is stored in a client side, usually in cookies or in local storage. This strategy eliminates the need to store session data on the server, which can be especially useful in applications with a large number of users.
+Distributed Cache Session Management: ASP.NET Core provides IDistributedCache interface that you can use to store your session state.
+Remember to always secure session data, especially when incorporating client-side session management strategies.
+
+
+3. How do you explain what a service lifetime is?
+An interviewer might ask this question to see if you understand the various lifetimes of registered services in .NET Core frameworks. A sound answer outlines the three different service lifetimes with specific explanations of each.
+
+Example: "A service lifetime refers to how long an object lives after being created. The three typical lifetimes are transient, scoped and singleton. Transient lifetimes are ideal for stateless and lightweight services because they get created each time the service container gets used. Scoped lifetimes happen once every connection. Singleton lifetimes happen when initially created and again with each subsequent request from the service container."
+
+6. Share a time you prioritised an IT task over something else and why.
+Behavioral questions can help interviewers understand how you might react during a specific situation. Questions like this often give insight into your problem-solving abilities, time management skills and creative thinking. Consider giving an answer that involved a challenging deadline, positive results or potentially unpopular decision to help show how you manage stressful situations.
+
+Example: "My team worked on an application and had a presentation to senior executives. Marketing colleagues wanted updated statistics and project reports from our department, but a team member told me about a system bug during testing runs that affected the show-and-tell portion of the presentation. Though the deadline to share materials with the marketing team drew near, I communicated our troubleshooting took priority and pushed the submission deadline. We addressed the glitch the same day and sent our updated report the next morning. The marketing team appreciated my honesty and ultimately included the updated fix in their presentation to leaders."
+
+7. What are some challenges you face while working with .NET Core?
+A question about challenges can show an interviewer how you handle work situations, along with giving insight into your analytical and critical thinking skills. Try focusing your answer on specific situations from your past work experience or projects and describe how you overcame the challenges to best display your tenacity and ability to move past obstacles. Consider using the STAR method of providing answers to situational questions.
+
+Example: "When I first became familiar with .NET Core, I often experienced server overloads and database issues when developing an application for my primary client. I noticed the landing pages worked, though they performed slowly with a lag time that might deter users. I connected with database administrators to monitor settings that allowed us to gain better performance while we further developed the app."
+
+Read more: How To Use the STAR Interview Response Technique
+
+8. What is an action method?
+Interviewers often seek to know you have a broad depth and understanding of industry terms, processes and practices. This question can help show your specific knowledge of IT concepts. Consider providing a concise answer that confidently addresses the question.
+
+Example: "An action method executes activity when an HTTP request takes place. It is a controller class that has specific parameters. For example, action method must be public, rather than protected or private. It cannot get overloaded and it cannot be a static method."
+
+9. How would you describe what a cookie is to someone not technologically savvy?
+This question can showcase your ability to explain complex processes in simple ways. Because communication is an essential skill in nearly every industry, an interviewer might glean insight into your oral and written communication skills. Consider using straightforward descriptions that someone outside of the IT industry can understand when forming your answer.
+
+Example: "A cookie is a small amount of data stored on your computer, mobile or other devices when you access a website. When you go back to the website again, it knows you have visited before. Cookies allow companies to tailor a website, promotion or offer to you specifically because they already know a bit about you as a consumer. Nearly all sites use cookies and they are relatively safe from viruses and malware."
+
+10. What are caching and response caching in .NET Core?
+An interviewer might ask this question to establish your awareness between various caching types and other software development aspects. Technical questions often require a precise response, so consider reviewing primary concepts used in the IT industry and .NET Core specifically to best be prepared.
+
+Example: "Caching is a process that reduces the number of calls to the data source, improving the application's performance and scalability. It essentially stores a copy of the data instead of generating it each time you access the original source. For example, if you visit a specific website or app frequently, some data already on your device let the page run faster, giving you a better user experience. For data that frequently changes, response caching sets parameters for the headers that control caching."
+
+Other .NET Core questions asked in a job interview
+Here are 20 other examples of .NET Core questions you might get asked in an interview:
+
+"Can you describe the dependency injection and what problem it solves?"
+"How do you explain session and state management in .NET Core?"
+"What does change token mean?"
+"Please outline the role of startup class."
+"Describe your level of software development proficiency, especially for .NET Core."
+"What is the difference between generic host and web host?"
+"Can you explain model validation in one sentence**?"
+"How would you explain in-memory cache and distributed caching to someone not familiar with the terms?"
+"What steps would you take to enable cross-origin requests and prevent cross-site scripting?"
+"Please explain the concept of middleware."
+"How are models, viewers and controllers used?"
+"What is area in relation to .NET and how would you describe it?"
+"What is the role of configure services and the configure method?"
+"How do you identify and handle errors in .NET Core?"
+"Can you run .NET Core applications in docker containers?"
+"What is attribute routing?"
+"Explain how attribute-based routing works."
+"What are caching and response caching?"
+"How does configuration work in .NET?"
+"What is the difference between a Kestrel and an Internet Information Service (IIS)?"
+
+https://in.indeed.com/career-advice/interviewing/adonet-interview-questions
+
+14. How can you improve Stored Procedure Performance?
+
+You should focus on certain points for your Stored Procedure performance as below.
+
+Use Proper indexing on tables.
+Set NOCount ON|OFF - it will control some messages like - after running some update query you see messages - '0 rows affected'.
+Use Select count(1) instead of count(*) for count function.
+do not use prefix 'SP' while creating stored procedures as default system stored procedures also starts with prefix 'SP'.
+Whenever it's required fetch data from the table with 'NOLOCK' keyword WITH(NOLOCK).
+Set ANSI_Nulls ON|OFF- When it's ON it means a select statement will return zero results even if there are null values in the column. When It's OFF means select statement will return the corresponding rows with null values in columns. When you are setting it OFF means comparison operators do not follow ISO standards.
+Set Quoted_Identifier ON|OFF - When it's ON means identifiers are delimited by double quotes and literals are delimited by single quotes. But when it's OFF means identifiers can not be delimited by quotation.
+
 https://www.hackertrail.com/talent/backend/net-core-interview-questions-answers/
 https://anywhere.epam.com/en/blog/advanced-asp-net-core-interview-questions-answers
 https://www.dotnettricks.com/learn/aspnetcore/top-20-asp-net-core-interview-questions-and-answers
