@@ -39,9 +39,6 @@ Yes, the values of variables can be altered during debugging.
 What is LINQ in C#?
 Language-Integrated Query (LINQ) is a .NET Framework. It is used to retrieve information from different kinds of sources.
 
-Looking for remote developer job at US companies?
-Work at Fortune 500 companies and fast-scaling startups from the comfort of your home
-
 1.What are the constructors?
 Constructor is a method that gets executed when a new class object is created. It can be public or private.
 
