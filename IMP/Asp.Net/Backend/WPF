@@ -4,9 +4,7 @@ https://www.c-sharpcorner.com/UploadFile/puranindia/wpf-interview-questions-and-
 WPF stands for Windows Presentation Foundation. It's a re-invention of a UI for Desktop applications using WPF. 
 Apart from dropping controls on "Windows Forms" just as developers have been doing for years, 
 WPF provides an extra rapid boost to the application development including Rich User Interface, Animation and much more
-
 . In a nutshell the following things can be done using WPF: 
-
  Draw normal controls and graphics.  Can easily load/play audio and video files. 
  Can provide smooth graphical effects such as drop shadows and color gradients. 
  Can use shared styles which can be used across the same controls to provide the same theme, skin and design. 
@@ -20,13 +18,10 @@ WPF provides an extra rapid boost to the application development including Rich 
 https://www.codeproject.com/Articles/744082/WPF-Interview-questions-with-answers
 What is WPF?
 WPF (Windows Presentation foundation) is a graphical subsystem for displaying user interfaces, documents, images, movies etc in windows application.
-
 What is the need of WPF when we had windows forms?
 Remember: - ABCDEFG
 A - Anywhere execution ( Windows or Web)
-
-B - Bindings ( less coding)
-
+B - Bindings (less coding)
 C - Common look and feel ( resource and styles)
 
 D - Declarative programming (XAML)
@@ -39,14 +34,14 @@ G - Graphic hardware independent ( resolution independent)
 
 I would strongly suggest you to see the below videowhich explains all the above A to G points practically.
 
-Image 3
-What is XAML in WPF and why do we need it?
-XAML is a XML file which represents your WPF UI. The whole point of creating the UI representation in XML was write once and run it anywhere. So the same XAML UI can be rendered as windows application with WPF and the same UI can be displayed on the browser using WPF browser or Silverlight application.
 
-Image 4
+What is XAML in WPF and why do we need it?
+XAML is a XML file which represents your WPF UI. The whole point of creating the UI representation in XML was write once and run it anywhere. 
+So the same XAML UI can be rendered as windows application with WPF and the same UI can be displayed on the browser using WPF browser or Silverlight application.
 
 What is xmlns in XAML file?
-“xmlns” stands for XML namespaces. It helps us to avoid name conflicts and confusion in XML documents. For example consider the below two XML which have table elements, one table is a HTML table and the other represents a restaurant table. Now if both these elements come in a single XML document there would name conflicts and confusion.
+“xmlns” stands for XML namespaces. It helps us to avoid name conflicts and confusion in XML documents. 
+For example consider the below two XML which have table elements, one table is a HTML table and the other represents a restaurant table. Now if both these elements come in a single XML document there would name conflicts and confusion.
 
 HTML
  <table>
