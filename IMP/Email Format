@@ -1,12 +1,13 @@
-I would suggest something like this
-
 Respected Sir/Madam {name in case name is mentioned},
 
 I read your job posting on Naukri.com for the postion of Software Engineer in Winforms Applications.
 
-In my current position as a Software Engineer in ABC Company, I created a Registry Cleaner using native libraries and customized functionalities and wrote various functionalities for enabling system restoration, detecting and clearing bad registries and saving & managing the restore points.
+In my current position as a Software Developer in Prodigy Technologies, 
+I created a Registry Cleaner using native libraries and customized functionalities and wrote various functionalities for enabling system restoration, 
+detecting and clearing bad registries and saving & managing the restore points.
 
-I involved myself in Creating the Setups using NSIS and creating Installers using .msi. and was given the responsibility to maintain the version control as well as the version updation of the software. I was entrusted with the responsibility for configuring the server, hosting the project in IIS and maintaining the website. I had played an active role in online marketing, blogging, Api Integrations, Payment Gateways such as ccavenue, Paypal, Bpoint.
+I involved myself in Creating the Setups using NSIS and creating Installers using .msi. and was given the responsibility to maintain the version control as well as the version updation of the software. 
+I was entrusted with the responsibility for configuring the server, hosting the project in IIS and maintaining the website. I had played an active role in online marketing, blogging, Api Integrations, Payment Gateways such as ccavenue, Paypal, Bpoint.
 
 The url of the application is as follows : myapplication.com
 
@@ -14,23 +15,11 @@ My resume is attached. If I can provide you with any further information on my b
 
 I look forward to hearing from you. Thank you for your consideration.
 
-John Doe
-Address
-Email
-Home Phone
-Cell Phone
+Swapnali Ranaware
+swapnaliswr@gmail.com
+7972478689
 
 Hope this would help.
-
-
-            string a = "Dear [Recipient's name or hiring manager],\r\n\r\n\r\n\r\n" 
-                +
-                I have attached my resume and cover letter for your convenience. Please do not hesitate to let me know if there is any other material you need.You can reach me at 000 - 000 - 0000 or via Aahana.Shah @email.com.Thank you for your time and I look forward to hearing from you.
-                "Regards,Swapnali Vishal Ladi";
-
-
-
-
 
 
 Dear Sir or Madam, I hope the day finds you well. I am writing to apply for the position of ___(Job Title)__ as advertised on ___(Website Title)__. My CV attached below. I am currently a ___(Position)__ for ___(Company Name)__, a company that has been in business for ___(Number)__ years. I have a great deal of experience in ___(Domain Name)__ and consider myself to be very qualified for this position. Please feel free to contact me if you would like to speak to me. I can be reached by phone at ___(Phone Number)__ or by email at ___(Email Address)__. I eagerly look forward to your reply. Kind Regards,
