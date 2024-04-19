@@ -1,0 +1,242 @@
+/*
+ * C# Program to Check whether the Entered Number is Even or Odd
+ */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+ 
+namespace check1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i;
+            Console.Write("Enter a Number : ");
+            i = int.Parse(Console.ReadLine());
+            if (i % 2 == 0)
+            {
+                Console.Write("Entered Number is an Even Number");
+                Console.Read();
+            }
+            else
+            {
+                Console.Write("Entered Number is an Odd Number");
+                Console.Read();
+            }
+        }
+    }
+}
+
+Enter a Number : 25
+Entered Number is an Odd Number
+
+
+using System;  
+                      
+public class CountCharacter  
+{  
+    public static void Main()  
+    {  
+        String string1 = "The best of both worlds";  
+        int count = 0;  
+          
+        //Counts each character except space  
+        for(int i = 0; i < string1.Length; i++) {  
+            if(string1[i] != ' ')  
+                count++;  
+        }  
+          
+        //Displays the total number of characters present in the given string  
+        Console.WriteLine("Total number of characters in a string: " + count);  
+    }  
+}   
+Output:
+
+Total number of characters in a string: 19
+
+
+C# program to print below star triangle by entering no of lines
+*
+**
+***
+****
+*****
+Here's a C# program that prints a star triangle based on the number of lines entered by the user:
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter the number of lines: ");
+        int numLines = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 1; i <= numLines; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+This program prompts the user to enter the number of lines, then it uses nested loops to print the appropriate number of stars on each line. The outer loop controls the number of lines, and the inner loop prints the stars for each line. Each line has a number of stars equal to the line number.
+
+
+C# program to print below star triangle by entering no of lines
+*****
+****
+***
+**
+*
+Here's C# program that prints the inverted star triangle based on the number of lines entered by the user:
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter the number of lines: ");
+        int numLines = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = numLines; i >= 1; i--)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+This program prompts the user to enter the number of lines, then it uses nested loops to print the inverted star triangle. The outer loop controls the number of lines, starting from the input number of lines and decrementing by 1 on each iteration. The inner loop prints the stars for each line, with the number of stars equal to the current line number.
+
+C# program to print below star diamond by entering no of lines
+*
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+Here's the C# program that prints the diamond pattern based on the number of lines entered by the user:
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter the number of lines: ");
+        int numLines = Convert.ToInt32(Console.ReadLine());
+
+        // Upper part of the diamond
+        for (int i = 1; i <= numLines; i++)
+        {
+            // Print spaces
+            for (int j = 1; j <= numLines - i; j++)
+            {
+                Console.Write(" ");
+            }
+
+            // Print stars
+            for (int k = 1; k <= 2 * i - 1; k++)
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine();
+        }
+
+        // Lower part of the diamond
+        for (int i = numLines - 1; i >= 1; i--)
+        {
+            // Print spaces
+            for (int j = 1; j <= numLines - i; j++)
+            {
+                Console.Write(" ");
+            }
+
+            // Print stars
+            for (int k = 1; k <= 2 * i - 1; k++)
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine();
+        }
+    }
+}
+This program prompts the user to enter the number of lines, then it uses nested loops to print the diamond pattern. The upper part of the diamond is printed first, followed by the lower part. The logic for printing spaces and stars remains the same as in the previous program.
+
+
+C# program to print below star triangle by entering no of lines
+*
+  ***
+ *****
+*******
+Here's the C# program that prints the star triangle with spaces based on the number of lines entered by the user:
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter the number of lines: ");
+        int numLines = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = 1; i <= numLines; i++)
+        {
+            // Print spaces
+            for (int j = 1; j <= numLines - i; j++)
+            {
+                Console.Write(" ");
+            }
+
+            // Print stars
+            for (int k = 1; k <= 2 * i - 1; k++)
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine();
+        }
+    }
+}
+This program prompts the user to enter the number of lines, then it uses nested loops to print the star triangle with spaces. The outer loop controls the number of lines. The first inner loop prints the appropriate number of spaces before the stars on each line, based on the line number and the total number of lines. The second inner loop prints the stars for each line, with the number of stars being '2 * i - 1' (where i is the current line number).
+
+
+C# program to print below star triangle by entering no of lines
+*****
+****
+***
+**
+*
+Here's C# program that prints the inverted star triangle based on the number of lines entered by the user:
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Enter the number of lines: ");
+        int numLines = Convert.ToInt32(Console.ReadLine());
+
+        for (int i = numLines; i >= 1; i--)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+This program prompts the user to enter the number of lines, then it uses nested loops to print the inverted star triangle. The outer loop controls the number of lines, starting from the input number of lines and decrementing by 1 on each iteration. The inner loop prints the stars for each line, with the number of stars equal to the current line number.
