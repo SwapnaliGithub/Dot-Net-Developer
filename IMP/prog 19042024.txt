@@ -1,3 +1,39 @@
+Threading
+Threads are the backbone of any software application. In simple terms, a thread is a single sequence of instructions that a process can execute. In C#, the System.Threading namespace offers classes that allow you to manipulate threads. When a C# program starts, it’s a single threaded process by default. This “main” thread is responsible for executing your code line by line, creating what is known as a single threaded application.
+Single threading is simpler to implement and debug
+
+Implementing single threading in C# is quite simple. You instantiate an object of the Thread class, passing it a ThreadStart delegate which points to the method to be executed in the new thread, and then call the Start() method. Here’s an example:
+void MyFunction()
+{
+    // Some work here
+}
+Thread myThread = new Thread(new ThreadStart(MyFunction));
+myThread.Start();
+In the example above, MyFunction is the method the new thread will execute. The Start() method initiates the execution of the new thread.
+
+Multithreading
+Multithreading in C# is a process in which multiple threads work SIMULTANEOUSLY. 
+It is a way to achieve MULTITASKING. It saves time because multiple tasks are being executed at a time. 
+To create multithreaded application in C#, we need to use SYSTEM.THREDING namespace
+Threads make it possible to execute several program pieces concurrently, enhancing the program’s efficiency. This brings us to the concept of multithreading.
+ multithreading can improve application performance by performing tasks concurrently.
+Implementing multithreading in C# requires a step further. You create more instances of the Thread class, one for each task you want to run concurrently:
+
+void Function1()
+{
+    // Some work here
+}
+void Function2()
+{
+    // Some other work here
+}
+Thread thread1 = new Thread(new ThreadStart(Function1));
+Thread thread2 = new Thread(new ThreadStart(Function2));
+thread1.Start();
+thread2.Start();
+In the example above, Function1 and Function2 will run concurrently, each in its thread. The order of execution is not determined by the order in which the threads are started. It’s managed by the thread scheduler, which is part of the .NET runtime.
+
+
 /*
  * C# Program to Check whether the Entered Number is Even or Odd
  */
