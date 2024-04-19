@@ -1,3 +1,22 @@
+Hello Good Morning/Afternoon/Evening.
+I am Swapnali Ranaware. 
+I belong to Karad.
+I have completed an MCA with a specialization in software application and development.
+I have 3.5 years of work experience in Microsoft technologies.
+Currently, I am working as a software developer for Prodigy Technologies, where i have gained experience in .Netcore, c#, MVC, webapi. 
+In my previous role at Agrima Exim Private Ltd, I was responsible for developing and maintaining a small web application. 
+I have good exposure to creating Web applications and am involved in all phases of the project, like designing, developing, testing and deploying activities.
+I have a strong command over both front-end and back-end technologies, allowing me to build complete and scalable applications.
+I’m excited to be part of a team where I can contribute my full stack development skills and help create innovative and impactful applications. 
+I'm a highly motivated and results-oriented individual with a passion for software development. 
+I'm confident that I have the skills and experience necessary to be a valuable asset to your team."
+Thank you for considering me, and I look forward to discussing how I can contribute to your organization.
+
+1.What is C#?
+C# is a simple & powerful object-oriented programming language developed by Microsoft. 
+C# can be used to create various types of applications, such as web, windows, console applications, or other types of applications using Visual studio.
+C# is a high-level object-oriented programming language. It is used for building secure and robust applications.
+
 Class and struct both are user-defined data types. However, they have some important differences:
 Struct
 Struct is a value type in C# that inherits values from System.Value
