@@ -1,3 +1,5 @@
+Encapsulation can be achieved by: Declaring all the variables in the class as private and using C# Properties in the class to set and get the values of variables
+
 Prism ois alo knows as  Composite Application Guaidance for wpf and silverlight
 It is a framework that can be used to build apps in wpf and silverlight 
 
@@ -207,7 +209,8 @@ class Program
         }
     }
 }
-This program prompts the user to enter the number of lines, then it uses nested loops to print the appropriate number of stars on each line. The outer loop controls the number of lines, and the inner loop prints the stars for each line. Each line has a number of stars equal to the line number.
+This program prompts the user to enter the number of lines, then it uses nested loops to print the appropriate number of stars on each line.
+The outer loop controls the number of lines, and the inner loop prints the stars for each line. Each line has a number of stars equal to the line number.
 
 
 C# program to print below star triangle by entering no of lines
