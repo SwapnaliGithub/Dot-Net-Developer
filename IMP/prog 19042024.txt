@@ -40,7 +40,9 @@ Operator overloading is a function where different operators are applied and dep
 Answer: A polyline is an object in AutoCAD that consists of one or more line (or arc) segments. 
 A rectangle is an example of a polyline that you are already familiar with. As you've seen, 
 it is one object that can be modified and worked with easier than four separate lines.
-In other words, A polyline is a collection of connected straight lines. The Polyline object represents a polyline shape and draws a polyline with the given points. The Points property represents the points in a polyline. The Stroke property sets the color and StrokeThickness represents the width of the line of a polyline.
+In other words, A polyline is a collection of connected straight lines. 
+The Polyline object represents a polyline shape and draws a polyline with the given points.
+The Points property represents the points in a polyline. The Stroke property sets the color and StrokeThickness represents the width of the line of a polyline.
 
 Creating a Polyline: The Polyline element in XAML creates a polyline shape. The following code snippet creates a polyline by setting its Points property. The code also sets the black stroke of width 4. 
 <Polyline
