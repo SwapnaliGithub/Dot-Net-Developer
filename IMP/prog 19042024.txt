@@ -1,3 +1,6 @@
+Prism ois alo knows as  Composite Application Guaidance for wpf and silverlight
+It is a framework that can be used to build apps in wpf and silverlight 
+
 Hello Good Morning/Afternoon/Evening.
 I am Swapnali Ranaware. 
 I belong to Karad.
