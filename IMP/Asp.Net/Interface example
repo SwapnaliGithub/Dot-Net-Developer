@@ -1,0 +1,36 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+interface IEmployee
+{
+    public void SetSalary();
+    public void SetProject();
+}
+
+public class PermanentEmployee : IEmployee
+{
+    public void SetSalary()
+    {
+        Console.WriteLine("50009");
+    }
+    
+    public void SetProject()
+    {
+        Console.WriteLine("New Application");
+    }
+}
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Try programiz.pro");
+        PermanentEmployee objPermanentEmployee = new PermanentEmployee();
+        objPermanentEmployee.SetSalary();
+        objPermanentEmployee.SetProject();
+        Console.ReadLine();
+    }
+}
+
