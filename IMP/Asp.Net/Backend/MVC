@@ -10,7 +10,7 @@ https://dotnettutorials.net/lesson/mvc-basic-interview-questions-answers/
 
 https://www.dotnettricks.com/learn/mvc/top-20-mvc-interview-questions-answers
 
-
+https://www.remoterocketship.com/advice/10-mvc-interview-questions-and-answers-in-2023
 What is Routing in ASP.NET MVC?
 The ASP.NET MVC Routing module is responsible for mapping the incoming browser requests (i.e. the incoming URL or incoming HTTP Requests) to a particular controller action method. This mapping is done by the routing rules defined for your application. For example, if we issue a request to the “/Home/Index” URL, then it is the Index action method of the Home Controller class that is going to handle the request
 
