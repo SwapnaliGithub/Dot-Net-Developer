@@ -5,7 +5,7 @@ SOLID Design Principles Interview questions and answers with Simple Examples
  Interviewer : Why should we use SOLID principles ? Can you explain about SOLID design Principles ?
 
 You : SOLID design principles are used to develop the code in an efficient way and also it gives the benefits  Flexible, Maintainable and Understandable code.
-
+The SOLID principles are a set of five design principles for writing maintainable and scalable software.
 SOLID design principles are 
 
 S : Single Responsibility Principle (SRP)
