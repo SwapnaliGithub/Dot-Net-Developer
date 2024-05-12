@@ -1,3 +1,17 @@
+Assembly https://www.csharpstar.com/asp-net-interview-questions-part-3-net-assemblies/
+
+Dispose v/s Finalize
+Dispose	Finalize
+It is used to free unmanaged resources at any time.	It can be used to free unmanaged resources held by an object before that object is destroyed.
+It is called by user code and the class which is implementing dispose method, must has to implement IDisposable interface.	It is called by Garbage Collector and cannot be called by user code.
+It is implemented by implementing IDisposable interface Dispose() method.	It is implemented with the help of Destructors
+There is no performance costs associated with Dispose method.	There is performance costs associated with Finalize method since it doesn’t clean the memory immediately and called by GC automatically.
+When a program starts, the system allocates some memory for the program to get executed.
+
+When a C# program instantiates a class, it creates an object.
+
+The program manipulates the object, and at some point the object may no longer be needed.
+When the object is no longer accessible to the program and becomes a candidate for garbage collection.
 1.What is C#?
 C# is a simple & powerful object-oriented programming language developed by Microsoft. 
 C# can be used to create various types of applications, such as web, windows, console applications, or other types of applications using Visual studio.
