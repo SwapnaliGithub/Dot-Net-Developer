@@ -62,3 +62,6 @@ So using this procedure, we need 7 races to decide the top 3 fastest horses. But
 To find the fastest, we need to run all 25 horses at least once, and since you can only race 5 horses at a time, you need a minimum of 25/5 = 5 races.
 Then we need to compare the winners of these races, which means a 6th race is necessary.
 To find the second and third fastest, we need at least one more race to compare the relative speed of the horses.
+
+
+You have 7 balls. One weighs more than the others (not significantly). You have a scale, like the scales of justice. Describe how to find the weighted ball only using the scale twice.
