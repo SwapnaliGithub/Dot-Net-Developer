@@ -1,5 +1,26 @@
+
 https://www.c-sharpcorner.com/article/exception-handling-in-asp-net-web-api/
 https://www.infoworld.com/article/2994111/how-to-handle-errors-in-aspnet-web-api.html
+
+Reusability – By using generic classes and methods, you can write code that can work with multiple data types without the need to create a separate version for each data type. 
+This makes your code more reusable and reduces the amount of code you need to write.
+Performance – Generic classes and methods allow you to write efficient code that avoids the overhead of type conversions. 
+This is because the type of the data is known at compile-time, allowing the compiler to generate optimized code.
+Code maintainability – By using generic classes and methods, you can write code that is easier to maintain and understand.
+This is because you can define a single implementation that works with multiple data types, making it easier to change and test.
+
+
+Ajax Post Method
+$.ajax({
+    type: "POST",
+    url: "/ordersfp/process",
+    data: {
+        data: JSON.stringify(data) // encode to JSON
+    },
+    success: function(response) {
+        console.log(response);
+    }
+});
 
 what are the biggest challenges you accommodated in your career
 find the no of occurance in the string
