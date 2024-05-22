@@ -1,6 +1,18 @@
 
 https://www.c-sharpcorner.com/article/exception-handling-in-asp-net-web-api/
-https://www.infoworld.com/article/2994111/how-to-handle-errors-in-aspnet-web-api.html
+Exceptions are the errors that happen at runtime. 
+Exception handling is the technique to handle this runtime error in our application code. 
+If any error is thrown in web API that is caught, it is translated into an HTTP response with status code 500- "Internal Server Error".
+
+There are many ways to handle the exceptio
+Web API supports many ways of exception handling. Following is a summary of exception handling in Web API described in this article:
+We can use HttpResponseException when the possibility of exception is known by us. 
+In the above example, we have thrown exception using HttpResponseException class as we know there is a chance to employee not found in the database. 
+We can use exception filter to catch unhandled exceptions on action/controllers. 
+We can use Exception Handlers to catch any type of unhandled exception application-wide.
+CreateErrorResponse method of Request object helps us to return meaningful error code and message to the client. 
+CreateErrorResponse creates an instance of HttpError object and returns it as HttpResponseMessage object.
+
 
 Reusability – By using generic classes and methods, you can write code that can work with multiple data types without the need to create a separate version for each data type. 
 This makes your code more reusable and reduces the amount of code you need to write.
@@ -52,6 +64,10 @@ Console.Write("Enter the string : ");
 oops concept various authentication mechanism
 how to handle a team how to give estimation
 what are the agile processes that you have made in your present role which you are proud of
+ I am highly experienced with agile methodologies and iterative development processes. In my previous role, 
+I worked on several projects using the Scrum framework and participated in daily stand-up meetings, sprint planning, review, and retrospective meetings. 
+I also collaborated closely with the product owner to ensure that we were delivering high-quality software consistently.
+
 have you identified problems in your current process or project what did you do to solve them? how successfile were you
 what are the contributions that you have made in your present role whaich you are proud of
 what is benifits of aglie methodology
