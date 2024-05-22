@@ -1,6 +1,57 @@
-Puzzle – Measure 4 litre with 3 and 5 litre bottle
+Puzzle 1– Measure 4 litre with 3 and 5 litre bottle
 Fill up the 3 liter bucket and pour these 3 liters into the 5 liter container.
 Fill the 3 liter bucket again and pour 2 liters of it into the 5 liter bucket.
 Empty the 5 liter container and pour the 1 liter which remains in the 3 liter bucket into the 5 liter bucket. 
 Fill up the 3 liter container and pour these 3 liters into the 5 liter container.
 Finally, the larger bucket now contains exactly 4 liters!
+
+Puzzle 7 | (3 Bulbs and 3 Switches)
+Last Updated : 19 Jan, 2023
+There is a room with a door (closed) and three light bulbs inside the room. Outside the room, there are three switches, connected to the bulbs. 
+You may manipulate the switches as you wish, but once you open the door you can’t change them. 
+All bulbs are in working condition and you can open the door only once. Identify each switch with respect to its bulb.
+Solution:
+Let the bulbs be X, Y, and Z 
+Turn on switch X for 5 to 10 minutes. Turn it off and turn on switch Y. Open the door and touch the light bulb. 
+1. the light is on from the bulb, it is Y 
+Now we will check the other two off bulbs 
+2. the bulb which is hot, is X 
+3. the bulb which is cold, is Z  
+
+
+Puzzle | 3 cuts to cut round cake into 8 equal pieces
+Last Updated : 18 Jan, 2023
+Puzzle: You have a birthday cake and have to cut it into 8 equal pieces by making 3 cuts only. How do you do it?
+Solution: The solution can be divided into 3 basic steps. But apart from this there are also other method of executing this task.
+Step 1: Cut the cake into quarters (4 pieces) using 2 of the cuts – one horizontally down the centre of the cake and the other vertically down the centre of the cake. 
+This will leave you with 4 pieces (or slices) of cake.
+Step 2: Then take all 4 pieces and arrange them in a stack that is 4 pieces high.
+Step 3: Finally, you can just cut that stack of 4 pieces in half – using your third and final cut – and then you will end up with 8 pieces of cake!
+
+
+Make group of 5 horses and run 5 races. Suppose five groups are [a, b, c, d, e] and next alphabet is its individual rank in this group(of 5 horses).for eg. d3 means horse in group d and has rank 3rd in his group. [ 5 RACES DONE ] 
+a1 b1 c1 d1 e1 
+a2 b2 c2 d2 e2 
+a3 b3 c3 d3 e3 
+a4 b4 c4 d4 e4 
+a5 b5 c5 d5 e5 
+
+Puzzle 9 | (Find the fastest 3 horses)
+Last Updated : 25 May, 2023
+There are 25 horses among which you need to find out the fastest 3 horses. 
+You can conduct a race among at most 5 to find out their relative speed. At no point, 
+you can find out the actual speed of the horse in a race. Find out the minimum no. of races which are required to get the top 3 horses.
+Now make a race of (a1,b1,c1,d1,e1).[RACE 6 DONE] suppose result is a1>b1>c1>d1>e1 
+which implies a1 must be FIRST. 
+b1 and c1 MAY BE(but not must be) 2nd and 3rd. 
+FOR II position, horse will be either b1 or a2 
+(we have to find top 3 horse therefore we choose horses b1,b2,a2,a3,c1 do racing among them [RACE 7 DONE]. 
+The only possibilities are : 
+c1 may be third 
+b1 may be second or third 
+b2 may be third 
+a2 may be second or third 
+a3 may be third 
+The final result will give ANSWER. suppose result is a2>a3>b1>c1>b2 
+then answer is a1,a2,a3,b1,c1. 
+HENCE ANSWER is 7 RACES 
