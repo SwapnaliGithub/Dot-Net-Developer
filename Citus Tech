@@ -1,3 +1,9 @@
+What is your experience with project management tools and methodologies?
+I have experience using Agile methodology and tools such as JIRA and Trello, where I have collaborated with cross-functional teams to manage projects and track progress
+n my previous role, I used Scrum methodology and tools such as JIRA and Confluence to manage projects.
+I led daily stand-up meetings with my team to discuss project progress and any roadblocks, resulting in successful completion of projects on time and within budget."
+
+One of my long-term career goals is to continue to develop my skills and knowledge in my field. I plan to take courses and attend conferences to stay up-to-date with industry developments."
 
 https://www.c-sharpcorner.com/article/exception-handling-in-asp-net-web-api/
 Exceptions are the errors that happen at runtime. 
@@ -89,6 +95,25 @@ JavaScript allocates memory for all variables and functions defined in the progr
 dotnet core advantages
 find character count in string
 how would you handle cors issue
+In this article, we covered the key steps to handle CORS issues:
+
+Package Installation: Ensure that the Microsoft.AspNetCore.Cors package is installed in your project.
+Configure CORS Services: In the ConfigureServices method of your Startup.cs file, add the CORS services specifying allowed origins, methods, and headers.
+Use CORS Middleware: In the Configure method of Startup.cs, apply the CORS policy using the app.UseCors middleware.
+Testing: Verify the solution by testing your API with your front-end application. Ensure that requests are allowed without encountering CORS errors.
+Additionally, we highlighted some considerations such as wildcard origins, handling credentials, and fine-grained control over CORS policies. It's essential to strike a balance between security and flexibility, tailoring CORS settings to fit the specific requirements of your application.
+
+By following these steps and considering the nuances of CORS configuration, you can establish a secure and seamless connection between your ASP.NET Core Web API and frontend, providing a smooth user experience while maintaining the integrity of your application's security.
+ross-Origin Resource Sharing (CORS) is a security feature implemented by web browsers to prevent web pages from making requests to a different domain than the one that served the web page. When developing a web application, especially if it involves making API requests to a different domain, you might encounter CORS-related errors. In this article, we'll explore how to resolve CORS issues in an ASP.NET Core Web API.
+
+Understanding CORS
+Before diving into solutions, let's understand why CORS issues occur. When a web page tries to make a request to a different domain than the one it came from, the browser blocks the request by default. This is a security measure to prevent unauthorized access to resources on a different domain.
+
+CORS in ASP.NET Core
+ASP.NET Core provides built-in support for handling CORS. The CORS middleware can be configured in the Startup.cs file to specify which origins, HTTP methods, and headers are allowed for your API.
+
+
+
 https://www.c-sharpcorner.com/article/handling-cors-cross-origin-resource-sharing-in-asp-net-core-web-api/
 swap 2 nos without using third variable
 find no is prime or not and pailendrome or not and reverse a no
