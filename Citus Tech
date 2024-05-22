@@ -3,6 +3,31 @@ https://www.infoworld.com/article/2994111/how-to-handle-errors-in-aspnet-web-api
 
 what are the biggest challenges you accommodated in your career
 find the no of occurance in the string
+we take the input from Console and then remove the blank spaces from the input if any. 
+Check the length of the input message and if it is greater than 0, 
+then using for loop we calculate the number of occurrences of each character,
+Console.Write("Enter the string : ");
+            string message = Console.ReadLine();
+
+            //Remove the empty spaces from the message
+            message = message.Replace(" ", string.Empty);
+            
+            while (message.Length > 0)
+            {
+                Console.Write(message[0] + " : ");
+                int count = 0;
+                for (int j = 0; j < message.Length; j++)
+                {
+                    if (message[0] == message[j])
+                    {
+                        count++;
+                    }
+                }
+                Console.WriteLine(count);
+                message = message.Replace(message[0].ToString(), string.Empty);
+            }
+
+            Console.ReadKey();
 oops concept various authentication mechanism
 how to handle a team how to give estimation
 what are the agile processes that you have made in your present role which you are proud of
@@ -10,15 +35,82 @@ have you identified problems in your current process or project what did you do 
 what are the contributions that you have made in your present role whaich you are proud of
 what is benifits of aglie methodology
 hoisting in javascript
+Hoisting is the default behavior in JavaScript where declarations of variables and functions 
+are moved to the top of their respective scopes during the compilation phase. 
+This ensures that regardless of where variables and functions are declared within a scope, they are accessible throughout that scope.
+
+Features of Hoisting
+Declarations are hoisted, not initializations.
+Allows calling functions before their declarations.
+All variable and function declarations are processed before any code execution.
+Undeclared variables are implicitly created as global variables when assigned a value.
+Note: JavaScript only hoists declarations, not initializations.
+
+JavaScript allocates memory for all variables and functions defined in the program before execution.
+
+
 dotnet core advantages
 find character count in string
 how would you handle cors issue
+https://www.c-sharpcorner.com/article/handling-cors-cross-origin-resource-sharing-in-asp-net-core-web-api/
 swap 2 nos without using third variable
 find no is prime or not and pailendrome or not and reverse a no
 9 balss to figure which one of them lighter weight
 what will you do if your team member  is nt paying attention to your idesas or is not interested in talking to you
 sp optimization
 var and let in js
+Parameters	Var	Let
+Introduction in JavaScript	Var has been a part of JavaScript since its inception.	Let was introduced in the ES 2015 (ES6) version of JavaScript.
+Scope	Var is globally scoped.	Let is block-scoped.
+Access and Declaration	Var can be declared and accessed globally.	Let can be declared globally, but its access is limited to the block in which it is declared.
+Redeclaration	Variables declared using var can be re-declared and updated within the same scope.	Variables declared with let can be updated but not re-declared within the same scope.
 explain api you have written
 delete duplicate record from atable which dont have primary key
+Deleting duplicate records from a table without a primary key can be challenging because you don't have a unique identifier to differentiate between duplicate records. 
+However, you can still use a combination of columns to identify duplicates and remove them. Here's a general approach using SQL:
+Identify Duplicate Records: Use the GROUP BY clause along with aggregate functions to identify duplicate records based on specific columns. For example, 
+if you have columns column1, column2, and column3, you can identify duplicates as records having the same values in all these columns.
+sql
+Copy code
+SELECT column1, column2, column3, COUNT(*)
+FROM your_table
+GROUP BY column1, column2, column3
+HAVING COUNT(*) > 1;
+Delete Duplicate Records: Once you have identified the duplicate records, you can use a common table expression (CTE) or a subquery to delete all but one instance of each duplicate.
+sql
+Copy code
+WITH CTE AS (
+    SELECT column1, column2, column3,
+           ROW_NUMBER() OVER(PARTITION BY column1, column2, column3 ORDER BY (SELECT NULL)) AS RowNumber
+    FROM your_table
+)
+DELETE FROM CTE WHERE RowNumber > 1;
+
 find the freq of each ele in an array
+ int [] arr = new int [] {1, 2, 8, 3, 2, 2, 2, 5, 1};   
+        //Array fr will store frequencies of element  
+        int [] fr = new int [arr.Length];  
+        int visited = -1;  
+        
+        for(int i = 0; i < arr.Length; i++){  
+            int count = 1;  
+            for(int j = i+1; j < arr.Length; j++){  
+                if(arr[i] == arr[j]){  
+                    count++;  
+                    //To avoid counting same element again  
+                    fr[j] = visited;  
+                }  
+            }  
+            if(fr[i] != visited)  
+                fr[i] = count;  
+        }  
+        
+        //Displays the frequency of each element present in array  
+        Console.WriteLine("---------------------");  
+        Console.WriteLine(" Element | Frequency");  
+        Console.WriteLine("---------------------");  
+        for(int i = 0; i < fr.Length; i++){  
+            if(fr[i] != visited)  
+                Console.WriteLine("    " + arr[i] + "    |    " + fr[i]);  
+        }  
+        Console.WriteLine("---------------------");
