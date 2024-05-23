@@ -1,5 +1,5 @@
 Reverse string
-Console.WriteLine ("Try programiz.pro");
+        Console.WriteLine ("Try programiz.pro");
         string str = "Swapnali";
         string reverse = "";
         
@@ -20,3 +20,283 @@ Reverse number
             no = no / 10;
         }
         Console.WriteLine(revNo);
+
+/*
+ * C# Program to Check whether the Entered Number is Even or Odd
+ */
+        using System;
+        using System.Collections.Generic;
+        using System.Linq;
+        using System.Text; 
+        namespace check1
+        {
+            class Program
+            {
+                static void Main(string[] args)
+                {
+                    int i;
+                    Console.Write("Enter a Number : ");
+                    i = int.Parse(Console.ReadLine());
+                    if (i % 2 == 0)
+                    {
+                        Console.Write("Entered Number is an Even Number");
+                        Console.Read();
+                    }
+                    else
+                    {
+                        Console.Write("Entered Number is an Odd Number");
+                        Console.Read();
+                    }
+                }
+            }
+        }
+        Enter a Number : 25
+        Entered Number is an Odd Number
+
+CountCharacter
+        using System;                        
+        public class CountCharacter  
+        {  
+            public static void Main()  
+            {  
+                String string1 = "The best of both worlds";  
+                int count = 0;                    
+                //Counts each character except space  
+                for(int i = 0; i < string1.Length; i++) {  
+                    if(string1[i] != ' ')  
+                        count++;  
+                }                    
+                //Displays the total number of characters present in the given string  
+                Console.WriteLine("Total number of characters in a string: " + count);  
+            }  
+        }   
+        Output:
+        Total number of characters in a string: 19
+
+C# program to print below star triangle by entering no of lines
+   *
+  ***
+ *****
+*******
+        Here's the C# program that prints the star triangle with spaces based on the number of lines entered by the user:
+        using System;
+        class Program
+        {
+            static void Main()
+            {
+                Console.Write("Enter the number of lines: ");
+                int numLines = Convert.ToInt32(Console.ReadLine());
+        
+                for (int i = 1; i <= numLines; i++)
+                {
+                    // Print spaces
+                    for (int j = 1; j <= numLines - i; j++)
+                    {
+                        Console.Write(" ");
+                    }
+        
+                    // Print stars
+                    for (int k = 1; k <= 2 * i - 1; k++)
+                    {
+                        Console.Write("*");
+                    }
+        
+                    Console.WriteLine();
+                }
+            }
+        }
+        This program prompts the user to enter the number of lines, then it uses nested loops to print the star triangle with spaces. 
+        The outer loop controls the number of lines. 
+        The first inner loop prints the appropriate number of spaces before the stars on each line, 
+        based on the line number and the total number of lines. 
+        The second inner loop prints the stars for each line, with the number of stars being '2 * i - 1' (where i is the current line number).
+
+FibbonacciSeries
+        private static int FibbonacciSeries(int number)
+        {
+            int firstValue = 0;
+            int secondValue = 1;
+            int result = 0;
+            if (number == 0)
+                return 0;
+            if (number == 1)
+                return 1;
+            for (int i = 2; i <= number; i++)
+            {
+                result = firstValue + secondValue;
+                firstValue = secondValue;
+                secondValue = result;
+            }
+            return result;
+        }
+
+Factorial
+        private static int Factorial(int number)
+        {
+            int fact = 1;
+            if (number == 0)
+                return 0;
+            if (number == 1)
+                return 1;
+
+            for (int i = 1; i <= number; i++)
+            {
+                fact = fact * i;
+            }
+            return fact;
+        }
+
+
+ private static void FindDuplicateCharacterInString(string inPutString)
+        {
+
+            if (string.IsNullOrEmpty(inPutString))
+            {
+                Console.WriteLine("Please enter valid Input");
+            }
+            else
+            {
+                var list = new List<char>();
+                string result = string.Empty;
+
+                foreach (char item in inPutString)
+                {
+                    if (list.Contains(item))
+                    {
+                        if (!result.Contains(item))
+                            result += item;
+                    }
+                    else
+                    {
+                        list.Add(item);
+                    }
+                }
+                Console.WriteLine("Duplicate Found : {0} ", result);
+            }
+
+        }
+
+        public static void FindDuplicateInstringArray()
+        {
+            string[] strArray = { "Sunday", "Monday", "Tuesday", "Wednesday", "Sunday", "Monday" };
+            List<string> lstString = new List<string>();
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var str in strArray)
+            {
+                if (lstString.Contains(str))
+                {
+                    sb.Append(" " + str);
+
+                }
+                else
+                {
+                    lstString.Add(str);
+                }
+            }
+            Console.WriteLine("Duplicate Found : {0}", sb.ToString());
+        }
+
+        public static void RemoveDuplicate(string inputString)
+        {
+            var list = new List<char>();
+
+            foreach (var item in inputString)
+            {
+                if (!list.Contains(item))
+                {
+                    list.Add(item);
+                }
+            }
+
+            Console.WriteLine("Orignal String {0}, After duplicate removed {1}", inputString, new string(list.ToArray()));
+        }
+
+public static void ReverseStringWords(string inputString)
+        {
+            string[] seprator = { " " };
+            string[] words = inputString.Split(seprator, StringSplitOptions.RemoveEmptyEntries);
+            string result = string.Empty;
+            for (int i = words.Length - 1; i >= 0; i--)
+            {
+                result += words[i].ToString();
+            }
+            Console.WriteLine("Reverse words in string {0}", result);
+        }
+
+
+public static bool IsStringPalindrome(string inputString)
+        {
+            int minIdex = 0;
+            int maxIdex = inputString.Length - 1;
+            while (true)
+            {
+                if (minIdex > maxIdex)
+                {
+                    return true;
+                }
+                char charfromLeft = inputString[minIdex];
+                char charfromRight = inputString[maxIdex];
+                if (charfromLeft != charfromRight)
+                {
+                    return false;
+                }
+                minIdex++;
+                maxIdex--;
+            }
+
+        }
+
+public static bool IsNumberPalindrome(int number)
+        {
+            int reminder, sum = 0;
+            int tempNumber;
+            tempNumber = number;
+            bool IsPalindrome = false;
+            while (number > 0)
+            {
+                reminder = number % 10;
+                number = number / 10;
+                sum = sum * 10 + reminder;
+                if (tempNumber == sum)
+                {
+                    IsPalindrome = true;
+                }
+            }
+            return IsPalindrome;
+        }
+
+public static bool IsNumberPrime(int number)
+        {
+            int i;
+            for (i = 2; i <= number - 1; i++)
+            {
+                if (number % i == 0)
+                {
+                    return false;
+                }
+            }
+            if (i == number)
+            {
+                return true;
+            }
+            return false;
+        }
+
+Program to swap two numbers without third variable
+using System;     
+class swap {   
+public static void Main()   
+    {   
+        Console.WriteLine("Enter the value of x and y");  
+        int x=Convert.ToInt32(Console.ReadLine());  
+        int y = Convert.ToInt32(Console.ReadLine());  
+        Console.WriteLine("before swapping numbers: "+x +"  "+ y);  
+          /*swapping*/  
+        x = x + y;   
+        y = x - y;   
+        x = x - y;   
+        Console.WriteLine("After swapping: "+x +"   " + y);   
+          
+    }   
+}   
