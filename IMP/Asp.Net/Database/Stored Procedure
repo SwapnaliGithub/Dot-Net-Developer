@@ -1,3 +1,425 @@
+1.What is a stored procedure in SQL Server and how do you create one?
+In SQL Server, a stored procedure is a prepared SQL code that you can save, reuse, and share with others. It allows you to group multiple SQL statements into a single procedure that can be executed with a single call. To create a stored procedure, you can use the CREATE PROCEDURE statement followed by the procedure name, parameters (if any), and SQL code block. Here's an example:
+
+CREATE PROCEDURE GetCustomersByCity
+    @City VARCHAR(50)
+AS
+BEGIN
+    SELECT Name, Email, Phone
+    FROM Customers
+    WHERE City = @City;
+END
+In this example, the stored procedure "GetCustomersByCity" takes a single parameter @City and returns the "Name", "Email", and "Phone" columns from the "Customers" table where the "City" column equals the parameter value. You can then execute the stored procedure using the EXEC statement:
+
+EXEC GetCustomersByCity 'New York';
+This will call the "GetCustomersByCity" stored procedure and pass "New York" as the parameter value.
+
+2. What is a view in SQL Server and how do you create one?
+In SQL Server, a view is a virtual table based on the result set of a SELECT statement. It provides a way to simplify complex queries by storing frequently used SELECT statements as named objects. To create a view, you can use the CREATE VIEW statement followed by the view name and the SELECT statement. Here's an example:
+
+CREATE VIEW EmployeesByDepartment AS
+SELECT Employees.Name, Employees.Title, Departments.Name AS Department
+FROM Employees
+INNER JOIN Departments ON Employees.DepartmentID = Departments.ID;
+In this example, the view "EmployeesByDepartment" is created based on the result set of the SELECT statement. You can then query the view as if it were a regular table:
+
+SELECT * FROM EmployeesByDepartment;
+This will return the results of the SELECT statement used to create the view. Views can be used to simplify complex queries, provide an additional layer of security by restricting access to certain columns or rows, and improve performance by precomputing expensive queries.
+
+3.What is normalization and why is it important in SQL Server?
+Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. In SQL Server, normalization is important because it helps to eliminate data inconsistencies and anomalies that can occur when data is stored redundantly across multiple tables.
+
+Normalization involves dividing a database into two or more tables and defining relationships between them using foreign keys. There are several normal forms, each with its own set of rules for eliminating redundancy and ensuring data integrity.
+
+For example, to normalize a table that contains customer information, you might create a separate table for customer addresses and link it to the customer table using a foreign key. This helps to ensure that each customer has only one address and that the address data is consistent across all records.
+
+CREATE TABLE Customers (
+  CustomerID INT PRIMARY KEY,
+  Name VARCHAR(50),
+  Email VARCHAR(50)
+);
+
+CREATE TABLE Addresses (
+  AddressID INT PRIMARY KEY,
+  CustomerID INT,
+  Street VARCHAR(50),
+  City VARCHAR(50),
+  State VARCHAR(2),
+  Zip VARCHAR(10),
+  FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+
+How do you use the UNION operator in SQL Server to combine the results of two or more queries?
+Hide answer
+
+The UNION operator in SQL Server is used to combine the results of two or more SELECT statements into a single result set. The columns in each SELECT statement must have the same data type and be in the same order. Duplicate rows are eliminated from the final result set.
+
+Here's an example of using UNION to combine the results of two queries:
+
+SELECT column1, column2 FROM table1
+UNION
+SELECT column1, column2 FROM table2;
+This would return a single result set that includes the columns "column1" and "column2" from both "table1" and "table2", with duplicate rows removed.
+
+How do you use the JOIN operator in SQL Server to combine data from two or more tables?
+Hide answer
+
+In SQL Server, the JOIN operator is used to combine data from two or more tables based on a related column between them. The most common types of JOIN are INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN. Here is an example of an INNER JOIN between two tables:
+
+SELECT *
+FROM Table1
+INNER JOIN Table2
+ON Table1.ID = Table2.ID;
+This will return all rows from both tables where there is a matching ID value.
+
+How do you use the OUTER JOIN operator in SQL Server to include non-matching rows in a query?
+Hide answer
+
+The OUTER JOIN operator in SQL Server is used to include non-matching rows from one or both tables in a query. There are three types of OUTER JOINs: LEFT OUTER JOIN, RIGHT OUTER JOIN, and FULL OUTER JOIN.
+
+Here's an example of a LEFT OUTER JOIN that returns all rows from the left table and only matching rows from the right table. Any non-matching rows from the left table will have NULL values in the result set for the columns of the right table.
+
+SELECT *
+FROM table1
+LEFT OUTER JOIN table2
+ON table1.id = table2.id;
+
+
+
+What is a stored procedure in SQL Server and how do you create one?
+Hide answer
+
+In SQL Server, a stored procedure is a prepared SQL code that you can save, reuse, and share with others. It allows you to group multiple SQL statements into a single procedure that can be executed with a single call. To create a stored procedure, you can use the CREATE PROCEDURE statement followed by the procedure name, parameters (if any), and SQL code block. Here's an example:
+
+CREATE PROCEDURE GetCustomersByCity
+    @City VARCHAR(50)
+AS
+BEGIN
+    SELECT Name, Email, Phone
+    FROM Customers
+    WHERE City = @City;
+END
+In this example, the stored procedure "GetCustomersByCity" takes a single parameter @City and returns the "Name", "Email", and "Phone" columns from the "Customers" table where the "City" column equals the parameter value. You can then execute the stored procedure using the EXEC statement:
+
+EXEC GetCustomersByCity 'New York';
+This will call the "GetCustomersByCity" stored procedure and pass "New York" as the parameter value.
+
+What is a view in SQL Server and how do you create one?
+Hide answer
+
+In SQL Server, a view is a virtual table based on the result set of a SELECT statement. It provides a way to simplify complex queries by storing frequently used SELECT statements as named objects. To create a view, you can use the CREATE VIEW statement followed by the view name and the SELECT statement. Here's an example:
+
+CREATE VIEW EmployeesByDepartment AS
+SELECT Employees.Name, Employees.Title, Departments.Name AS Department
+FROM Employees
+INNER JOIN Departments ON Employees.DepartmentID = Departments.ID;
+In this example, the view "EmployeesByDepartment" is created based on the result set of the SELECT statement. You can then query the view as if it were a regular table:
+
+SELECT * FROM EmployeesByDepartment;
+This will return the results of the SELECT statement used to create the view. Views can be used to simplify complex queries, provide an additional layer of security by restricting access to certain columns or rows, and improve performance by precomputing expensive queries.
+
+How do you grant and revoke permissions in SQL Server?
+Hide answer
+
+In SQL Server, you can grant and revoke permissions using the GRANT and REVOKE statements.
+
+To grant permissions to a user or role, you can use the GRANT statement followed by the permissions and the object being granted access to. Here's an example:
+
+GRANT SELECT, INSERT ON Employees TO John;
+This will grant the user "John" the ability to select and insert data into the "Employees" table.
+
+To revoke permissions from a user or role, you can use the REVOKE statement followed by the permissions and the object being revoked access to. Here's an example:
+
+REVOKE SELECT, INSERT ON Employees FROM John;
+This will revoke the user "John" the ability to select and insert data into the "Employees" table.
+
+You can also grant or revoke permissions at the database or server level by specifying the database or server name instead of an object name.
+
+What is normalization and why is it important in SQL Server?
+Hide answer
+
+Normalization is the process of organizing data in a database to reduce redundancy and improve data integrity. In SQL Server, normalization is important because it helps to eliminate data inconsistencies and anomalies that can occur when data is stored redundantly across multiple tables.
+
+Normalization involves dividing a database into two or more tables and defining relationships between them using foreign keys. There are several normal forms, each with its own set of rules for eliminating redundancy and ensuring data integrity.
+
+For example, to normalize a table that contains customer information, you might create a separate table for customer addresses and link it to the customer table using a foreign key. This helps to ensure that each customer has only one address and that the address data is consistent across all records.
+
+CREATE TABLE Customers (
+  CustomerID INT PRIMARY KEY,
+  Name VARCHAR(50),
+  Email VARCHAR(50)
+);
+
+CREATE TABLE Addresses (
+  AddressID INT PRIMARY KEY,
+  CustomerID INT,
+  Street VARCHAR(50),
+  City VARCHAR(50),
+  State VARCHAR(2),
+  Zip VARCHAR(10),
+  FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+What is a trigger in SQL Server and how do you create one?
+Hide answer
+
+In SQL Server, a trigger is a special type of stored procedure that is automatically executed in response to certain database events, such as INSERT, UPDATE, or DELETE operations. Triggers are often used to enforce business rules, maintain data integrity, or audit changes to data.
+
+To create a trigger, you can use the CREATE TRIGGER statement followed by the trigger name, the table it will be associated with, and the event that will trigger the trigger. Here's an example:
+
+CREATE TRIGGER AuditEmployees
+ON Employees
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+  -- trigger logic here
+END;
+In this example, the trigger "AuditEmployees" is associated with the "Employees" table and will be triggered after any INSERT, UPDATE, or DELETE operation on the table. The trigger logic would then be written in the BEGIN and END block.
+
+What is an index in SQL Server and how do you create one?
+Hide answer
+
+In SQL Server, an index is a database object that improves the performance of database operations by providing quick access to specific data in a table. An index works like a table of contents, allowing the database to quickly locate data without having to scan the entire table.
+
+To create an index, you can use the CREATE INDEX statement followed by the index name, the table and columns to be indexed, and any additional options. Here's an example:
+
+CREATE INDEX IX_Employees_LastName
+ON Employees (LastName);
+In this example, an index named "IX_Employees_LastName" is created on the "LastName" column of the "Employees" table. This would speed up queries that involve searching for employees by last name.
+
+How do you back up and restore a SQL Server database?
+Hide answer
+
+To back up a SQL Server database, you can use the BACKUP DATABASE statement followed by the name of the database and the location where you want to store the backup file. Here's an example:
+
+BACKUP DATABASE MyDatabase
+TO DISK = 'C:\Backup\MyDatabase.bak';
+To restore a SQL Server database from a backup file, you can use the RESTORE DATABASE statement followed by the name of the database and the location of the backup file. Here's an example:
+
+RESTORE DATABASE MyDatabase
+FROM DISK = 'C:\Backup\MyDatabase.bak'
+WITH REPLACE;
+In this example, the WITH REPLACE option is used to overwrite the existing database with the backup. Note that restoring a database from a backup may require additional options depending on the type of backup and the specific restore scenario.
+
+What is a transaction in SQL Server and how do you use it?
+Hide answer
+
+In SQL Server, a transaction is a sequence of one or more database operations that are treated as a single unit of work. Transactions ensure that all the operations within the transaction are completed or rolled back as a single unit, so that the database remains in a consistent state.
+
+To use transactions in SQL Server, you can wrap your database operations in a BEGIN TRANSACTION and COMMIT or ROLLBACK statement. Here's an example:
+
+BEGIN TRANSACTION;
+
+UPDATE Customers
+SET Balance = Balance - 100
+WHERE CustomerID = 1234;
+
+INSERT INTO Transactions
+VALUES (1234, -100, GETDATE());
+
+COMMIT TRANSACTION;
+In this example, a transaction is used to deduct $100 from the balance of a customer with ID 1234, and record the transaction in a separate table. If any of the operations within the transaction fail, the entire transaction will be rolled back and the database will be returned to its previous state.
+
+What is a cursor in SQL Server and how do you use it?
+Hide answer
+
+In SQL Server, a cursor is a database object used to traverse the result set of a SELECT statement one row at a time. Cursors are typically used to perform operations that cannot be easily accomplished with set-based operations.
+
+To use a cursor in SQL Server, you first declare and open the cursor using the DECLARE and OPEN statements. Then, you can fetch the rows one at a time using the FETCH statement, perform operations on each row, and then close the cursor when you're done. Here's an example:
+
+DECLARE @CustomerID INT, @CustomerName VARCHAR(50);
+DECLARE CustomerCursor CURSOR FOR
+SELECT CustomerID, CustomerName
+FROM Customers
+WHERE Balance > 1000;
+
+OPEN CustomerCursor;
+
+FETCH NEXT FROM CustomerCursor
+INTO @CustomerID, @CustomerName;
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+  PRINT 'Customer ' + @CustomerName + ' (ID ' + CAST(@CustomerID AS VARCHAR) + ') has a balance > $1000';
+  FETCH NEXT FROM CustomerCursor
+  INTO @CustomerID, @CustomerName;
+END;
+
+CLOSE CustomerCursor;
+DEALLOCATE CustomerCursor;
+In this example, a cursor is used to retrieve the IDs and names of customers who have a balance greater than $1000. The cursor is declared, opened, and then used to fetch each row of the result set one at a time. For each row, a message is printed indicating the customer's name and ID. Finally, the cursor is closed and deallocated.
+
+What is a temporary table in SQL Server and how do you create one?
+Hide answer
+
+A temporary table is a type of table in SQL Server that is used to store a temporary result set that can be referenced multiple times within a single session. Temporary tables can be created and used within a single session, and they are automatically dropped when the session ends. Temporary tables are created using the CREATE TABLE statement with the # prefix before the table name to indicate that it is a temporary table. Here's an example:
+
+-- create a temporary table
+CREATE TABLE #tempTable (
+  id INT,
+  name VARCHAR(50)
+);
+
+-- insert data into the temporary table
+INSERT INTO #tempTable (id, name)
+VALUES (1, 'John'), (2, 'Jane');
+
+-- select data from the temporary table
+SELECT * FROM #tempTable;
+
+-- drop the temporary table
+DROP TABLE #tempTable;
+What is the difference between a clustered and non-clustered index in SQL Server?
+Hide answer
+
+In SQL Server, a clustered index determines the physical order of data in a table, whereas a non-clustered index does not affect the physical order of data. A table can have only one clustered index, but multiple non-clustered indexes. Because of their impact on physical data order, clustered indexes are typically used on columns that are frequently searched and returned in a particular order. Non-clustered indexes are used on columns that are frequently searched but not necessarily returned in a specific order. Here's an example of creating a clustered and non-clustered index on a table:
+
+-- create a clustered index
+CREATE CLUSTERED INDEX idx_name ON table_name (column_name);
+
+-- create a non-clustered index
+CREATE NONCLUSTERED INDEX idx_name ON table_name (column_name);
+What is a collation in SQL Server and how do you set it?
+Hide answer
+
+In SQL Server, a collation specifies the rules for comparing and sorting character data. It determines the character set used, as well as the order in which characters are sorted and compared. Collations can be set at the server, database, column, or expression level.
+
+Here's an example of setting the collation for a database:
+
+ALTER DATABASE database_name
+COLLATE collation_name;
+And here's an example of setting the collation for a column:
+
+ALTER TABLE table_name
+ALTER COLUMN column_name data_type
+COLLATE collation_name;
+In both cases, collation_name specifies the desired collation.
+
+How do you check the version of SQL Server?
+Hide answer
+
+To check the version of SQL Server, you can run the following SQL query:
+
+SELECT @@VERSION
+This will return a string with information about the version of SQL Server, including the edition, release, and build number. For example:
+
+Microsoft SQL Server 2019 (RTM-CU15) (KB5005652) - 15.0.4153.1 (X64)
+        Sep 11 2021 08:32:16
+        Copyright (C) 2019 Microsoft Corporation
+        Developer Edition (64-bit) on Windows 10 Pro 10.0 <X64> (Build 19042: ) (Hypervisor)
+How do you optimize a SQL Server query?
+Hide answer
+
+There are several ways to optimize a SQL Server query:
+
+Use indexes: Creating indexes on columns used in WHERE, JOIN, and ORDER BY clauses can significantly improve query performance.
+Use appropriate data types: Choosing the appropriate data types for columns can also improve performance.
+Avoid using SELECT *: Instead of selecting all columns, specify only the columns that are needed in the query.
+Use query execution plan: Analyzing the query execution plan can help identify performance bottlenecks and optimize queries accordingly.
+Use parameterized queries: Using parameterized queries can help improve performance by reducing the number of compilations and improving plan reuse.
+Example:
+
+--Create an index on the column used in WHERE clause
+CREATE INDEX IX_Employee_Salary ON Employee(Salary);
+
+--Specify only the columns that are needed in the query
+SELECT EmployeeName, Salary FROM Employee WHERE Salary > 50000;
+
+--Analyze the query execution plan
+EXPLAIN SELECT EmployeeName, Salary FROM Employee WHERE Salary > 50000;
+
+--Use parameterized queries
+DECLARE @Salary INT = 50000;
+SELECT EmployeeName, Salary FROM Employee WHERE Salary > @Salary;
+What is the difference between a view and a table in SQL Server?
+Hide answer
+
+In SQL Server, a table is a physical object that stores data, while a view is a virtual table that is created by a query. The data in a view is not physically stored in the database but is dynamically retrieved from one or more tables. A view can be used to simplify the complexity of a query or to restrict access to certain data. A table can be modified by adding, deleting or updating rows, while a view cannot be modified directly and is usually used for reading data only.
+
+Example of creating a table:
+
+CREATE TABLE customers (
+   id INT PRIMARY KEY,
+   name VARCHAR(50),
+   email VARCHAR(50)
+);
+Example of creating a view:
+
+CREATE VIEW customer_emails AS
+SELECT name, email FROM customers;
+How do you rename a table in SQL Server?
+Hide answer
+
+To rename a table in SQL Server, you can use the sp_rename system stored procedure. The syntax is as follows:
+
+EXEC sp_rename 'old_table_name', 'new_table_name';
+Here, old_table_name is the name of the table that you want to rename, and new_table_name is the new name you want to give to the table. Make sure that the new name you choose does not conflict with any other existing table or object in the database.
+
+How do you create a user-defined data type in SQL Server and when would you use it?
+View answer 
+
+To create a user-defined data type in SQL Server, you can use the CREATE TYPE statement. User-defined data types are useful when you want to enforce specific data formatting or validations on a column.
+
+Here is an example of creating a user-defined data type called PhoneNumber that represents a 10-digit phone number in the format xxx-xxx-xxxx:
+
+CREATE TYPE PhoneNumber
+FROM VARCHAR(12)
+WHERE VALUE LIKE '___-___-____'
+This user-defined data type can then be used in a table definition like this:
+
+CREATE TABLE Customers
+(
+    CustomerID INT,
+    Name VARCHAR(50),
+    Phone PhoneNumber
+)
+How do you create a computed column in SQL Server and what is its purpose?
+Hide answer
+
+A computed column is a column in a SQL Server table that is generated by an expression. It is computed from an expression that can use other columns in the same table. A computed column is not stored physically in the table and is computed every time a query is executed against the table. It can be used to perform calculations or transformations on existing data.
+
+To create a computed column in SQL Server, you can use the AS keyword followed by the expression that will compute the value of the column. Here's an example:
+
+CREATE TABLE Employees
+(
+   EmployeeID INT PRIMARY KEY,
+   FirstName VARCHAR(50),
+   LastName VARCHAR(50),
+   Salary DECIMAL(10,2),
+   Bonus DECIMAL(10,2),
+   TotalPay AS (Salary + Bonus)
+);
+In this example, the TotalPay column is a computed column that is calculated by adding the values of the Salary and Bonus columns.
+
+How do you rename a table in SQL Server?
+Hide answer
+
+To rename a table in SQL Server, you can use the sp_rename stored procedure. Here is an example:
+
+EXEC sp_rename 'old_table_name', 'new_table_name';
+This will rename the table called "old_table_name" to "new_table_name". Note that the new name must not already exist in the database.
+
+How do you use common table expressions (CTEs) in SQL Server?
+Hide answer
+
+Common Table Expressions (CTEs) allow you to define a temporary result set that can be referenced within a SELECT, INSERT, UPDATE, or DELETE statement. They can be used to simplify complex queries and improve readability. To create a CTE in SQL Server, you can use the WITH keyword followed by the CTE name, and then define the SELECT statement that will generate the result set. Here's an example:
+
+WITH CTE AS (
+  SELECT *
+  FROM MyTable
+  WHERE MyColumn = 'Value'
+)
+SELECT *
+FROM CTE
+In this example, a CTE named "CTE" is defined that selects all columns from "MyTable" where "MyColumn" equals 'Value'. The CTE is then referenced in the SELECT statement to return the result set.
+
+
+
+
+
+
+
+
 1. How can you improve Stored Procedure Performance?
 
 Use Proper indexing on tables.
@@ -7,6 +429,8 @@ do not use prefix 'SP' while creating stored procedures as default system stored
 Whenever it's required fetch data from the table with 'NOLOCK' keyword WITH(NOLOCK).
 Set ANSI_Nulls ON|OFF- When it's ON it means a select statement will return zero results even if there are null values in the column. When It's OFF means select statement will return the corresponding rows with null values in columns. When you are setting it OFF means comparison operators do not follow ISO standards.
 Set Quoted_Identifier ON|OFF - When it's ON means identifiers are delimited by double quotes and literals are delimited by single quotes. But when it's OFF means identifiers can not be delimited by quotation.
+
+
 
 write a code that removes the spaces from start and end of the string
 fobonacci
