@@ -1,5 +1,9 @@
 Assembly https://www.csharpstar.com/asp-net-interview-questions-part-3-net-assemblies/
+In C#, public and private are access modifiers that determine the visibility and accessibility of class members.
 
+A member declared as public can be accessed from anywhere, inside or outside the class.
+
+A member declared as private can only be accessed within the class where it is declared.
 Dispose v/s Finalize
 Dispose	Finalize
 It is used to free unmanaged resources at any time.	It can be used to free unmanaged resources held by an object before that object is destroyed.
