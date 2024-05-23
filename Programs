@@ -1,8 +1,6 @@
-Reverse string
-        Console.WriteLine ("Try programiz.pro");
+Reverse string        
         string str = "Swapnali";
-        string reverse = "";
-        
+        string reverse = "";        
         for(int i = str.Length - 1; i >= 0; i--)
         {
             reverse += str[i];
@@ -21,9 +19,7 @@ Reverse number
         }
         Console.WriteLine(revNo);
 
-/*
- * C# Program to Check whether the Entered Number is Even or Odd
- */
+C# Program to Check whether the Entered Number is Even or Odd
         using System;
         using System.Collections.Generic;
         using System.Linq;
