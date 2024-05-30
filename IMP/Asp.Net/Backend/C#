@@ -1,3 +1,49 @@
+1. How to implement asynchronous programming?
+Asynchronous programming in .NET is usually implemented using the async and await keywords. Asynchronous programming is commonly used for I/O bound operations, such as file access, database queries, and network communication.
+
+Asynchronous programming is particularly useful in web application development to prevent main-thread blocking while performing synchronous I/O operations.
+
+2. What do you know about dependency injection?
+Dependency Injection is the implementation of Inversion of Control, where a class no longer initializes its dependencies but instead accepts them through constructors or properties.
+
+Three commonly used service lifetimes are Singleton, Scoped, and Transient.
+
+Singleton: The instance is created once and used throughout the application's runtime.
+Scoped: Created a new one for each scope, usually each request in the web application.
+Transient: Created every time the dependency is called.
+Dependency injection enhances modularity and flexibility and simplifies unit testing by replacing actual dependencies with mockups.
+
+All About Dependency Injection in ASP .NET Core
+Dependency injection, IoC container, service scoped, singleton, scoped, transient
+juldhais.net
+
+3. Can you explain the SOLID principles?
+The SOLID principles provide five guidelines for developing code that is easy to maintain and extend.
+
+Single Responsibility: Each class can only have one responsibility.
+Open/Closed: Each class must be open for extension and closed for modification.
+Liskov Substitution: The parent class must be able to be replaced by any derived class without causing errors in the program.
+Interface Segregation: Each class should only implement the interfaces that will actually be used.
+Dependency Inversion: High-level modules should not depend on low-level modules. Both must rely on abstractions.
+4. What do you know about unit testing?
+Unit testing is used to ensure application logic runs according to specifications. We can use unit testing frameworks such as NUnit or xUnit. Mocking libraries such as Moq can be used to create mock objects.
+
+The code coverage of the unit tests must reach the specified percentage. The ideal value for code coverage is around 80%. We can use tools such as SonarCube or JetBrains dotCover to measure the code coverage.
+
+5. How do you implement a locking mechanism?
+Locking mechanisms are important for managing resources accessed together in multithreading to avoid race conditions and deadlocks. Locking mechanisms can be implemented using. lock, Monitor, Mutex, and Semaphore.
+
+6. What do you know about LINQ?
+LINQ (Language-Integrated Query) is a feature that allows writing queries to data sources in a declarative and consistent way. LINQ can be used to perform queries to memory (lists or arrays), databases, and XML.
+
+We can apply LINQ to query the database using an ORM such as Entity Framework. Each LINQ query will be converted into an SQL query and executed on the database.
+
+7. How do you troubleshoot?
+The troubleshooting process can be done using the Visual Studio debugger to check variable values and program execution flow. Utilizing logging functionality is beneficial in identifying and resolving errors that may arise while troubleshooting.
+
+For performance-related problems, we can use profiling tools such as Visual Studio Diagnostic Tools or JetBrains dotTrace.
+
+
 Assembly https://www.csharpstar.com/asp-net-interview-questions-part-3-net-assemblies/
 In C#, public and private are access modifiers that determine the visibility and accessibility of class members.
 
