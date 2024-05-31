@@ -142,10 +142,9 @@ Factorial
             return fact;
         }
 
-
- private static void FindDuplicateCharacterInString(string inPutString)
+FindDuplicateCharacterInString
+        private static void FindDuplicateCharacterInString(string inPutString)
         {
-
             if (string.IsNullOrEmpty(inPutString))
             {
                 Console.WriteLine("Please enter valid Input");
@@ -169,9 +168,9 @@ Factorial
                 }
                 Console.WriteLine("Duplicate Found : {0} ", result);
             }
-
         }
 
+FindDuplicateInstringArray
         public static void FindDuplicateInstringArray()
         {
             string[] strArray = { "Sunday", "Monday", "Tuesday", "Wednesday", "Sunday", "Monday" };
@@ -193,6 +192,7 @@ Factorial
             Console.WriteLine("Duplicate Found : {0}", sb.ToString());
         }
 
+RemoveDuplicate
         public static void RemoveDuplicate(string inputString)
         {
             var list = new List<char>();
@@ -208,7 +208,8 @@ Factorial
             Console.WriteLine("Orignal String {0}, After duplicate removed {1}", inputString, new string(list.ToArray()));
         }
 
-public static void ReverseStringWords(string inputString)
+ReverseStringWords
+        public static void ReverseStringWords(string inputString)
         {
             string[] seprator = { " " };
             string[] words = inputString.Split(seprator, StringSplitOptions.RemoveEmptyEntries);
@@ -220,8 +221,8 @@ public static void ReverseStringWords(string inputString)
             Console.WriteLine("Reverse words in string {0}", result);
         }
 
-
-public static bool IsStringPalindrome(string inputString)
+String Palindrome
+        public static bool IsStringPalindrome(string inputString)
         {
             int minIdex = 0;
             int maxIdex = inputString.Length - 1;
@@ -243,6 +244,7 @@ public static bool IsStringPalindrome(string inputString)
 
         }
 
+Number Palindrome
 public static bool IsNumberPalindrome(int number)
         {
             int reminder, sum = 0;
@@ -262,6 +264,7 @@ public static bool IsNumberPalindrome(int number)
             return IsPalindrome;
         }
 
+Number Prime
 public static bool IsNumberPrime(int number)
         {
             int i;
@@ -280,19 +283,19 @@ public static bool IsNumberPrime(int number)
         }
 
 Program to swap two numbers without third variable
-using System;     
-class swap {   
-public static void Main()   
-    {   
-        Console.WriteLine("Enter the value of x and y");  
-        int x=Convert.ToInt32(Console.ReadLine());  
-        int y = Convert.ToInt32(Console.ReadLine());  
-        Console.WriteLine("before swapping numbers: "+x +"  "+ y);  
-          /*swapping*/  
-        x = x + y;   
-        y = x - y;   
-        x = x - y;   
-        Console.WriteLine("After swapping: "+x +"   " + y);   
-          
-    }   
-}   
+        using System;     
+        class swap {   
+        public static void Main()   
+            {   
+                Console.WriteLine("Enter the value of x and y");  
+                int x=Convert.ToInt32(Console.ReadLine());  
+                int y = Convert.ToInt32(Console.ReadLine());  
+                Console.WriteLine("before swapping numbers: "+x +"  "+ y);  
+                  /*swapping*/  
+                x = x + y;   
+                y = x - y;   
+                x = x - y;   
+                Console.WriteLine("After swapping: "+x +"   " + y);   
+                  
+            }   
+        }   
