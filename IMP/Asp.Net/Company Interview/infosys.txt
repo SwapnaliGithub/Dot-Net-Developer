@@ -1,3 +1,355 @@
+https://github.com/kansiris/C-Sharp-c-interview-question
+https://dotnettutorials.net/course/csharp-dot-net-tutorials/
+
+1.) .net framework — DOT NET Framework , CLR ,CTS , dot net program execution flow , intermediate language , managed and unmanaged code , garbage collector ,Assembly DLL EXE in .NET Framework , strong and weak assembly , app domain.
+
+2.) C# — basics , oops , exception handling , delegates , multithreading , collection framework and generic.
+
+3.) SQL — basics ,keys , clauses , operator, joins , indexes ,built in function, store procedure , difference between Store procedure and function,views , Trigger .
+
+4.) Web api —introduction ,http Verb ( get ,post ,put ,delete) , calling web api from jQuery, Routing , security , versioning
+
+5.) Ado.net — introduction , Sqlconnection, Sqlconmand , sqldatareader , sqldataadapater, dataset, datatable , architecture of Ado.net
+
+6.) Entity framework— basics , database first approach .
+
+7.) Asp.net MVC— MVC , routing , html helper, attributes , data annotations, action results , view ,filter , security.
+
+1.)Do have good understanding of oops concepts.If possibe expain them with a code example.
+2.).Net Architecture(how the web request is handled by the IIS Server).
+3.)Page life cycle(This invlolves all the events that occur at various phases of PLC)
+4.)Some Basics regarding assemblies(Their advantage over the COM component and DLL Conflicts and Vesioning Problems).How to create Shared assemblies.
+5.)If possible go through Design pattern(Idisposable Interface for Garabge Collection is often asked).Do go through other design patterns such as factory pattern,singleton pattern etc.
+6.)Have an overview of MVC Pattern.
+7.)Do have basic knowledge of memory managemnet(heap and stack),CLR,JIT,Server Controls,Boxing,Unboxing,casting.
+8.)State Managemet(Seesion management) is also very important.
+9.)If possible go through web Service and WCF Service.if you have worked on it then it is a big advantage.
+10.)Garbage collection how it works.
+Note:-You can go through all these topics from MSDN.
+Right now i could think of only these topics and i guess these should get u through the interview.
+ALL THE BEST...!!!
+
+1. When the ViewState available during the page processing cycle?
+2. What is the difference between Codebehind and Src?
+3. Which template is a much when displaying the data in a Repeater Control?
+4. Describe few properties that are common in every validation Control?
+5. What are the new versions came in .NET?
+
+1.How can you compare a part of name rather than the entire name?
+2. Which command is used to delete a record from a database?
+3. How to get distinct entries from the database?
+4. What are different DCL commands used?
+5. How to get results of any query which is sorted in any order?
+
+https://www.interviewbit.com/dot-net-interview-questions/
+
+https://lifedb.in/?p=posts%2Fview_post&title=Infosys+Interview+Questions+For+.NET+and+SQL+For+5+to+10+Years+Experience+Candidate.&id=7
+Following questions asked to me in Infosys interview-
+
+1.Why stored procedures not inline queries?
+inline queries may be suitable for simple, ad-hoc queries or small-scale applications, 
+stored procedures provide significant benefits in terms of performance, security, maintainability, abstraction, transaction management, 
+and network efficiency, making them a preferred choice for larger, more complex, and enterprise-level applications.
+
+2.Types of authentication?﻿
+
+3.What work you have done till now?
+
+4.Version control tool you have used?
+
+5.What are design patterns?
+
+6.What is water fall and agile methodology?
+
+7.Difference between composite key and primary key.
+
+8.Difference between functions and stored procedure.
+
+9.What are indexes?
+
+10.Any tool used for testing, code checking.
+
+11.Tell me about the process of deployment?
+
+
+
+
+
+https://www.javatpoint.com/dot-net-interview-questions
+https://www.interviewbit.com/infosys-interview-questions/
+https://neelbhatt.com/2017/07/08/infosys-interview-questions-for-experienced-net-developers/
+https://www.credosystemz.com/infosys-dot-net-interview-questions/
+https://sibeeshpassion.com/infosys-interview-questions-for-dotnet-professionals
+
+1. What is exactly the .Net framework?
+The object-oriented technique is supported by the.NET framework and is used to create Windows programs. 
+It supports a wide range of languages, including C#, VB, Cobol, Perl, and.NET. 
+It contains various functions and tools, including classes, libraries, and APIs, which are used to create, deploy, and run web services and multiple applications.
+
+2. Major components of the.Net framework
+dotnet framework
+
+3. What is Common language runtime(CLR)?
+The code is executed by this engine, which also offers services that facilitate the development process.
+
+Regardless of the programming language used, the CLR executes applications created for the.NET Framework. CLR is present in every.NET Framework version.
+
+4. Describe a Common type system(CTS)
+The CTS standard outlines the categories of data values that can be defined and maintained in runtime memory. it will ensure that programming data defined in various languages interact with one another. For instance, while C# describes as a data type, VB.NET integer is a data type.
+
+Transferring data from a type in one language to its corresponding type in another can be utilized to avoid data loss.
+
+5. state the Common language specification(CLS)
+A subset of CTS called Common Language Specification (CLS) outlines a set of guidelines that all languages using the.NET Framework to confirm.
+
+A CLS will support interoperability or cross-language integration. For instance, every programming language supported by the.NET framework (C#, F#, VB.Net, etc.) has its syntax. Therefore, when statements from various languages are performed, the CLS will offer a standard communication and information-sharing platform.
+
+6. Describe .Net Assembly
+The main component of the.NET Framework is known as a.NET assembly. In the CLI (Common Language Infrastructure), an assembly is a logical unit of code used for deployment, versioning, and security. Executable (.exe) files and Dynamic Link Libraries (.dll) are the two ways that assembly can be defined.
+
+7. what is Namespace in Dot Net?
+It is the group of predefined classes and methods found in the.Net Framework. Through “using a system,” where the system stands in for a namespace while using a keyword, a namespace can be introduced to a.NET program.
+
+8. What do you mean ASP.Net?
+Microsoft Corporation’s propitiatory frontend language is called ASP.NET. The term is “Active Server Pages.” The name alone declares that I’m engaged. The client machine will execute the ASP code, which will display the data the server is returning.
+
+9. Explain ASP.Net state management.
+State management refers to expressly maintaining the state of a control, web page, data, and user in the application. Because all ASP.NET web applications are stateless by default, every time a page is submitted to the server, the state of controls is lost.
+
+10. Distinguish a function and stored procedure
+A process is utilized to carry out specific tasks sequentially. A procedure has many functions. A function returns control and value to the function or code. The calling function or code receives control from a procedure but not any values.
+
+TCS Dot Net Interview Questions
+
+1. what is JIT?
+JIT is an acronym for the “Just in time” compiler. The native language is utilized to translate the intermediate code. During execution, the intermediate code is transformed into the native language.
+
+2. Describe BCL and its features.
+A base class library (BCL) is a collection of classes, interfaces, and value types.
+It serves as the basis for all.NET framework programs, elements, and controls.
+Encapsulates a vast array of frequently used features and makes them readily available to developers.
+It offers features including input/output, security, diagnostics, resources, globalization, and threading.
+Further performs the function of facilitating user and runtime interaction.
+Similarly, it offers namespaces that are frequently used. For example- system, system. Things to do, etc.
+3. What precisely is LINQ?
+It stands for Language Integrated Query, a feature that was added to Visual Studio 2008. LINQ is a collection of features that adds query functionality to the syntax of the.NET framework and enables data manipulation from any data source. The world of data and the world of objects are connected by LINQ.
+
+4. Distinguish MDI and SDI.
+An MDI (Many Document Interface) allows you to open multiple windows; it has one parent window and as many child windows as you need. The parent window’s components, such as the menu bar and toolbar, are shared.
+
+Each document is presented in a separate window using the SDI (Single Document Interface) interface. Each window has its features, such as a menu bar and toolbar. It is not limited to the parent window as a result.
+
+5. What is the difference between a stack and a heap?
+Stack	Heap
+Type of stored value.
+
+Reference type stored.
+
+Every thread in execution is tracked by a stack and its location.
+
+The heap is in charge of maintaining track of the finer-grained items or data.
+
+6. Differentiate localization and globalization.
+Globalization	localization
+The process of creating software that supports various languages is known as globalization.
+
+To adapt the already globally accessible program to a particular language or culture
+
+Multiple language support can also be added to already existing applications.
+
+Microsoft.Extensions. The program content is localized using localization.
+
+7. List the events in the page life cycle.
+The following activities make up the page life cycle:
+
+preInit_page
+init_page
+initcomplete_page
+preLoad_page
+load_page
+oadcomplete_page
+preRender_render
+8. What are variables and constants in.NET?
+Variable: A variable is a place in the computer’s memory where data is stored and which has a name and a value. Every variable has a data type associated with it that specifies the kind of value that can be placed in it.
+
+Constant: The difference between a constant and a variable is their respective values. A constant’s value cannot be changed once it has been assigned. At the same moment, they are declared, constants must also be initialized.
+
+9. what are tuples in .Net?
+A fixed-size collection called a tuple might include components of the same data type or various data types. Like with arrays, the user must specify the size of a tuple when it is declared.
+
+10. How do you check whether a DataReader is closed or opened?
+To determine whether a DataReader is open or closed, the “IsClosed” attribute is utilized. If a Data Reader is closed, this property returns a true value; otherwise, a false value is returned.
+
+Accenture Dot Net Interview Questions
+1. What are the fundamental components of OOP?
+The fundamental elements of OOP are: Encapsulation is the process of creating independent modules that link functions that access data with the data itself.
+
+Abstraction: Manages complexity and permits the implementation of additional sophisticated functionality without making it visible to the user object.
+
+Polymorphism: To enable simple integration, the operation is dependent on the context at runtime. A class can inherit behavior from its parent class and reuse code by creating classes in a hierarchy.
+
+2. How does OOP relate to the.NET Framework?
+The term “object-oriented programming” (OOP) is an abbreviation. It is a programming structure that accomplishes the needed functionality without the usage of methods by using independent things known as “objects.” OOP enables.NET programmers to build classes and programs that contain logical modules like methods, properties, fields, and events.
+
+3. What kinds of JIT Compilers are there?
+Three categories of JIT Compilers exist:
+
+Pre-JIT compiler: It performs a single compilation cycle, or at the time the application is deployed, to convert all of the source code into machine code.
+
+Normal JIT Compiler: The run-time needed source code methods are converted into machine code and saved in the cache to be invoked later.
+
+Econo JIT Compiler: This compiler is used to compile methods that are only needed at runtime and are not saved for later usage.
+
+4. What does.NET caching do?
+The.NET Framework’s caching feature enables data storage in memory for quick access. Making data accessible even when the data source is momentarily unavailable, increases scalability and aids in performance improvement.
+
+5. Distinguish a queue from a stack
+The Last-In, First-Out (LIFO) principle is used to process the values in a stack, so all items are added to and removed from the top. But when it comes to both insertion and deletion, a queue lists things according to the FIFO (First-In, First-Out) principle. The elements are added to a queue from the back end and removed from the front end.
+
+6. Distinguish the While and for loops. Give each loop a.NET syntax.
+While the While loop is a control flow statement that enables repetitive code execution, the for loop offers a simple approach to writing the loop structure. At the beginning of the for loop, initialization, condition checking, and iteration statements are written; however, at the beginning of the while loop, only initialization and condition checking are completed.
+
+7. Describe Marshaling.
+The process of marshaling involves changing types in both managed and unmanaged code.
+
+8. What are the differences between an EXE from a DLL?
+Single outbound files known as EXE files are not able to be shared with other apps. DLL files are a type of shareable multiple inbound files.
+
+9. How is ErrorProvider Control used in.NET?
+While filling out a data entry form, the end-user is informed of any errors or invalid data using the ErrorProvider control. When entering faulty data, the control’s neighboring display shows the error message that is associated with the error description string.
+
+10. What is Multithreading?
+A process that uses many threads to complete various tasks simultaneously is known as multi-threading. Multi-threading is supported by NET in two ways:
+
+Using ThreadStart delegates to start threads
+Using asynchronous methods and the ThreadPool class.
+11. Describe a PE file.
+Portable Executable is referred to as PE. It is an offshoot of Microsoft Common Object File Format (COFF). executable for Windows. The PE file format is used by EXE and DLL files.
+
+There are four sections to it:
+
+EXE or DLL file information is contained in the PE/COFF headers.
+CLR header—Contains details regarding CLR and memory administration.
+CLR data – Consists of DDL and MSIL metadata produced by compilers.
+Native image portion—This component includes sub-sections such as .data, .rdata, .rsrc, and .text.
+12. Describe ADO.
+ActiveX Data Objects is referred to as ADO. It is a program used to create Windows programs. Access to a relational or non-relational database from database providers like Microsoft and others is obtained using this method.
+
+13. Differentiate a release build and a debug build.
+Debug builds are not optimized and permit precise breakpoint settings. While the built-in “Release” mode of the code is optimized for speed or size without any debug data, they contain debugging symbols.
+
+14. What is the difference between the trace class and debug class?
+The Debug class is included, and this is when the application is being developed. While being used at the time of application deployment, the call to the Trace class is included in both Debug and Release modes.
+
+15. What Is Hashtable?
+Key-value pairs are kept in a collection called a hashtable. To access elements in the collection, it employs the hash codes of each key to organize the pairings.
+
+16. Define Method Overriding.
+Using the same name, return type, argument, and calling the same methods from a different class (base class) in the derived class is a process known as method overriding.
+
+17. What are the differences between overriding and shadowing?
+Shadowing is used to give the base class method a new implementation and helps guard against future base class alteration. By overriding, you can accomplish polymorphism by rewriting a base class method with a distinct definition.
+
+18. Describe polymorphism.
+A single interface with various functionalities is referred to as polymorphic. According to the run-time type of the instance that invokes it, the same method or property can carry out several tasks.
+
+19. What.NET Framework design patterns are there?
+1. Factory Method (Creational Design Pattern)
+Abstract Factory
+A builder.
+Prototype
+Singleton
+Adapter
+2. Structural Design Patterns
+Bridge
+Composite
+A decorator
+Facade
+Flyweight
+A proxy
+3. Chain of Responsibility Behavioral Design Pattern
+Direction
+A translator
+Iterator
+Arbitrator
+Memo
+The onlooker
+State
+Plan
+Guests
+Template Method
+
+20. Write a program to calculate the addition of two numbers.
+You must start a brand-new “CalculateSum” ASP.NET Core project. File > New > Project in Visual Studio 2015.
+
+Choose Web in the left pane, then choose ASP.NET Core Web Application (.NET Core) in the middle pane. Click OK after changing the project’s name to “CalculateSum”.
+
+Choose Web Application in the template window, change the Authentication setting to “No Authentication,” and then click OK.
+
+Click Add New Item from the context menu after opening “Solution Explorer” and selecting the folder “Home” (it is located under Views).
+
+To add a page, click the Add button after renaming the MVC View Page Template to “addition. cshtml” in the ASP.NET Section.
+
+Open addition. cshtml and the following code:
+
+@{
+    ViewBag.Title = "Addition Page";
+    }
+    Welcome to Addition Page
+    form asp-controller="Home" asp-action="add" method="post"
+    span Enter First Number :  input id="Text1" type="text" name="txtFirstNum" 
+    span Enter Second Number : input id="Text2" type="text" name="txtSecondNum" 
+    input id="Submit1" type="submit" value="Add" 
+    form
+    @ViewBag.Result
+    
+    using System;
+    using Microsoft.AspNetCore.Mvc;
+    namespace CalculateSum.Controllers
+    {
+    public class HomeController: Controller
+    {
+    public IActionResult Index()
+    {
+    return View();
+    }
+    public IActionResult About()
+    {
+    ViewData["Message"] = "Application description page.";
+    return View();
+    }
+    public IActionResult Contact()
+    {
+    ViewData["Message"] = "Contact page.";
+    return View();
+    }
+    public IActionResult Error()
+    {
+    return View();
+    }
+    public IActionResult addition()
+    {
+    return View();
+    }
+    [HttpPost]
+    public IActionResult add()
+    {
+    int number1 = Convert.ToInt32(HttpContext.Request.Form["txtFirstNum"].ToString());
+    int number2 = Convert.ToInt32(HttpContext.Request.Form["txtSecondNum"].ToString());
+    int res = number1 + number2;
+    ViewBag.Result = res.ToString();
+    return View("addition");
+    }
+    }
+    }
+    Press Ctrl+F5 to start your program now. This will open a browser and load an ASP.NET Core webpage. After adding /Home/addition to the end of the URL, press enter.
+    
+Below is the output format:
+
+Dot Net Interview Questions
+https://www.blendinfotech.com/dot-net-interview-questions-and-answers-for-2-years-experience
+https://btreesystems.com/blog/dot-net-interview-questions/
+
 Tell me about yourself.
 I answered — I am Rohit Sharma working in XXXXXX having 3 years of experience and well versed with Microsoft Technologies. I have worked upon the .Net, C#, Ajax, Javascript, Jquery, and SQL Server.
 
