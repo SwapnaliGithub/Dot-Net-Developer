@@ -1,3 +1,150 @@
+How do I prepare for dot net interview with 4 years of experience?
+Preparing for a .NET interview with 4 years of experience requires a good understanding of the core concepts and practical experience in developing applications using the .NET framework. Here are some tips to help you prepare effectively:
+
+Review Core Concepts: Make sure you have a solid understanding of the core concepts of .NET, including C# programming language, .NET framework, ASP.NET, ADO.NET, and Entity Framework.
+Practice Coding: Be prepared to write code during the interview. Practice coding exercises related to data structures, algorithms, and common .NET tasks. Websites like LeetCode, HackerRank, and GeeksforGeeks offer coding challenges that can help you improve your coding skills.
+Understand Design Patterns: Familiarize yourself with common design patterns used in .NET development, such as MVC, Singleton, Factory, and Repository patterns. Be prepared to discuss when and why you would use each pattern.
+Know ASP.NET Core: If you are applying for web development roles, make sure you are familiar with ASP.NET Core, an open-source framework for building modern, cloud-based, and internet-connected applications.
+Database Knowledge: Brush up on your knowledge of database concepts and technologies commonly used in .NET development, such as SQL Server and Entity Framework.
+Prepare for Behavioral Questions: Be ready to discuss your previous projects, challenges you faced, and how you overcame them. Employers often ask behavioral questions to gauge your problem-solving skills and how you work in a team.
+Review Your Previous Work: Make sure you can explain in detail the projects you have worked on, the technologies you used, and the challenges you faced. Be prepared to discuss your contributions and the impact of your work.
+Stay Updated: Keep yourself updated with the latest trends and updates in the .NET ecosystem. Follow blogs, forums, and websites related to .NET development to stay current with industry best practices.
+Mock Interviews: Consider doing mock interviews with friends, colleagues, or mentors to practice answering technical questions and improve your communication skills.
+Ask Questions: Remember that interviews are also an opportunity for you to assess if the company is the right fit for you. Prepare thoughtful questions about the company culture, team dynamics, and projects you would be working on.
+By following these tips and dedicating time to prepare, you can increase your chances of performing well in a .NET interview with 4 years of experience. Good luck!
+
+
+How should I prepare myself for a .Net interview in a week?
+The best way to prepare for an interview is to attend the interview first. Its my experience, I was avoiding most of the interviews because I haven't start preparing for it. But the preparation didn't start until I attended the first company. When i started attending, I got so many questions and get know the way they are asking questions which starts building the confidence in me. Lists the questions you have encountered and prepare answers for that then the preparation starts its own way.
+
+How many stages are there for Amazon’s SQL interview?
+The entire Amazon SQL Interview process can be divided into three stages:
+
+1. Phone Screen: The questions in this round will be related to your resume and skills, focused on understanding you as an applicant more than your technical proficiency.
+
+2. Technical Interview: You can expect questions related to coding, algorithms, and machine learning. You will be assigned 1 or 2 problems to solve within a stipulated time.
+
+3. On-site Interview: The final and most challenging round of the Amazon SQL Interview process is the on-site interview, also known as “The Loop.” There can be 3-5 rounds, where each r
+
+Dot Net developer interview questions?
+Everyyear i attend interviews just to brush up my knowledge and stay upto date. Till now i have gone through many interviews with both product and service based companies.
+
+It is easier to crack service companies than product based companies.
+
+Because in service companies you ll get questions like definitions and examples to write and a very few scenario based questions. But product based companies are very particular about real time implementation. They will ask questions from your work experience, you cant bluff there. Only you can able to explain these questions if you have worked on those areas and you should be very clear about your points. They will try to confuse you but stick to your point.
+
+If you are going for. Net interview, fisrt thing is you should be very strong in OOPs concepts.
+
+Okay. Here are some questions and topics from my interview experience.
+
+1.Features of OOPs with real time example.
+
+They ll ask many questions related to this. Like - difference between interface and abstraction? - difference between abstract class and abstract method?
+
+-how can you achieve abstraction?
+
+-what is polymerphism and types of polymerphism
+
+-method overloading and overriding with well explained example
+
+2. Constructors and types
+
+3.call by value and call by reference and where we should use?
+
+4.virtual function
+
+5.Exception handling
+
+6.explain types of inheritances
+
+7.Difference between struct and class
+
+8.managed and unmanaged code in c#
+
+9.Difference between constant and readonly with example
+
+10.difference between internal and private
+
+11.what is delegate?
+
+12.Difference between list and collection
+
+13.Dependency injection with example
+
+14.why do we use partial class?
+
+15.why do we use static class?
+
+16.what are Func and Action, why do we use?
+
+17.Anonymous methods
+
+18.Difference between ref and out keyword
+
+19.Difference between array and arraylist
+
+20.String and string builder
+
+Some questions from MVC
+
+1.why mvc?
+
+2.bundling and mimification
+
+3.action filters and types
+
+4.what is antiforgery token?
+
+5.viewdata,viewbag,tempdata
+
+6.Different ways to pass data from controller to view
+
+7.what is routing?
+
+8.why do we use partial view?
+
+9.How to pass data from view to controller?
+
+10.HTTPGET,HTTPPOST
+
+11.Action results
+
+12.Adding routes to webform application and mvc
+
+13.Methods to add constraints to a route
+
+14.IQueryable vs IEneumerable
+
+15.why and how we use sessions in mvc?
+
+16.what is custom action filter?
+
+17.POCO Class
+
+18.what is scaffolding?
+
+19.How to bind more than one model to view?
+
+20.How to validate data?
+
+21.Data reader, Data set, Data Adapter, Data table
+
+22.Connected architecture and disconnected architecture
+
+23.Execute non query, execute scalar, execute reader
+
+24.Difference between viewstate and session
+
+25.what are nullable types and generic types
+
+26.what is model binder?
+
+27.How to increase performance?
+
+28.session,cookie and cache
+
+29.Difference between finalize and dispose
+
 Interview Questions
 Tell me about yourself
 truncate and delete
