@@ -1,0 +1,178 @@
+What is your experience with project management tools and methodologies?
+I have experience using Agile methodology and tools such as JIRA and Trello, where I have collaborated with cross-functional teams to manage projects and track progress
+n my previous role, I used Scrum methodology and tools such as JIRA and Confluence to manage projects.
+I led daily stand-up meetings with my team to discuss project progress and any roadblocks, resulting in successful completion of projects on time and within budget."
+
+One of my long-term career goals is to continue to develop my skills and knowledge in my field. I plan to take courses and attend conferences to stay up-to-date with industry developments."
+
+https://www.c-sharpcorner.com/article/exception-handling-in-asp-net-web-api/
+Exceptions are the errors that happen at runtime. 
+Exception handling is the technique to handle this runtime error in our application code. 
+If any error is thrown in web API that is caught, it is translated into an HTTP response with status code 500- "Internal Server Error".
+
+There are many ways to handle the exceptio
+Web API supports many ways of exception handling. Following is a summary of exception handling in Web API described in this article:
+We can use HttpResponseException when the possibility of exception is known by us. 
+In the above example, we have thrown exception using HttpResponseException class as we know there is a chance to employee not found in the database. 
+We can use exception filter to catch unhandled exceptions on action/controllers. 
+We can use Exception Handlers to catch any type of unhandled exception application-wide.
+CreateErrorResponse method of Request object helps us to return meaningful error code and message to the client. 
+CreateErrorResponse creates an instance of HttpError object and returns it as HttpResponseMessage object.
+
+
+Reusability – By using generic classes and methods, you can write code that can work with multiple data types without the need to create a separate version for each data type. 
+This makes your code more reusable and reduces the amount of code you need to write.
+Performance – Generic classes and methods allow you to write efficient code that avoids the overhead of type conversions. 
+This is because the type of the data is known at compile-time, allowing the compiler to generate optimized code.
+Code maintainability – By using generic classes and methods, you can write code that is easier to maintain and understand.
+This is because you can define a single implementation that works with multiple data types, making it easier to change and test.
+
+
+Ajax Post Method
+$.ajax({
+    type: "POST",
+    url: "/ordersfp/process",
+    data: {
+        data: JSON.stringify(data) // encode to JSON
+    },
+    success: function(response) {
+        console.log(response);
+    }
+});
+
+what are the biggest challenges you accommodated in your career
+find the no of occurance in the string
+we take the input from Console and then remove the blank spaces from the input if any. 
+Check the length of the input message and if it is greater than 0, 
+then using for loop we calculate the number of occurrences of each character,
+Console.Write("Enter the string : ");
+            string message = Console.ReadLine();
+
+            //Remove the empty spaces from the message
+            message = message.Replace(" ", string.Empty);
+            
+            while (message.Length > 0)
+            {
+                Console.Write(message[0] + " : ");
+                int count = 0;
+                for (int j = 0; j < message.Length; j++)
+                {
+                    if (message[0] == message[j])
+                    {
+                        count++;
+                    }
+                }
+                Console.WriteLine(count);
+                message = message.Replace(message[0].ToString(), string.Empty);
+            }
+
+            Console.ReadKey();
+oops concept various authentication mechanism
+how to handle a team how to give estimation
+what are the agile processes that you have made in your present role which you are proud of
+ I am highly experienced with agile methodologies and iterative development processes. In my previous role, 
+I worked on several projects using the Scrum framework and participated in daily stand-up meetings, sprint planning, review, and retrospective meetings. 
+I also collaborated closely with the product owner to ensure that we were delivering high-quality software consistently.
+
+have you identified problems in your current process or project what did you do to solve them? how successfile were you
+what are the contributions that you have made in your present role whaich you are proud of
+what is benifits of aglie methodology
+hoisting in javascript
+Hoisting is the default behavior in JavaScript where declarations of variables and functions 
+are moved to the top of their respective scopes during the compilation phase. 
+This ensures that regardless of where variables and functions are declared within a scope, they are accessible throughout that scope.
+
+Features of Hoisting
+Declarations are hoisted, not initializations.
+Allows calling functions before their declarations.
+All variable and function declarations are processed before any code execution.
+Undeclared variables are implicitly created as global variables when assigned a value.
+Note: JavaScript only hoists declarations, not initializations.
+
+JavaScript allocates memory for all variables and functions defined in the program before execution.
+
+
+dotnet core advantages
+find character count in string
+how would you handle cors issue
+In this article, we covered the key steps to handle CORS issues:
+
+Package Installation: Ensure that the Microsoft.AspNetCore.Cors package is installed in your project.
+Configure CORS Services: In the ConfigureServices method of your Startup.cs file, add the CORS services specifying allowed origins, methods, and headers.
+Use CORS Middleware: In the Configure method of Startup.cs, apply the CORS policy using the app.UseCors middleware.
+Testing: Verify the solution by testing your API with your front-end application. Ensure that requests are allowed without encountering CORS errors.
+Additionally, we highlighted some considerations such as wildcard origins, handling credentials, and fine-grained control over CORS policies. It's essential to strike a balance between security and flexibility, tailoring CORS settings to fit the specific requirements of your application.
+
+By following these steps and considering the nuances of CORS configuration, you can establish a secure and seamless connection between your ASP.NET Core Web API and frontend, providing a smooth user experience while maintaining the integrity of your application's security.
+ross-Origin Resource Sharing (CORS) is a security feature implemented by web browsers to prevent web pages from making requests to a different domain than the one that served the web page. When developing a web application, especially if it involves making API requests to a different domain, you might encounter CORS-related errors. In this article, we'll explore how to resolve CORS issues in an ASP.NET Core Web API.
+
+Understanding CORS
+Before diving into solutions, let's understand why CORS issues occur. When a web page tries to make a request to a different domain than the one it came from, the browser blocks the request by default. This is a security measure to prevent unauthorized access to resources on a different domain.
+
+CORS in ASP.NET Core
+ASP.NET Core provides built-in support for handling CORS. The CORS middleware can be configured in the Startup.cs file to specify which origins, HTTP methods, and headers are allowed for your API.
+
+
+
+https://www.c-sharpcorner.com/article/handling-cors-cross-origin-resource-sharing-in-asp-net-core-web-api/
+swap 2 nos without using third variable
+find no is prime or not and pailendrome or not and reverse a no
+9 balss to figure which one of them lighter weight
+what will you do if your team member  is nt paying attention to your idesas or is not interested in talking to you
+sp optimization
+var and let in js
+Parameters	Var	Let
+Introduction in JavaScript	Var has been a part of JavaScript since its inception.	Let was introduced in the ES 2015 (ES6) version of JavaScript.
+Scope	Var is globally scoped.	Let is block-scoped.
+Access and Declaration	Var can be declared and accessed globally.	Let can be declared globally, but its access is limited to the block in which it is declared.
+Redeclaration	Variables declared using var can be re-declared and updated within the same scope.	Variables declared with let can be updated but not re-declared within the same scope.
+explain api you have written
+delete duplicate record from atable which dont have primary key
+Deleting duplicate records from a table without a primary key can be challenging because you don't have a unique identifier to differentiate between duplicate records. 
+However, you can still use a combination of columns to identify duplicates and remove them. Here's a general approach using SQL:
+Identify Duplicate Records: Use the GROUP BY clause along with aggregate functions to identify duplicate records based on specific columns. For example, 
+if you have columns column1, column2, and column3, you can identify duplicates as records having the same values in all these columns.
+sql
+Copy code
+SELECT column1, column2, column3, COUNT(*)
+FROM your_table
+GROUP BY column1, column2, column3
+HAVING COUNT(*) > 1;
+Delete Duplicate Records: Once you have identified the duplicate records, you can use a common table expression (CTE) or a subquery to delete all but one instance of each duplicate.
+sql
+Copy code
+WITH CTE AS (
+    SELECT column1, column2, column3,
+           ROW_NUMBER() OVER(PARTITION BY column1, column2, column3 ORDER BY (SELECT NULL)) AS RowNumber
+    FROM your_table
+)
+DELETE FROM CTE WHERE RowNumber > 1;
+
+find the freq of each ele in an array
+ int [] arr = new int [] {1, 2, 8, 3, 2, 2, 2, 5, 1};   
+        //Array fr will store frequencies of element  
+        int [] fr = new int [arr.Length];  
+        int visited = -1;  
+        
+        for(int i = 0; i < arr.Length; i++){  
+            int count = 1;  
+            for(int j = i+1; j < arr.Length; j++){  
+                if(arr[i] == arr[j]){  
+                    count++;  
+                    //To avoid counting same element again  
+                    fr[j] = visited;  
+                }  
+            }  
+            if(fr[i] != visited)  
+                fr[i] = count;  
+        }  
+        
+        //Displays the frequency of each element present in array  
+        Console.WriteLine("---------------------");  
+        Console.WriteLine(" Element | Frequency");  
+        Console.WriteLine("---------------------");  
+        for(int i = 0; i < fr.Length; i++){  
+            if(fr[i] != visited)  
+                Console.WriteLine("    " + arr[i] + "    |    " + fr[i]);  
+        }  
+        Console.WriteLine("---------------------");
