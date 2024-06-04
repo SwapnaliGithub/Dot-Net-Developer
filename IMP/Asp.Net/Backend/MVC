@@ -1,3 +1,294 @@
+Q11. What is difference between 3-layer architecture and MVC architecture?
+Ans. 3-layer architecture separates the application into 3 components which consists of Presentation Layer 
+Business Layer and Data Access Layer. In 3-layer architecture, user interacts with the Presentation layer. 3-layer 
+is a linear architecture.
+MVC architecture separates the application into three components which consists of Model, View and Controller. 
+In MVC architecture, user interacts with the controller with the help of view. MVC is a triangle architecture. 
+MVC does not replace 3-layer architecture. Typically 3-layer and MVC are used together and MVC acts as the 
+Presentation layer.
+
+Q13. What is ViewModel in ASP.NET MVC?
+Ans. In ASP.NET MVC, ViewModel is a class that contains the fields which are represented in the strongly-typed 
+view. It is used to pass data from controller to strongly-typed view.
+Key Points about ViewModel
+ ViewModel contain fields that are represented in the view (for LabelFor, EditorFor, DisplayFor helpers)
+ ViewModel can have specific validation rules using data annotations.
+ ViewModel can have multiple entities or objects from different data models or data source.
+
+What is Routing in ASP.NET MVC?
+Ans. Routing is a pattern matching system that monitor the incoming request and figure out what to do with
+that request. At runtime, Routing engine use the Route table for matching the incoming request's URL pattern 
+against the URL patterns defined in the Route table. You can register one or more URL patterns to the Route table 
+at Application_Start event.
+ 
+When the routing engine finds a match in the route table for the incoming request's URL, it forwards the request 
+to the appropriate controller and action. If there is no match in the route table for the incoming request's URL, it 
+returns a 404 HTTP status code.
+Join our .NET Training Programs in Delhi/Noida Call Us : +91-9871749695
+www.dotnet-tricks.com Handy Tricks For Beginners & Professionals 22
+Q16. How to define a route in ASP.NET MVC?
+Ans. You can define a route in ASP.NET MVC as given below:
+public static void RegisterRoutes(RouteCollection routes)
+{
+ routes.MapRoute(
+ "Default", // Route name
+ "{controller}/{action}/{id}", // Route Pattern
+ new
+ {
+ controller = "Home",
+ action = "Index",
+ id = UrlParameter.Optional
+ }// Default values for above defined parameters
+ );
+}
+protected void Application_Start()
+{
+ RegisterRoutes(RouteTable.Routes);
+ //TODO:
+}
+Always remember route name should be unique across the entire application. Route name can’t be duplicate.
+In above example we have defined the Route Pattern {controller}/{action}/{id} and also provide the default values 
+for controller, action and id parameters. Default values means if you will not provide the values for controller or 
+action or id defined in the pattern then these values will be serve by the routing system.
+Suppose your webapplication is running on www.example.com then the url pattren for you application will be 
+www.example.com/{controller}/{action}/{id}. Hence you need to provide the controller name followed by action 
+name and id if it is required. If you will not provide any of the value then default values of these parameters will 
+be provided by the routing system. Here is a list of URLs that match and don't match this route pattern.
+Request URL Parameters
+http://example.com/ controller=Home, action=Index, id=none, Since 
+default value of controller and action are Home and 
+Index respectively.
+http://example.com/Admin controller=Admin, action=Index, id=none, Since 
+default value of action is Index
+http://example.com/Admin/Product controller=Admin, action=Product, id=none
+http://example.com/Admin/Product/1 controller=Admin, action=Product, id=1
+http://example.com/Admin/Product/SubAdmin/1 No Match Found
+http://example.com/Admin/Product/SubAdmin/Add/1 No Match Found
+Note: Always put more specific route on the top order while defining the routes, since routing system check the 
+incoming URL pattern form the top and as it get the matched route it will consider that. It will not checked further 
+routes after matching pattern.
+Join our .NET Training Programs in Delhi/Noida Call Us : +91-9871749695
+www.dotnet-tricks.com Handy Tricks For Beginners & Professionals 23
+Q17. What is Attribute Routing and how to define it?
+Ans. ASP.NET MVC5 and WEB API 2 supports a new type of routing, called attribute routing. In this routing, 
+attributes are used to define routes. Attribute routing provides you more control over the URIs by defining routes 
+directly on actions and controllers in your ASP.NET MVC application and WEB API.
+1. Controller level routing – You can define routes at controller level which apply to all actions within the 
+controller unless a specific route is added to an action.
+[RoutePrefix("MyHome")]
+[Route("{action=index}")] //default action
+public class HomeController : Controller
+{
+ //new route: /MyHome/Index
+ public ActionResult Index()
+ {
+ return View();
+ }
+ //new route: /MyHome/About
+ public ActionResult About()
+ {
+ ViewBag.Message = "Your application description page.";
+ return View();
+ }
+ //new route: /MyHome/Contact
+ public ActionResult Contact()
+ {
+ ViewBag.Message = "Your contact page.";
+ return View();
+ }
+}
+2. Action level routing – You can define routes at action level which apply to a specific action with in the
+controller.
+public class HomeController : Controller
+{
+ [Route("users/{id:int:min(100)}")] //route: /users/100
+ public ActionResult Index(int id)
+ {
+ //TO DO:
+ return View();
+ }
+ [Route("users/about")] //route" /users/about
+ public ActionResult About()
+ {
+ ViewBag.Message = "Your application description page.";
+Join our .NET Training Programs in Delhi/Noida Call Us : +91-9871749695
+www.dotnet-tricks.com Handy Tricks For Beginners & Professionals 24
+ return View();
+ }
+ //route: /Home/Contact
+ public ActionResult Contact()
+ {
+ ViewBag.Message = "Your contact page.";
+ return View();
+ }
+}
+Note:
+ Attribute routing should configure before the convention-based routing.
+ When you combine attribute routing with convention-based routing, actions which do not have Route
+attribute for defining attribute-based routing will work according to convention-based routing. In above 
+example Contact action will work according to convention-based routing.
+ When you have only attribute routing, actions which do not have Route attribute for defining attribute-based
+routing will not be the part of attribute routing. In this way they can’t be access from outside as a URI.
+Q18. When to use Attribute Routing?
+Ans. The convention-based routing is complex to support certain URI patterns that are common in RESTful 
+APIs. But by using attribute routing you can define these URI patterns very easily.
+For example, resources often contain child resources like Clients have orders, movies have actors, books have 
+authors and so on. It’s natural to create URIs that reflects these relations like as: /clients/1/orders
+This type of URI is difficult to create using convention-based routing. Although it can be done, the results don’t 
+scale well if you have many controllers or resource types.
+With attribute routing, it’s pretty much easy to define a route for this URI. You simply add an attribute to the 
+controller action as:
+[Route("clients/{clientId}/orders")]
+public IEnumerable<Order> GetOrdersByClient(int clientId)
+{
+ //TO DO
+}
+Q19. How to enable Attribute Routing in ASP.NET MVC?
+Ans. Enabling attribute routing in your ASP.NET MVC5 application is simple, just add a call to 
+routes.MapMvcAttributeRoutes() method with in RegisterRoutes() method of RouteConfig.cs file.
+public class RouteConfig
+{
+ public static void RegisterRoutes(RouteCollection routes)
+ {
+ routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+ 
+Join our .NET Training Programs in Delhi/Noida Call Us : +91-9871749695
+www.dotnet-tricks.com Handy Tricks For Beginners & Professionals 25
+ //enabling attribute routing
+ routes.MapMvcAttributeRoutes();
+ }
+}
+You can also combine attribute routing with convention-based routing.
+public class RouteConfig
+{
+ public static void RegisterRoutes(RouteCollection routes)
+ {
+ routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+ //enabling attribute routing
+ routes.MapMvcAttributeRoutes();
+ //convention-based routing
+ routes.MapRoute(
+ name: "Default",
+ url: "{controller}/{action}/{id}",
+ defaults: new { controller = "Home", action = "Index", id = 
+UrlParameter.Optional });
+ }
+}
+Q20. How to define Attribute Routing for Area in ASP.NET MVC?
+Ans. You can also define attribute routing for a controller that belongs to an area by using the RouteArea
+attribute. When you define attribute routing for all controllers with in an area, you can safely remove the 
+AreaRegistration class for that area.
+[RouteArea("Admin")]
+[RoutePrefix("menu")]
+[Route("{action}")]
+public class MenuController : Controller
+{
+ // route: /admin/menu/login
+ public ActionResult Login()
+ {
+ return View();
+ }
+ // route: /admin/menu/products
+ [Route("products")]
+ public ActionResult GetProducts()
+ {
+ return View();
+ }
+ // route: /categories
+Join our .NET Training Programs in Delhi/Noida Call Us : +91-9871749695
+www.dotnet-tricks.com Handy Tricks For Beginners & Professionals 26
+ [Route("~/categories")]
+ public ActionResult Categories()
+ {
+ return View();
+ }
+}
+
+Q21. What is difference between Routing and URL Rewriting?
+Ans. Many developers compare routing to URL rewriting since both look similar and can be used to make SEO 
+friendly URLs. But both the approaches are very much different. The main difference between routing and url 
+rewriting is given below:
+ URL rewriting is focused on mapping one URL (new url) to another URL (old url) while routing is focused 
+on mapping a URL to a resource.
+ URL rewriting rewrites your old url to new one while routing never rewrite your old url to new one but it 
+map to the original route.
+
+Q22. What is Route Constraints in ASP.NET MVC?
+Ans. Route constraints is way to put some validation around the defined route.
+Creating Route Constraints
+Suppose we have defined the following route in our application and you want to restrict the incoming request url 
+with numeric id only.Now let's see how to do it with the help of regular expression.
+public static void RegisterRoutes(RouteCollection routes)
+{
+ routes.MapRoute(
+ "Default", // Route name
+ "{controller}/{action}/{id}", // Route Pattern
+ new
+ {
+ controller = "Home",
+ action = "Index",
+ id = UrlParameter.Optional
+ } // Default values for parameters
+ );
+}
+Restrict to numeric id only
+public static void RegisterRoutes(RouteCollection routes)
+{
+ routes.MapRoute(
+ "Default", // Route name
+ "{controller}/{action}/{id}", // Route Pattern
+ new
+ {
+ controller = "Home",
+Join our .NET Training Programs in Delhi/Noida Call Us : +91-9871749695
+www.dotnet-tricks.com Handy Tricks For Beginners & Professionals 27
+ action = "Index",
+ id = UrlParameter.Optional
+ }, // Default values for parameters
+ new { id = @"\d+" } //Restriction for id
+ );
+}
+Now for this route, routing engine will consider only those URLs which have only numeric id like as 
+http://example.com/Admin/Product/1 else it will considers that url is not matched with this route.
+
+Q23. How route table is created in ASP.NET MVC?
+Ans. When an MVC application first starts, the Application_Start() method in global.asax is called. This method 
+calls the RegisterRoutes() method. The RegisterRoutes() method creates the route table for MVC application.
+
+Q24. What are important namespaces in ASP.NET MVC?
+Ans. There are some important namespaces as given below:
+ System.Web.Mvc - This namespace contains classes and interfaces that support the MVC pattern for 
+ASP.NET Web applications. This namespace includes classes that represent controllers, controller 
+factories, action results, views, partial views, and model binders.
+ System.Web.Mvc.Ajax - This namespace contains classes that supports Ajax scripting in an ASP.NET MVC 
+application. The namespace includes support for Ajax scripts and Ajax option settings as well.
+ System.Web.Mvc.Html – This namespace contains classes that help render HTML controls in an MVC 
+application. This namespace includes classes that support forms, input controls, links, partial views, and 
+validation.
+
+Q25. What is View Engine?
+Ans. A View Engine is a MVC subsystem which has its own markup syntax. It is responsible for converting serverside template into HTML markup and rendering it to the browser. Initially, ASP.NET MVC ships with one view 
+engine, web forms (ASPX) and from ASP.NET MVC3 a new view engine, Razor is introduced. With ASP.NET MVC, 
+you can also use other view engines like Spark, NHaml etc.
+
+Q26. How View Engine works?
+Ans. Each view engine has following three main components:
+1. ViewEngine class - This class implements the IViewEngine interface and responsible for locating view 
+templates.
+2. View class - This class implements the IView interface and responsible for combining the template with 
+data from the current context and convert it to output HTML markup.
+3. Template parsing engine - This parses the template and compiles the view into executable code.
+
+Q27. What is Razor View Engine?
+Ans. Razor Engine is an advanced view engine that was introduced with MVC3. This is not a new language but 
+it is a new markup syntax. Razor has new and advance syntax that are compact, expressive and reduces typing.
+Razor syntax are easy to learn and much clean than Web Form syntax. Razor uses @ symbol to write markup as:
+Join our .NET Training Programs in Delhi/Noida Call Us : +91-9871749695
+www.dotnet-tricks.com Handy Tricks For Beginners & Professionals 28
+@Html.ActionLink("SignUp", "SignUp")
+
+Q14. Explain ASP.NET MVC pipeline?
+
 https://www.codeproject.com/Articles/556995/ASP-NET-MVC-Interview-Questions-with-Answers
 https://nareshit.in/asp-net-mvc-interview-questions/
 https://www.dotnettricks.com/learn/mvc/top-20-mvc-interview-questions-answers
