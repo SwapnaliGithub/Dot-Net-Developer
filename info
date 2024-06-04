@@ -47,6 +47,9 @@ https://lifedb.in/?p=posts%2Fview_post&title=Infosys+Interview+Questions+For+.NE
 Following questions asked to me in Infosys interview-
 
 1.Why stored procedures not inline queries?
+inline queries may be suitable for simple, ad-hoc queries or small-scale applications, 
+stored procedures provide significant benefits in terms of performance, security, maintainability, abstraction, transaction management, 
+and network efficiency, making them a preferred choice for larger, more complex, and enterprise-level applications.
 
 2.Types of authentication?﻿
 
@@ -70,33 +73,18 @@ Following questions asked to me in Infosys interview-
 
 
 
-#tags:
 
-#infosys interview questions for .net and sql,
-
-#infosys interview questions for experienced .net developer,
-
-#infosys interview questions for .net developer,
-
-#infosys interview questions for net developer 5 years experience,
-
-#infosys .net interview questions and answers for experienced,
-
-#.net infosys interview questions and answers,
-
-#infosys c# .net interview questions,
-
-#sql interview questions for infosys,
 
 https://www.javatpoint.com/dot-net-interview-questions
 https://www.interviewbit.com/infosys-interview-questions/
-
 https://neelbhatt.com/2017/07/08/infosys-interview-questions-for-experienced-net-developers/
 https://www.credosystemz.com/infosys-dot-net-interview-questions/
 https://sibeeshpassion.com/infosys-interview-questions-for-dotnet-professionals
 
 1. What is exactly the .Net framework?
-The object-oriented technique is supported by the.NET framework and is used to create Windows programs. It supports a wide range of languages, including C#, VB, Cobol, Perl, and.NET. It contains various functions and tools, including classes, libraries, and APIs, which are used to create, deploy, and run web services and multiple applications.
+The object-oriented technique is supported by the.NET framework and is used to create Windows programs. 
+It supports a wide range of languages, including C#, VB, Cobol, Perl, and.NET. 
+It contains various functions and tools, including classes, libraries, and APIs, which are used to create, deploy, and run web services and multiple applications.
 
 2. Major components of the.Net framework
 dotnet framework
@@ -132,7 +120,6 @@ State management refers to expressly maintaining the state of a control, web pag
 A process is utilized to carry out specific tasks sequentially. A procedure has many functions. A function returns control and value to the function or code. The calling function or code receives control from a procedure but not any values.
 
 TCS Dot Net Interview Questions
-If you are fresher or experienced, this is the right platform to help you start your preparation for the TCS .Net Interview Questions and Answers.
 
 1. what is JIT?
 JIT is an acronym for the “Just in time” compiler. The native language is utilized to translate the intermediate code. During execution, the intermediate code is transformed into the native language.
@@ -291,6 +278,7 @@ State
 Plan
 Guests
 Template Method
+
 20. Write a program to calculate the addition of two numbers.
 You must start a brand-new “CalculateSum” ASP.NET Core project. File > New > Project in Visual Studio 2015.
 
