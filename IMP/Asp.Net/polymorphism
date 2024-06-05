@@ -1,0 +1,3 @@
+Similarly, let's understand polymorphism with a real-life example. 
+Consider a person, who can have multiple characteristics at a time, the person can be a father, a son, and an employee at the same time. 
+The same person acts differently in different scenarios, this shows polymorphism.
