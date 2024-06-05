@@ -3,6 +3,11 @@ Split the balls into groups of three, compare two of the groups.
 If the sets balance then the heavy ball is in the third group, otherwise it is in the group left out. 
 Whichever it is, take two balls from that group to weigh. 
 If they balance, you know it is the third ball, if they don't, you have the heavier ball.
+9 चेंडू, दिसायला एकसारखे. 8 समान वजनाचे आहेत. 1 जड आहे. दोनदा स्केल वापरून हा जड चेंडू ओळखा.
+बॉलला तीन गटांमध्ये विभाजित करा, दोन गटांची तुलना करा. 
+जर सेट बॅलन्स असेल तर जड बॉल तिसऱ्या गटात असेल, अन्यथा तो सोडलेल्या गटात असेल. 
+ते कोणतेही असले तरी वजनासाठी त्या गटातील दोन चेंडू घ्या. 
+जर ते समतोल राखले तर तुम्हाला माहित आहे की तो तिसरा चेंडू आहे, जर त्यांनी तोल केला नाही तर तुमच्याकडे जास्त वजन आहे.
 
 Puzzle 2– Measure 4 litre with 3 and 5 litre bottle
 Fill up the 3 liter bucket and pour these 3 liters into the 5 liter container.
@@ -10,6 +15,12 @@ Fill the 3 liter bucket again and pour 2 liters of it into the 5 liter bucket.
 Empty the 5 liter container and pour the 1 liter which remains in the 3 liter bucket into the 5 liter bucket. 
 Fill up the 3 liter container and pour these 3 liters into the 5 liter container.
 Finally, the larger bucket now contains exactly 4 liters!
+3 आणि 5 लिटरच्या बाटलीसह 4 लिटर मोजा
+3 लिटरची बादली भरा आणि हे 3 लिटर 5 लिटरच्या डब्यात टाका.
+3 लिटरची बादली पुन्हा भरा आणि त्यातील 2 लिटर 5 लिटर बादलीत घाला.
+5 लिटरचा डबा रिकामा करा आणि 3 लिटरच्या बादलीत राहिलेले 1 लिटर 5 लिटरच्या बादलीत ओता. 
+3 लिटर कंटेनर भरा आणि हे 3 लिटर 5 लिटर कंटेनरमध्ये घाला.
+शेवटी, आता मोठ्या बादलीमध्ये 4 लिटर आहे!
 
 Puzzle 3–| (3 Bulbs and 3 Switches)
 Last Updated : 19 Jan, 2023
@@ -23,6 +34,12 @@ Turn on switch X for 5 to 10 minutes. Turn it off and turn on switch Y. Open the
 Now we will check the other two off bulbs 
 2. the bulb which is hot, is X 
 3. the bulb which is cold, is Z  
+खोलीच्या आत एक दरवाजा (बंद) आणि तीन लाइट बल्ब असलेली खोली आहे. खोलीच्या बाहेर, बल्बला जोडलेले तीन स्विच आहेत. 
+तुम्ही तुमच्या इच्छेनुसार स्विचेस हाताळू शकता, परंतु एकदा तुम्ही दरवाजा उघडल्यानंतर तुम्ही ते बदलू शकत नाही. 
+सर्व बल्ब कार्यरत स्थितीत आहेत आणि तुम्ही एकदाच दरवाजा उघडू शकता. प्रत्येक स्विच त्याच्या बल्बच्या संदर्भात ओळखा.
+उपाय:
+बल्ब X, Y आणि Z असू द्या 
+5 ते 10 मिनिटांसाठी X स्विच चालू करा. ते बंद करा आणि Y स्विच चालू करा.
 
 Puzzle 4– cuts to cut round cake into 8 equal pieces
 Last Updated : 18 Jan, 2023
