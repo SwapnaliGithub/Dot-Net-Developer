@@ -1,3 +1,62 @@
+// OOPs: Object Oriented Programming is a methodology to design a program using classes and objets.
+        // These principles help in creating a more modular, reusable, and manageable code structure
+        //Class: Class is a logical unit and blueprint that contains fields methods and properties.
+        Object: Object is Anchor instance of a class.
+        Field:- Field is a variable of any data.
+        Property:- Property provides helps in read and write of private FileDescriptor.
+        Method: Method is async CodeAccessPermission block that contains series of statement.
+        Constructor:- Constructor is async Member of a class which gets automatically executed when instance of the class is craeted.
+
+        public class Employee1  /* ----- Class ----- */
+        {
+            public Employee1() /* ---- Constructor ---- */
+            {
+
+            }
+
+            private int experience; /* ----- Field ----- */
+
+            public int Experience   /* ----- Property ----- */
+            {
+                get { return experience; }
+                set { experience = value; }
+            }
+
+            public void CalculateSalary() /* ----- Method ----- */
+            {
+                int salary = Experience * 30000;
+                Console.WriteLine("Salary " + salary);
+            }
+
+            public static void Main(String[] args)
+            {
+                Employee1 employee1 = new Employee1(); /* ----- Object ----- */
+                employee1.experience = 3;
+                employee1.CalculateSalary();
+                Console.ReadLine();
+            }
+        }
+    }
+}
+
+What are access modifiers in C# and how are they used to control access to class members?
+Access modifiers in C# determine the visibility and accessibility of class members. The common access modifiers are ‘public’, ‘private’, ‘protected’, and ‘internal’. ‘Public’ allows access from any class, ‘private’ restricts access to the same class, ‘protected’ enables access within the same class or derived classes, and ‘internal’ allows access within the same assembly.
+https://clouddevs.com/c-sharp/interview-questions/
+https://www.javatpoint.com/c-sharp-inheritance
+Access Modifiers
+In C#, access modifiers are used as keywords to determine the accessibility level (visibility) of properties, methods, or fields within a C# program.
+
+Keyword	Description
+public	Available anywhere in the program.
+protected	Available only to the current class or child classes that inherit from that class.
+internal	Available only to the classes in the current project where it is defined.
+protected internal	Available to the current class, child classes that inherit from that class, or classes in the current project where it is defined.
+private	Only available within the class where it is declared.
+private protected	Only available to the classes in the current project where it is defined and also to the children of all classes that inherit from the parent class within the same project.
+
+https://tutorials.eu/what-are-lambda-expressions-in-c-sharp/
+https://medium.com/@praveen.rao.g.1990/inheritance-in-c-79495adff5f5	
+
 https://www.dotnetustad.com/oop-interview/when-to-use-abstract-method
 https://www.interviewquestionspdf.com/2015/02/c-oops-interview-questions-answers-with.html
 https://www.bytehide.com/blog/csharp-oops-interview-questions
