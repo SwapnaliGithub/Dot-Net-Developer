@@ -1,0 +1,463 @@
+Multithreading in C# is a powerful method that allows several threads to run concurrently within a single process. This enables developers to create responsive and efficient programs by effectively ututilizinghe the available CPU cores
+
+Advantages of Multithreading
+Improved Performance: Multithreading allows multiple tasks to be executed concurrently, effectively utilizing multiple CPU cores.
+Responsiveness: The main thread remains responsive to user interactions by offloading time-consuming operations to separate threads.
+Resource Utilization: Because threads can handle concurrent operations efficiently, multithreading improves resource utilization.
+Scalability: Multithreading improves scalability by allowing applications to handle multiple requests at the same time.
+Background Processing: Multithreading is required for implementing background tasks such as file downloads, data processing, and so on while keeping the UI responsive.
+
+Why do we need Multi-threading in our project?
+Multi-threading is used to run multiple threads simultaneously. Some main advantages are:
+You can do multiple tasks simultaneously. For e.g. saving the details of the user to a file while at the same time retrieving something from a web service.
+Threads are much more lightweight than processes. They don’t get their own resources. They used the resources allocated to a process.
+Context-switch between threads takes less time than process.
+ 
+OOPs: Object Oriented Programming is a methodology to design a program using classes and objets.
+//Class: Class is a logical unit and blueprint that contains fields methods and properties.
+        Object: Object is Anchor instance of a class.
+        Field:- Field is a variable of any data.
+        Property:- Property provides helps in read and write of private FileDescriptor.
+        Method: Method is async CodeAccessPermission block that contains series of statement.
+        Constructor:- Constructor is async Member of a class which gets automatically executed when instance of the class is craeted.
+
+        public class Employee1  /* ----- Class ----- */
+        {
+            public Employee1() /* ---- Constructor ---- */
+            {
+
+            }
+
+            private int experience; /* ----- Field ----- */
+
+            public int Experience   /* ----- Property ----- */
+            {
+                get { return experience; }
+                set { experience = value; }
+            }
+
+            public void CalculateSalary() /* ----- Method ----- */
+            {
+                int salary = Experience * 30000;
+                Console.WriteLine("Salary " + salary);
+            }
+
+            public static void Main(String[] args)
+            {
+                Employee1 employee1 = new Employee1(); /* ----- Object ----- */
+                employee1.experience = 3;
+                employee1.CalculateSalary();
+                Console.ReadLine();
+            }
+        }
+    }
+}
+
+What are access modifiers in C# and how are they used to control access to class members?
+Access modifiers in C# determine the visibility and accessibility of class members. The common access modifiers are ‘public’, ‘private’, ‘protected’, and ‘internal’. ‘Public’ allows access from any class, ‘private’ restricts access to the same class, ‘protected’ enables access within the same class or derived classes, and ‘internal’ allows access within the same assembly.
+
+
+Access Modifiers
+In C#, access modifiers are used as keywords to determine the accessibility level (visibility) of properties, methods, or fields within a C# program.
+
+Keyword	Description
+public	Available anywhere in the program.
+protected	Available only to the current class or child classes that inherit from that class.
+internal	Available only to the classes in the current project where it is defined.
+protected internal	Available to the current class, child classes that inherit from that class, or classes in the current project where it is defined.
+private	Only available within the class where it is declared.
+private protected	Only available to the classes in the current project where it is defined and also to the children of all classes that inherit from the parent class within the same project.
+
+
+29. What is the virtual function?
+A virtual function is a function that is used to override a method of the parent class in the derived class. It is used to provide abstraction in a class.
+
+28. What is a constructor in C#?
+Ans: A constructor is a special method of the class that contains a collection of instructions and gets automatically invoked when an instance of the class is created.
+
+29. Explain Different Types of Constructors in C#?
+Ans: There are 5 types of constructors in C#, as given below:
+
+Default Constructor: It is without any parameters.
+Parameterized Constructor: It has one parameter.
+Copy Constructor: It creates an object by copying variables from another object.
+Static Constructor: It is created using a static keyword and will be invoked only once for all of the instances of the class.
+Private Constructor: It is created with a private specifier and does not allow other classes to derive from this class or create an instance of it.
+
+
+What is abstraction in C# and why is it important?
+Answer
+Abstraction is the process of simplifying complex systems by breaking them down into smaller, more manageable components and hiding the implementation details. In C#, abstraction can be achieved through abstract classes and interfaces.
+
+Abstract classes are classes that cannot be instantiated, and they can contain both abstract and non-abstract methods. Abstract methods don’t have a body and must be overridden in derived classes. By defining an abstract class with methods that must be implemented by its subclasses, you can create a blueprint for a certain type of functionality without providing any implementation details.
+
+Interfaces, on the other hand, are a contract that specifies a set of methods and properties that must be implemented by any class that implements the interface. Multiple interfaces can be implemented by a single class, thus providing a way to achieve multiple inheritance.
+
+Abstraction is important in software development because it helps to:
+Reduce complexity by hiding unnecessary implementation details from the users of a class or an interface.
+Promote better code organization by breaking down complex systems into smaller, more focused components.
+Enhance flexibility and extensibility, 
+
+interfaces and abstract classes allow you to add new features or modify existing ones without affecting other parts of the system.
+Improve code reusability through inheritance and interface implementation.
+
+Lambda Expressions
+An anonymous method
+No access modifier
+No name
+No return statement
+Lambda Expression is nothing but an anonymous method. That is a method that has no access modifier (like public or private), and has no name, and has no return statement.
+Why do we use them? For convenience. We can write less code and achieve the same thing, plus our code would be more readable.
+
+The ASP.NET page life cycle consists of several stages, each representing a specific phase of the page processing. Here are the main stages:
+
+Page Request: The web server receives a request for a page.
+Start: The page's initialization occurs, including loading the page's controls and their properties.
+Page Load: The page's controls are populated with data, and the page's logic is executed.
+Validation: The user input is validated, and any validation errors are collected.
+Postback Event Handling: If there is a postback event, like a button click, the corresponding event handler is executed
+PreRender: The page prepares for rendering, and the state of the controls is finalized.
+Render: The HTML markup for the page is generated.
+Unload: The page is unloaded, and resources are released.
+Understanding the ASP.NET page life cycle is important for several reasons:
+
+Control and Manipulation: By understanding each stage of the life cycle, developers can control and manipulate the behavior and appearance of the page at specific points. This allows them to customize the page's behavior based on the current state.
+State Management: The life cycle helps manage the state of controls and their values across postbacks. It ensures that user input and control values are properly persisted and restored during subsequent requests.
+Event Handling: The life cycle provides a clear structure for handling events raised by controls on the page. Developers can write code to respond to specific events at the appropriate stage of the life cycle.
+Performance Optimization: Knowledge of the life cycle can help optimize the performance of ASP.NET applications. Developers can take advantage of the life cycle stages to perform resource-intensive operations at the appropriate time and avoid unnecessary processing.
+Overall, understanding the ASP.NET page life cycle is crucial for building robust and efficient web applications with ASP.NET. It allows developers to control the flow of execution, handle events, manage state, and optimize performance effectively.
+
+Object pooling is a design pattern that keeps a group of objects in memory for reuse. 
+Reduces resource overhead
+Object pooling is useful when multiple instances of a class are needed, but the class is expensive to create or manage.
+Improves performance
+Object pooling can improve the performance of memory-intensive applications by reducing the overhead of initialization, allocation, and disposal of objects.
+Reduces processing power
+Object pooling can optimize performance by reducing the processing power required of the CPU to run repetitive create and destroy calls.
+
+Connection pooling allows you to reuse connections rather than create a new one every time the ADO.NET data provider needs to establish a connection to the underlying database. Connection pooling behavior can be controlled by using connection string options
+Connection pooling is simple to implement, but it makes a huge difference in performance when more users are logged in. By default, a connection string is enabled with connection pooling. By default, the maximum number of pools is 100, minimum is 0
+
+
+How do I secure my Web REST API?
+How do you secure REST API from malicious attacks and data...
+Use HTTPS.
+Implement authentication and authorization.
+Validate and sanitize inputs and outputs.
+Apply rate limiting and throttling.
+Encrypt and backup your data.
+Monitor and audit your API.
+
+Ref	Out
+The parameter or argument must be initialized first before it is passed to ref.	It is not compulsory to initialize a parameter or argument before it is passed to an out.
+It is not required to assign or initialize the value of a parameter (which is passed by ref) before returning to the calling method.	A called method is required to assign or initialize a value of a parameter (which is passed to an out) before returning to the calling method.
+Passing a parameter value by Ref is useful when the called method is also needed to modify the passed parameter.	Declaring a parameter to an out method is useful when multiple values need to be returned from a function or method.
+It is not compulsory to initialize a parameter value before using it in a calling method.	A parameter value must be initialized within the calling method before its use.
+When we use REF, data can be passed bi-directionally.	When we use OUT data is passed only in a unidirectional way (from the called method to the caller method).
+Both ref and out are treated differently at run time and they are treated the same at compile time.	
+Properties are not variables, therefore they cannot be passed as an out or ref parameter.
+
+
+ReadOnly Keyword	Const Keyword
+In C#, readonly fields can be created using readonly keyword	In C#, constant fields are created using const keyword.
+ReadOnly is a runtime constant.	Const is a compile time constant.
+The value of readonly field can be changed.	The value of the const field can not be changed.
+It cannot be declared inside the method.	It can be declared inside the method.
+In readonly fields, we can assign values in declaration and in the constructor part.	In const fields, we can only assign values in declaration part.
+It can be used with static modifiers.	It cannot be used with static modifiers.
+
+n C#, both string and StringBuilder are used to represent text. However, there is one key difference between them.
+In C#, a string is immutable. It means a string cannot be changed once created. For example, a new string, "Hello World!" will occupy a memory space on the heap. Now, changing the initial string "Hello World!" to "Hello World! from Tutorials Teacher" will create a new string object on the memory heap instead of modifying an original string at the same memory address. This impacts the performance if you modify a string multiple times by replacing, appending, removing, or inserting new strings in the original string.
+For example, the following create a new string object when you concatenate a value to it.
+Example: String
+ Copy
+string greeting = "Hello World!";
+greeting += " from Tutorials Teacher."; // creates a new string object
+In contrast, StringBuilder is a mutable type. It means that you can modify its value without creating a new object each time.
+Example: StringBuilder
+ Copy
+StringBuilder sb = new StringBuilder("Hello World!");
+sb.Append("from Tutorials Teacher."); //appends to the same object
+The StringBuilder performs faster than the string if you modify a string value multiple times. If you modify a string value more than five times then you should consider using the StringBuilder than a string.
+Convert.ToString and ToString Method in C#
+Both these methods are used to convert a value to a string. The difference is Convert.ToString() method handles null whereas the ToString() doesn’t handle null in C#.
+
+In C#, a dictionary is a collection of key-value pairs, while a list is a group of items. Both are generic collections that store data and have random access data structures. However, they have different performance characteristics when it comes to inserting and searching data:
+•	Dictionary
+Dictionaries are slower to insert data because they need to calculate a hash, but are faster to search because of that hash. Dictionaries are a good choice if you need fast retrieval based on keys or unique key-value pairs.
+•	List
+Lists are faster to insert data because they don't need to calculate a hash, but are slower to search because they need to look at every element. Lists are a good choice if you need an ordered collection, sequential access, or indexing operations. Lists are also helpful for storing large amounts of data
+
+What is the difference between an Array and an Array List in C#?
+The ArrayList collection in C# is very much similar to the Arrays data type. The major difference between them is the dynamic nature of the non-generic collection ArrayList. For arrays, we need to define the size i.e. the number of elements that the array can hold at the time of array declaration. But in the case of the ArrayList collection in C#, this does not need to be done beforehand. Elements can be added or removed from the Array List collection at any point in time.
+This is one of the frequently asked interview questions in C#. So let us discuss the difference between an array and an ArrayList.
+Array:
+1.	Fixed Length
+2.	Cannot insert it into the middle
+3.	Cannot delete from middle
+4.	It is type-safe, so we can store only similar types of data based on the data type.
+5.	Boxing and Unboxing are not required.
+ArrayList:
+1.	Variable Length
+2.	Can insert an element into the middle of the collection
+3.	Can delete elements from the middle of the collection
+4.	It is not type-safe, so we can store any type of data.
+5.	Boxing and Unboxing are required as it is operated on the object data type.
+
+What is a Collection in C#?
+The Collections in C# are a set of predefined classes that are present in the System.Collections namespace that provides greater capabilities and functionalities than the traditional arrays. The collections in C# are reusable, more powerful, and more efficient and most importantly they have been designed and tested to ensure quality and performance.
+So in simple words, we can say a Collection in C# is a dynamic array. That means the collections in C# have the capability of storing multiple values but with the following features.
+1.	Size can be increased dynamically.
+2.	We can insert an element into the middle of a collection.
+3.	It also provides the facility to remove or delete elements from the middle of a collection.
+The collections in C# are classes that represent a group of objects. With the help of C# Collections, we can perform different types of operations on objects such as Store, Update, Delete, Retrieve, Search, and Sort objects, etc. In short, all the data structure work can be performed by collections in C#. That means Collections standardize the way in which the objects are handled by our program.
+
+What are Delegates in C#?
+In simple words, we can say that the delegates in C# are the Type-Safe Function Pointer. It means they hold the reference of a method or function and then call that method for executio
+
+Rules of using Delegates in C#:
+1.	A delegate in C# is a user-defined type and hence before invoking a method using a delegate, we must have to define that delegate first.
+2.	The signature of the delegate must match the signature of the method, the delegate points to otherwise we will get a compiler error. This is the reason why delegates are called type-safe function pointers.
+What are the Types of Delegates in C#?
+The Delegates in C# are classified into two types as
+1.	Single Cast Delegate
+2.	Multicast Delegate
+If a delegate is used for invoking a single method, then it is called a single cast delegate or unicast delegate. In other words, we can say that the delegates that represent only a single function are known as single cast delegates.
+If a delegate is used for invoking multiple methods, then it is known as the multicast delegate. Or the delegates that represent more than one function are called Multicast delegates.
+Where do we use Delegates in C#?
+Delegates are used in the following cases:
+1.	Event Handlers
+2.	Callbacks
+3.	Passing Methods as Method Parameters
+4.	LINQ
+5.	Multithreading
+
+
+4. How to call a base class constructor from derive class?
+In C#, you can call the constructor of a base class from a derived class using the base keyword. The base keyword is used to access members of the base class, including constructors. Here's an example:
+
+csharp
+Copy code
+public class MyBaseClass
+{
+    // Base class constructor
+    public MyBaseClass(int parameter1, string parameter2)
+    {
+        // Constructor logic
+    }
+}
+
+public class MyDerivedClass : MyBaseClass
+{
+    // Derived class constructor
+    public MyDerivedClass(int parameter1, string parameter2, double parameter3)
+        : base(parameter1, parameter2) // Call the base class constructor
+    {
+        // Derived class constructor logic
+        // Additional logic specific to the derived class
+    }
+}
+In this example:
+
+MyBaseClass has a constructor that takes two parameters (int and string).
+MyDerivedClass inherits from MyBaseClass and has its own constructor.
+The constructor of MyDerivedClass uses the : base(parameter1, parameter2) syntax to call the constructor of the base class, passing the required parameters.
+When you create an instance of MyDerivedClass, the base class constructor will be called first, followed by the constructor of the derived class.
+
+
+11. What is difference between `First` & `FirstOrDefault` in LINQ?
+In LINQ, both `First` and `FirstOrDefault` are methods used to retrieve the first element from a sequence, but they have different behaviors when the sequence is empty. Here are the key differences:
+
+### `First`:
+
+1. **Usage:**
+   - `First` is used to retrieve the first element from a sequence that satisfies a specified condition.
+
+2. **Behavior on Empty Sequence:**
+   - If the sequence is empty, calling `First` will throw an `InvalidOperationException`.
+
+3. **Example:**
+   ```csharp
+   List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+   int firstElement = numbers.First(); // Returns 1
+   ```
+
+### `FirstOrDefault`:
+
+1. **Usage:**
+   - `FirstOrDefault` is used to retrieve the first element from a sequence that satisfies a specified condition, or a default value if no such element is found.
+
+2. **Behavior on Empty Sequence:**
+   - If the sequence is empty, calling `FirstOrDefault` will return the default value for the type of elements in the sequence. For reference types, it will be `null`, and for value types, it will be the default value (e.g., 0 for `int`, `false` for `bool`).
+
+3. **Example:**
+   ```csharp
+   List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+   int firstOrDefaultElement = numbers.FirstOrDefault(); // Returns 1
+
+   List<int> emptyList = new List<int>();
+   int firstOrDefaultFromEmptyList = emptyList.FirstOrDefault(); // Returns 0 (default for int)
+   ```
+3. Can you explain the SOLID principles?
+The SOLID principles provide five guidelines for developing code that is easy to maintain and extend.
+
+Single Responsibility: Each class can only have one responsibility.
+Open/Closed: Each class must be open for extension and closed for modification.
+Liskov Substitution: The parent class must be able to be replaced by any derived class without causing errors in the program.
+Interface Segregation: Each class should only implement the interfaces that will actually be used.
+Dependency Inversion: High-level modules should not depend on low-level modules. Both must rely on abstractions.
+
+Differentiate between Struct and Class in C#.
+Class and struct both are user-defined data types. However, they have some important differences:
+Struct
+Struct is a value type in C# that inherits values from System.Value
+It is mostly used for small quantities of data
+It cannot be inherited to any other type
+A Struct cannot have abstract values.
+Class
+Class is a reference type in C#. Since it refers to objects, it inherits from System.Object
+Classes are mostly used for large quantities of data
+Classes can be inherited to other classes
+Classes can have abstract values.
+A default constructor can be created for classes.
+
+
+How is encapsulation done in C#?
+
+Hide Answer
+Access specifiers help implement Encapsulation, in C#, is implemented by using access specifiers. A class member’s scope and visibility are defined by these access specifiers.
+With public access specifiers, a class can expose its member variables and functions to other objects and functions. Once a member is public, it can be reached from outside the class.
+With private access specifiers, a class can hide its member variables and functions from other objects and functions. The private members of a class can be accessed only by functions of the same class. Even instances of the same class do not have access to its private members.
+Protected access specifiers are similar to private access specifiers because they cannot be accessed outside the class. However, protected class members can be accessed by any subclass of that class as well. This enables implementing inheritance.
+
+
+What is a Destructor in C# and when is it used?
+
+Hide Answer
+A destructor is a special method in C# that is automatically called when an object is destroyed. It is used to free up any resources that the object may have been using, such as memory or files. Destructors are usually implemented in a class and are denoted by the keyword ~ followed by the class name.
+
+For example, if a class called MyClass was to have a destructor, it would be declared as follows: ~MyClass().
+
+Differentiate between ref and out keywords.
+
+Hide Answer
+The main difference between ref and out keywords in C# is that ref requires that the variable be initialized before being passed to the method whereas out keyword doesn’t require the variable to be initialized before being passed to the method.
+
+
+using System;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        string str = "";
+        Console.Write("Enter a string : ");
+        str = Console.ReadLine();
+        
+        char[] arr = str.ToCharArray();
+        Array.Reverse(arr);
+        Console.Write("Reverse string is : ");
+        
+        foreach(char ch in arr)
+        {
+            Console.Write(ch);
+        }
+        //Console.WriteLine ("Hello Mono World");
+    }
+}
+
+Enter a string : Swapnali Vishal Ladi
+Reverse string is : idaL lahsiV ilanpawS
+
+21.
+Write a program in C# to reverse the order of the given words?
+using System;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        string str = "Hello World";
+        string[] words = str.Split(' ');
+        Console.Write("Reversed order of the given string : ");
+        for(int i = words.Length -1; i>=0; i--)
+        {
+            Console.Write(words[i]+ " ");
+        }
+        //Console.WriteLine ("Hello Mono World");
+    }
+}
+Reversed order of the given string : World Hello 
+
+How Generics are helpful in C# ?
+Generics in C# allow you to write flexible and reusable code by creating classes, methods, or interfaces that can work with different data types.
+
+Following are the benefits of using generics:
+
+1) Code Reusability: Generics allow you to write code that can work with multiple data types without duplicating logic.
+
+2) Type Safety: The compiler enforces type safety, catching type-related errors at compile-time rather than runtime.
+
+3) Performance: Generics can be more efficient than using object types, as they eliminate the need for boxing/unboxing operations.
+
+
+2. What is Static Class and Can we have the non-static members inside static class ?
+
+I answered — A static class is a class that cannot be instantiated. You can‘t create an object for the static class. In static class static constructor will be called whenever we try to call the method of the static class and it will be called only once.
+
+For e.g. in the below code only staticcheck.a = 1 will call the constructor. Next ling staticcheck.a=2 will not call the contstructor. So, “Hello” will be printed once.
+
+
+And, We can’t create non static members inside static class. It will give the compile time error.
+
+
+3. What is Interface ? When we should go for Interface and when we should go for Abstract Class ?
+
+I answered — Interface is like a contract which means it tell what we have to implement inside the class where we are going to use it.
+
+The only thing it contains are declarations of events, indexers, methods and/or properties.
+ If we know the implementation will remain same so we can put it inside the abstract class but when we know the implemntation will vary from class to class then we should go for interface. For e.g. In banks the interest rate is different from bank to bank so we should go for interface in that scenraio. ( He seems to be happy with the answer so far;P)
+
+
+
+interface
+using System;
+
+interface IEmployee
+{
+    public void SetSalary();
+    public void SetProject();
+}
+
+public class PermanentEmployee : IEmployee
+{
+    public void SetSalary()
+    {
+        Console.WriteLine("50009");
+    }
+    
+    public void SetProject()
+    {
+        Console.WriteLine("New Application");
+    }
+}
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Try programiz.pro");
+        PermanentEmployee objPermanentEmployee = new PermanentEmployee();
+        objPermanentEmployee.SetSalary();
+        objPermanentEmployee.SetProject();
+        Console.ReadLine();
+    }
+}
+
+
+polymporphism
+Similarly, let's understand polymorphism with a real-life example. 
+Consider a person, who can have multiple characteristics at a time, the person can be a father, a son, and an employee at the same time. 
+The same person acts differently in different scenarios, this shows polymorphism.
+
+
