@@ -1,2 +1,37 @@
 can you help me prepare for an interview for a dot net developer? what are the common questions and how should i answer them?
 https://medium.com/@BhuvanaR/questions-to-prepare-to-crack-a-full-stack-net-developer-interview-a2fc5ee8e620
+C# and .NET Framework/Core:
+
+Explain the difference between .NET Framework and .NET (Core).
+What are the benefits of using C# as a programming language?
+Discuss different types of collections in C# and their use cases.
+Explain garbage collection in .NET and how it works.
+How do you handle exceptions in a C# application?
+What are async/await keywords used for in C#?
+Explain Dependency Injection (DI) and its benefits.
+Discuss different types of inheritance in C#.
+How do you implement unit testing in a .NET project? 1 10. What are some design patterns commonly used in .NET development?
+ASP.NET Core MVC/Web API:
+
+Explain the Model-View-Controller (MVC) pattern in ASP.NET Core.
+What are the differences between ASP.NET Core MVC and Web API?
+How do you handle routing in an ASP.NET Core application?
+Explain middleware in ASP.NET Core and its functionalities.
+Discuss different ways to implement authentication and authorization in ASP.NET Core.
+How do you configure CORS (Cross-Origin Resource Sharing) in ASP.NET Core?
+Explain model binding and validation in ASP.NET Core MVC.
+How do you implement caching in an ASP.NET Core application?
+What are some best practices for improving performance in ASP.NET Core applications?
+Discuss logging mechanisms available in ASP.NET Core.
+Databases (SQL Server):
+
+Explain different types of joins (inner, left, right, full) in SQL Server.
+Discuss stored procedures and functions in SQL Server and their benefits.
+How do you implement transactions in SQL Server?
+Explain normalization in database design and its importance.
+What are different types of indexes in SQL Server and when to use them?
+Discuss security considerations when working with databases.
+How do you manage database migrations in a .NET application?
+Explain Entity Framework (EF) and its role in data access.
+Discuss different approaches to data access in .NET (ADO.NET, EF Core).
+How do you optimize database queries for performance?
